@@ -40,3 +40,14 @@ Ocupación: Cajero
 Nombre: Maximiliano Rawe
 Edad: 27 años
 Profesión: Encargado de compras en una Distribuidora de insumos médicos
+
+links de referencia:
+[https://www.yauzo.com.ar/](https://www.yauzo.com.ar/?gclid=CjwKCAjwrKr8BRB_EiwA7eFaphVoMg0bB-AyeoqoP0RCNXKm1shjuTXxYsHuejE2_BRvzXAjnrE5lBoC06gQAvD_BwE)
+
+[https://www.curatealma.com/](https://www.curatealma.com/)
+
+[https://www.espaciovino.com.ar/](https://www.espaciovino.com.ar/)
+
+[https://steadfast.coffee/](https://steadfast.coffee/)
+
+[https://www.ellementry.com/](https://www.ellementry.com/)
