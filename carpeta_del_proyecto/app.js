@@ -9,12 +9,12 @@ app.get('/', function(req, res) {
     res.sendFile( path.join(__dirname, './views/index.html') )
 })
 
-app.get('/productDetail', function(req, res) {
-    res.sendFile( path.join(__dirname, './views/productDetail.html') )
+app.get('/productdetail', function(req, res) {
+    res.sendFile( path.join(__dirname, './views/productdetail.html') )
 })
 
-app.get('/productCart', function(req, res) {
-    res.sendFile( path.join(__dirname, './views/productCart.html') )
+app.get('/productcart', function(req, res) {
+    res.sendFile( path.join(__dirname, './views/productcart.html') )
 })
 
 app.get('/register', function(req, res) {
