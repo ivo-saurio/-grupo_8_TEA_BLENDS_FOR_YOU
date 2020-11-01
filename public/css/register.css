@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;}
+    
+    section{
+        position: relative;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         border: none;
+         margin: 25px auto;
+        background-color: rgba(00, 64, 66, 0.1);
+    }
+
+    h2 {
+        position: relative;
+        text-align: center;
+        top: 5px
+    }
+    
+    
+    .registro{
+
+        position: relative;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         border: none;
+         margin: 25px auto;
+            background-color: rgba(00, 64, 66, 0.1);
+        }
+
+    .formulario {
+         position: relative;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         border: none;
+         margin: 25px auto;
+         
+    }
+    input {
+        height: 20px;
+        text-align: center;
+    }
