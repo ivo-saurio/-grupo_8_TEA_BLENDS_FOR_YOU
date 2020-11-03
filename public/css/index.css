@@ -2,7 +2,8 @@
 
 
 .body {
-    background-color:#DDF788;
+    
+    background-color:rgb(42, 1, 4 );
 }
 
 .flex {
@@ -25,7 +26,8 @@
     justify-content: space-around;
     width: 100%;
     align-items: center;
-    background-color: #CFF160 ;
+    background-color: rgb(53, 6, 8, 0.4) ;
+    
 }
 
 .container {
@@ -38,6 +40,7 @@
 }
 .titulo {
     text-align: center;
+    color: rgb(255, 251, 199) ;
 }
 .logo {
     display: flex;
@@ -48,4 +51,14 @@
     top: -50px;
     width: 400px;
     right: 470px;
+}
+.degrades {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    
+    linear-gradient(to bottom, rgba(42,1,4,1) 0%, rgba(42,1,4,1) 26%, rgba(0,0,0,1) 55%, rgba(42,1,4,1) 76%, rgba(42,1,4,1) 93%, rgba(42,1,4,1) 100%);
 }
