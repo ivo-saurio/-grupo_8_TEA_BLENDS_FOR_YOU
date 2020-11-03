@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
 
 *{
@@ -10,7 +10,7 @@
 
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Bebas Neu';
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -20,9 +20,11 @@ body {
 }
 header {
     display: flex;
+    flex-direction: row;
     width: 100%;
-    padding: 20px 150px 20px 150px;
-    justify-content: center;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -34,15 +36,13 @@ header {
 }
 .logo {
     align-items: center;
-    width: 100px;
+    width: 150px;
     justify-content: center;
 }
 
 .flex1 {
     display: flex;
     list-style-type: none;
-    flex-direction: row-reverse;
-    justify-content: end;
 
 }
 h1{
@@ -58,6 +58,7 @@ h1{
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .cart img{
     height: 100px;
