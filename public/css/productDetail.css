@@ -1,11 +1,15 @@
-       * {
+      /* Bebas neue tipografia */
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+      * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
     
     .body {
-        background-color: rgba(36, 96, 201, 0.1);
+        font-family: 'Bebas Neue', cursive;
+        background-color:rgb(42, 1, 4 );
     }
 
     .titulo{
@@ -48,6 +52,7 @@
         .img1 {
             width: 140px;
             height: 140px;
+            border-style: double;
         }
 
         .caja2 {
@@ -62,6 +67,7 @@
         .img2 {
             width: 140px;
             height: 140px;
+            border-style: double;
         }
 
         .caja3 {
@@ -76,6 +82,7 @@
         .img3 {
             width: 140px;
             height: 140px;
+            border-style: double;
         }
 
         .caja4 {
@@ -90,6 +97,7 @@
         .img4{
             width: 460px;
             height: 460px;
+            border-style: double;
         }
         .descripcion {
             position: absolute;
