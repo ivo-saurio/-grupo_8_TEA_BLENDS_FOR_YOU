@@ -7,29 +7,34 @@
     <title>Carrito</title>
 </head>
 <body>
+    <div class="container">
     <header>
         <div><ul class="flex">
-            <li><a href="/index">| Botannys Essence |</a></li>
-            <li><a href="/productdetail">| Nuestras Boxes |</a></li>
+            <li><a href="/">Botannys Essence</a></li>
+            <li><a href="/productdetail">Nuestras Boxes</a></li>
         </ul>
     </div>
     <div class="logo"><img class="logo" src= "/img/logo-28.png" alt="">
     </div>
        <div> <ul class= "flex1">
-                <li><a href="/register">| Registrate |</a></li>
-                <li><a href="/login">| Usuario |</a></li>
-                <li><a href="/productcart">| Carrito |</a></li>
+                <li><a href="/register">Registrate</a></li>
+                <li><a href="/login">Usuario</a></li>
+                <li><a href="/productcart">Carrito</a></li>
         </ul>
     </div>
 
     </header>
     <h1>Tu Carrito</h1>
     <div class="cart">
-        <img src="/img/boc_large_cerrada.jpeg" alt=""><p>Lorem ipsum dolor sit amet.</p><p>$1000</p> <!--Link del producto-->
-        <button type="button">-</button><input type="number"><button type="button">+</button>
+        <img src="/img/boc_large_cerrada.jpeg" alt=""><p>Lorem ipsum dolor sit amet.</p> <!--Link del producto-->
+       <label for="cantidad">Cantidad:</label>
+        <!-- <button type="button">-</button>--><input id="cantidad" name="cantidad" type="number"min="0" max="100"><!--<button type="button">+</button>-->
+        <p>$1000</p>
     </div>
         <h3>Subtotal $1000</h3> 
-        <div class="fin"><input type="submit" value="Finalizar Compra"></div>
-        <div class="seguir"><input type="submit" value="Seguir Comprando"></div>
+        <div class="fin"><input class='btn1' type="submit" value="Comprar"></div>
+        <div class="seguir"><input class='btn2' type="submit" value="Seguir Comprando"></div>
+
+    </div>    
 </body>
 </html>
