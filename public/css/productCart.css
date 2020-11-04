@@ -12,7 +12,7 @@
 body {
     font-family: 'Bebas Neue';
     color: #ffffff;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
     background-size: 400% 400%;
    
 }
@@ -51,11 +51,12 @@ header {
     display: inline-block;
 }
 .flex li a:hover {
-    background: blue;
+    background: white;
+    color:rgb(42, 1, 4);
 }
 .logo {
     display: flex;
-    width: 300px;
+    width: 250px;
     vertical-align: top;
     display: inline-block;
 }
@@ -68,13 +69,14 @@ header {
 
 .flex1 li a {
     font-size: 20px;
-    color: white;
+    color:white;
     text-decoration: none;
     padding: 20px;
     display: inline-block;
 }
 .flex1 li a:hover {
-    background: blue;
+    background: white;
+    color:rgb(42, 1, 4);
 }
 /* -------------Acá termina el header--------------*/
 h1{
@@ -92,6 +94,8 @@ h1{
     align-items: center;
     text-align: center;
     padding: 40px;
+    margin: 10px;
+    border: 4px solid;
 }
 .cart img{
     height: 140px;
@@ -105,8 +109,13 @@ h1{
     font-size: 20px;
 }
 .cart input[type="number"]{
-    height: 25px;
+    height: 30px;
     width: 50px;
+    text-align: center;
+    font-size: 16px;
+    background: #411025;
+    color: white;
+    border: 2px solid;
 }
 h3 {
     font-size: 40px;
@@ -114,22 +123,29 @@ h3 {
     border-top: 2px solid black;
 }
 
-.btn1{
-    margin: 30px 0;
-    width: 100%;
-    height: 40px;
-    width: 200px;
-    font-size: 20px;
-    border-radius: 5px;
-    border-color: white;
+.fin{
+    padding: 20px;
 }
 
-.btn2{
-    margin: 20px 0;
-    width: 100%;
-    height: 40px;
+.btn {
+    padding: 20px;
     width: 200px;
-    font-size: 20px;
-    border-radius: 5px;
-    border-color: white;
+    height: 60px;
+    background: none;
+    border: 4px solid;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn:hover{
+    background: white;
+    color: #7C0B2B;
+}
+
+.seguir button{
+    padding: 10px 20px;
 }
