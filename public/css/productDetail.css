@@ -10,10 +10,9 @@
     
     .body {
         font-family: 'Bebas neue';   
-    color: rgb(255, 251, 199);
-    /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
+    background-size: 400% 400%; 
+    color: white;
 
 }
     .conteiner {
@@ -90,6 +89,7 @@ header {
         text-align: center;
         top: 5px;
         color: rgb(255, 251, 199);
+        font-size: 45px;
 
     }
     
@@ -175,6 +175,8 @@ header {
             margin-top:5px;
             width: 360px;
             height: 500px;
+            box-shadow: 0 0 10px gray;
+            padding: 5px;
         }
 
         .descripcion > p {

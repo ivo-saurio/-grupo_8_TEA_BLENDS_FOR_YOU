@@ -7,10 +7,9 @@
    
     body {
         font-family: 'Bebas neue';   
-    color: rgb(255, 251, 199);
-    /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400% 400%;
+    background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
+    background-size: 400% 400%; 
+    color: white;
     }
 
     /* ----------Acá empieza el header--------------- */
@@ -72,6 +71,7 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100vw;
+    box-shadow: 0 0 10px gray;
 }
 
     h2 {
@@ -79,6 +79,7 @@ header {
         justify-content: center;
         top: 5px;
         color: rgb(255, 251, 199);
+        font-size: 45px;
     }
 
     .formulario {
