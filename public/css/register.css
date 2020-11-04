@@ -6,40 +6,82 @@
 }
    
     body {
-        font-family: 'Bebas Neue', cursive;
-        background-color:rgb(42, 1, 4 );
+        font-family: 'Bebas neue';   
+    color: rgb(255, 251, 199);
+    /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
     }
 
-    section{
-        position: relative;
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         border: none;
-         margin: 25px auto;
-        background-color: rgba(00, 64, 66, 0.1);
-    }
+    /* ----------Acá empieza el header--------------- */
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+.flex li a {
+    font-size: 20px;
+    color: rgb(255, 251, 199);
+    text-decoration:none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex li a:hover {
+    background: blue;
+}
+.logo {
+    display: flex;
+    width: 250px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.flex1 {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+}
+
+.flex1 li a {
+    font-size: 20px;
+    color: rgb(255, 251, 199);
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex1 li a:hover {
+    background: blue;
+}
+/* -------------Acá termina el header--------------*/
+
+.formulariocompleto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
 
     h2 {
-        position: relative;
-        text-align: center;
-        top: 5px
+        display: flex;
+        justify-content: center;
+        top: 5px;
+        color: rgb(255, 251, 199);
     }
-    
-    
-    .registro{
-
-        position: relative;
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         border: none;
-         margin: 25px auto;
-            background-color: rgba(00, 64, 66, 0.1);
-        }
 
     .formulario {
-         position: relative;
          display: flex;
          flex-wrap: wrap;
          justify-content: center;

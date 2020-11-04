@@ -1,5 +1,6 @@
       /* Bebas neue tipografia */
       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
 
       * {
         box-sizing: border-box;
@@ -8,45 +9,114 @@
     }
     
     .body {
-        font-family: 'Bebas Neue', cursive;
-        background-color:rgb(42, 1, 4 );
-    }
+        font-family: 'Bebas neue';   
+    color: rgb(255, 251, 199);
+    /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);*/
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+
+}
+    .conteiner {
+    width: 100%;
+    height: 100 vh; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}  
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    width: 250px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+.flex li a {
+    font-size: 20px;
+    color: white;
+    text-decoration:none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex li a:hover {
+    background: blue;
+}
+
+.flex1 {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+}
+
+.flex1 li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex1 li a:hover {
+    background: blue;
+}
 
     .titulo{
-        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         margin: 35px auto;
         width: 600px;
         height: 40px;
-        background-color: rgba(00, 64, 66, 0.1);
+        
     }
 
     h2 {
         position: relative;
         text-align: center;
         top: 5px;
+        color: rgb(255, 251, 199);
 
     }
     
     
     .imagenes{
-
-            position: absolute;
+        
+        display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: space-around;
             left: 70px;
             margin:5px auto;
             width: 740px;
             height: 500px;
-            background-color: rgba(00, 64, 66, 0.1);
 
 
         }
     
         .caja1 {
-            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
             left: 20px;
             top: 20px;
             width: 140px;
             height: 140px;
-            background-color: rgba(21, 2, 56, 0.5) 
+            background-color: none;
         } 
 
         .img1 {
@@ -56,12 +126,11 @@
         }
 
         .caja2 {
-            position: absolute;
+            display: flex;
             left: 20px;
             top: 180px;
             width: 140px;
-            height: 140px;
-            background-color: rgba(21, 2, 56, 0.5) 
+            height: 140px; 
         }
 
         .img2 {
@@ -71,13 +140,12 @@
         }
 
         .caja3 {
-            position: absolute;
+            display: flex;
             left: 20px;
             top: 340px;
             width: 140px;
             height: 140px;
-            background-color: rgba(21, 2, 56, 0.5) 
-        }
+                }
 
         .img3 {
             width: 140px;
@@ -86,12 +154,11 @@
         }
 
         .caja4 {
-            position: absolute;
+            display: flex;
             right:55px;
             top: 20px;
             width: 460px;
-            height: 460px;
-            background-color: rgba(21, 2, 56, 0.5) 
+            height: 460px; 
         }
 
         .img4{
@@ -100,29 +167,50 @@
             border-style: double;
         }
         .descripcion {
-            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            align-self: flex-end;
+            justify-content: start;
             right: 70px;
-            margin:5px;
+            margin-top:5px;
             width: 360px;
             height: 500px;
-            background-color: rgba(31, 22, 44, 0.5)
+        }
+
+        .descripcion > p {
+            color: rgb(255, 251, 199);
+        }
+
+        .imgdesc {
+            display: flex;
+
         }
 
         .pagos {
-            position: relative;
-            margin: 560px auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 10px auto;
+            justify-content: space-around;
             width: 600px;
             height: 200px;
-            background-color: rgba(00, 64, 66, 0.1);
+            color: rgb(255, 251, 199);
+        }
+
+        .todoslosdatos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
         }
 
         .valor {
-            position: absolute;
+            position: relative;
             right: 30px;
             top: 20px;
             width: 530px;
             height: 40px;
-            background-color: rgba(50, 34, 192, 0.1);
+            
         }
 
         .precio {
@@ -132,12 +220,12 @@
         }
 
         .cuotas {
-            position: absolute;
+            position: relative;
             right: 30px;
             top: 80px;
             width: 530px;
             height: 40px;
-            background-color: rgba(50, 34, 192, 0.1);
+            
         }
 
         .formaspago {
@@ -147,7 +235,7 @@
         }
 
         .comprar {
-            position: absolute;
+            position: relative;
             right: 30px;
             top: 140px;
             width: 530px;
@@ -159,5 +247,6 @@
             width: 530px;
             height: 40px;
             background-color: rgba(50, 34, 192, 0.1);
+            color: rgb(255, 251, 199);
             }
             
