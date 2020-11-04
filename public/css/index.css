@@ -7,19 +7,57 @@
     background-color:rgb(42, 1, 4 );
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
 .flex {
     display: flex;
     list-style-type: none;
-    flex-direction: row;
+    text-align: center;
 }
+.flex li a {
+    font-size: 20px;
+    color: white;
+    text-decoration:none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex li a:hover {
+    background: blue;
+}
+.logo {
+    display: flex;
+    width: 300px;
+    vertical-align: top;
+    display: inline-block;
+}
+
 .flex1 {
     display: flex;
     list-style-type: none;
-    flex-direction: row-reverse;
-    position: relative;
-    top: -34px;
-
+    align-content: center;
 }
+
+.flex1 li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex1 li a:hover {
+    background: blue;
+}
+
+
 .imagenes {
     display: flex;
     flex-wrap: wrap;
@@ -43,16 +81,7 @@
     text-align: center;
     color: rgb(255, 251, 199) ;
 }
-.logo {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute ;
-    top: -50px;
-    width: 400px;
-    right: 470px;
-}
+
 .degrades {
     display: flex;
     flex-wrap: wrap;
