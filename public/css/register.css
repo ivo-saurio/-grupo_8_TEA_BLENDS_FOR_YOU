@@ -6,10 +6,11 @@
 }
    
     body {
-        font-family: 'Bebas neue';   
-    background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
-    background-size: 400% 400%; 
-    color: white;
+        font-family: 'Bebas neue';
+        color: #ffffff;   
+        background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
+        background-size: 400% 400%; 
+        color: white;
     }
 
     /* ----------Acá empieza el header--------------- */
@@ -32,13 +33,14 @@ header {
 }
 .flex li a {
     font-size: 20px;
-    color: rgb(255, 251, 199);
+    color: white;
     text-decoration:none;
     padding: 20px;
     display: inline-block;
 }
 .flex li a:hover {
-    background: blue;
+    background: white;
+    color: rgb(42, 1, 4);
 }
 .logo {
     display: flex;
@@ -55,13 +57,14 @@ header {
 
 .flex1 li a {
     font-size: 20px;
-    color: rgb(255, 251, 199);
+    color:white;
     text-decoration: none;
     padding: 20px;
     display: inline-block;
 }
 .flex1 li a:hover {
-    background: blue;
+    background: white;
+    color:rgb(42, 1, 4);
 }
 /* -------------Acá termina el header--------------*/
 
