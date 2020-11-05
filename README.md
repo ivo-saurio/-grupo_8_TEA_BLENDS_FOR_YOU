@@ -51,3 +51,6 @@ links de referencia:
 [https://steadfast.coffee/](https://steadfast.coffee/)
 
 [https://www.ellementry.com/](https://www.ellementry.com/)
+
+Enlace al tablero de trabajo: Trello
+https://trello.com/b/ttQ0maiv/botannysessence
