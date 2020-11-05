@@ -79,6 +79,16 @@ header {
     color:rgb(42, 1, 4);
 }
 /* -------------Acá termina el header--------------*/
+.carrito {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 50px;
+    align-items: center;
+    text-align: center;
+
+}
+
 h1{
     text-align: center;
     padding: 20px;
@@ -95,7 +105,6 @@ h1{
     padding: 40px;
     margin: 10px;
     box-shadow: 0 0 10px grey;
-    
 }
 .cart img{
     height: 140px;
@@ -140,7 +149,6 @@ h3 {
     cursor: pointer;
     font-size: 16px;
     text-align: center;
-
 }
 
 .btn:hover{
@@ -151,3 +159,52 @@ h3 {
 .seguir button{
     padding: 10px 20px;
 }
+
+.linea{
+    border-top: 2px inset white;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 0px 20px 0 20px;
+    justify-content: space-between;
+    
+}
+.flex3 {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+
+}
+.flex3 li a {
+    font-size: 20px;
+    color: white;
+    text-decoration:none;
+    padding: 20px;
+    display: inline-block;
+}
+.flex3 li a:hover {
+    background: white;
+    color:rgb(42, 1, 4);
+}
+
+.flex4 {
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+        list-style-type: none;
+        align-content: center;
+
+    }
+    
+    .flex4 li a {
+        font-size: 20px;
+        color:white;
+        text-decoration: none;
+        padding: 20px;
+        display: inline-block;
+    }
