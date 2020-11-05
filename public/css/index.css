@@ -2,9 +2,12 @@
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
 
 
-.body {
-    font-family: 'Bebas Neue', cursive;
-    background-color:rgb(42, 1, 4 );
+body {
+    font-family: 'Bebas Neue';
+    color: #ffffff;
+    background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
+    background-size: 400% 400%;
+   
 }
 
 header {
@@ -31,11 +34,12 @@ header {
     display: inline-block;
 }
 .flex li a:hover {
-    background: blue;
+    background: white;
+    color:rgb(42, 1, 4);
 }
 .logo {
     display: flex;
-    width: 300px;
+    width: 250px;
     vertical-align: top;
     display: inline-block;
 }
@@ -48,15 +52,15 @@ header {
 
 .flex1 li a {
     font-size: 20px;
-    color: white;
+    color:white;
     text-decoration: none;
     padding: 20px;
     display: inline-block;
 }
 .flex1 li a:hover {
-    background: blue;
+    background: white;
+    color:rgb(42, 1, 4);
 }
-
 
 .imagenes {
     display: flex;
@@ -75,6 +79,7 @@ header {
 
 .img {
     width: 230px;
+    border-style: double;
     
 }
 .titulo {
@@ -90,5 +95,15 @@ header {
     width: 100%;
     align-items: center;
     
-    background: linear-gradient(to bottom, rgba(42,1,4,1) 0%, rgba(42,1,4,1) 26%, rgba(0,0,0,1) 55%, rgba(42,1,4,1) 76%, rgba(42,1,4,1) 93%, rgba(42,1,4,1) 100%);
+    /*background: linear-gradient(to bottom, rgba(42,1,4,1) 0%, rgba(42,1,4,1) 26%, rgba(0,0,0,1) 55%, rgba(42,1,4,1) 76%, rgba(42,1,4,1) 93%, rgba(42,1,4,1) 100%);
+*/
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+    
 }
