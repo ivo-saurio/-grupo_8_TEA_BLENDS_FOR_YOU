@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Bebas Neue';
     color: #ffffff;
     background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
     background-size: 400% 400%;
+    
    
 }
 
@@ -102,7 +108,12 @@ header {
 }
 
 .container {
-    margin: 0;
+    width: 100%;
+    height: 100 vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .img {
@@ -146,3 +157,4 @@ footer {
     width: 80%;
     padding: 0px 20px 0 20px;
     justify-content: space-between;
+}
