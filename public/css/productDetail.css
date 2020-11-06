@@ -203,6 +203,7 @@ header {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            margin-bottom: 180px;
 
         }
 
@@ -251,4 +252,54 @@ header {
             background-color: rgba(50, 34, 192, 0.1);
             color: rgb(255, 251, 199);
             }
+
+            .linea{
+                border-top: 2px inset white;
+                width: 100%;
+            }
+        
+            footer {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 80%;
+                padding: 0px 20px 0 20px;
+                justify-content: space-between;
+                
+                
+            }
+            .flex3 {
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+        
+            }
+            .flex3 li a {
+                font-size: 20px;
+                color: white;
+                text-decoration:none;
+                padding: 20px;
+                display: inline-block;
+            }
+            .flex3 li a:hover {
+                background: white;
+                color:rgb(42, 1, 4);
+            }
+           
+            .flex4 {
+                    display: flex;
+                    padding: 50px;
+                    flex-direction: column;
+                    list-style-type: none;
+                    align-content: center;
+        
+                }
+                
+                .flex4 li a {
+                    font-size: 20px;
+                    color:white;
+                    text-decoration: none;
+                    padding: 20px;
+                    display: inline-block;
+                }
             
