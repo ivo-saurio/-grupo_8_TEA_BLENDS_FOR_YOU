@@ -16,67 +16,57 @@ body {
     
 }
 .conteiner {
-    width: 100%;
+    width: 90%;
+    max-width: 1000px;
     height: 100 vh; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    margin: auto;
+   
+    
 }  
-/* ----------Acá empieza el header--------------- */
+/* ----------HEADER--------------- */
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     padding: 0px 20px 0px 20px;
-    justify-content: space-between;
     align-content: center;
     align-items: center;
 }
-
-.flex {
+.logo {
+    width: 250px;  
+}
+header nav {
+    width: 80%;
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     list-style-type: none;
     text-align: center;
+    align-items: center;
+    justify-content: space-between;   
 }
-.flex li a {
+header nav a {
+    flex-grow: 1;
     font-size: 20px;
     color: white;
     text-decoration:none;
     padding: 20px;
     display: inline-block;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
 }
-.flex li a:hover {
+header nav a:hover {
     background: white;
     color:rgb(42, 1, 4);
+    
 }
-.logo {
-    display: flex;
-    width: 250px;
-    vertical-align: top;
-    display: inline-block;
-}
-
-.flex1 {
-    display: flex;
-    list-style-type: none;
-    align-content: center;
-}
-
-.flex1 li a {
-    font-size: 20px;
-    color:white;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-}
-.flex1 li a:hover {
-    background: white;
-    color:rgb(42, 1, 4);
-}
-/* -------------Acá termina el header--------------*/
+/* -------------HEADER--------------*/
 
 .login{
     display: flex;
@@ -145,7 +135,7 @@ header {
 
     .linea{
         border-top: 2px inset white;
-        width: 100%;
+        width: 80%;
     }
 
     footer {
@@ -192,3 +182,22 @@ header {
             padding: 20px;
             display: inline-block;
         }
+
+
+
+@media(max-width: 900px) {
+    /*---HEADER---*/
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        box-shadow: 0 0 10px grey;   
+    }
+    header nav a {
+        width: 100%;
+        border-right: none;
+        border-left: none;
+
+    }
+    /*--HEADER--*/
+}
