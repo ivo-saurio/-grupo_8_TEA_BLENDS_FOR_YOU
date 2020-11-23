@@ -73,6 +73,7 @@ header nav a:hover {
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin: auto;
 
     } 
 
@@ -185,7 +186,10 @@ header nav a:hover {
 
 
 
-@media(max-width: 900px) {
+@media(max-width: 940px) {
+    .container {
+        width: 100%;
+    }
     /*---HEADER---*/
     header nav {
         display: flex;
@@ -199,5 +203,29 @@ header nav a:hover {
         border-left: none;
 
     }
-    /*--HEADER--*/
+    
+    /*--LOGIN--*/
+
+    .login{
+        width: max-content;
+    }
+    
+    /*--FOOTER--*/
+    footer{
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer ul {
+        align-items: center;
+        justify-content: center;
+    }   
+}
+
+@media(max-width: 367px) {
+     footer ul{
+        text-align: center;
+     }
+     
 }
