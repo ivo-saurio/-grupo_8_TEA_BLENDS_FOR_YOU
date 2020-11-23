@@ -3,8 +3,12 @@ const app = express();
 
 const path = require('path');
 const mainController = require('./controllers/mainController');
+const productosController = require('./controllers/productosController')
 const mainRouter = require('./routes/main');
+const productosRouter = require('./routes/productos');
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
 // MOTOR DE VISTA : EJS.
 app.set('view engine', 'ejs');
 // ESTA ES LA CARPETA QUE TIENE TODAS LAS VISTAS:
@@ -23,6 +27,8 @@ app.use('/productdetail', mainRouter);
 app.use('/register', mainRouter);
 
 app.use('/formulario', mainRouter);
+
+app.use('/productos', productosRouter)
 
 
 
