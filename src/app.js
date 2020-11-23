@@ -22,6 +22,8 @@ app.use('/productdetail', mainRouter);
 
 app.use('/register', mainRouter);
 
+app.use('/formulario', mainRouter);
+
 
 
 

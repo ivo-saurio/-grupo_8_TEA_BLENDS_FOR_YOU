@@ -16,4 +16,6 @@ router.get('/productdetail', mainController.productdetail)
 
 router.get('/register', mainController.register)
 
+router.get('/formulario', mainController.formulario)
+
 module.exports = router;
