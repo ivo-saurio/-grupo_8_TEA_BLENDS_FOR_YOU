@@ -595,9 +595,14 @@ footer ul {
     justify-content: center;
 }   
 }
+@media(max-width: 460px) {
+/*--HOME--*/
+.degrades {
+    justify-content: space-around;
+}
 
+}
 @media(max-width: 367px) {
-
 
 
 /*--FOOTER--*/
