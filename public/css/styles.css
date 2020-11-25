@@ -12,7 +12,7 @@ body {
     font-family: 'Bebas neue';   
     background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
     background-size: 400% 400%; 
-    color: white;
+    color:  #fafafa;
     
 }
 
@@ -54,15 +54,15 @@ header nav {
 header nav a {
     flex-grow: 1;
     font-size: 20px;
-    color: white;
+    color:  #fafafa;
     text-decoration:none;
     padding: 20px;
     display: inline-block;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    border-right: 1px solid #fafafa;
+    border-left: 1px solid #fafafa;
 }
 header nav a:hover {
-    background: white;
+    background: #fafafa;
     color:rgb(42, 1, 4);
     
 }
@@ -76,7 +76,7 @@ header nav a:hover {
 }
 .titulo {
     text-align: center;
-    color: rgb(255, 251, 199) ;
+    color: #fafafa;
 }
 
 .degrades {
@@ -99,7 +99,7 @@ header nav a:hover {
     } 
 
     .login h1{
-        color:white;
+        color:#fafafa;
         text-align: center;
         padding: 20px;
         font-size: 40px;
@@ -130,7 +130,7 @@ header nav a:hover {
         font-size: 14px;
     }
     .otp a{
-        color: white;
+        color: #fafafa;
     }
     .submit{
         padding: 20px;
@@ -143,7 +143,7 @@ header nav a:hover {
         background: none;
         border: 4px solid;
         box-shadow: 0 0 10px grey;
-        color: white;
+        color: #fafafa;
         font-weight: 700;
         text-transform: uppercase;
         cursor: pointer;
@@ -151,7 +151,7 @@ header nav a:hover {
     }
 
     .btn:hover{
-        background: white;
+        background: #fafafa;
         color: #7C0B2B;
     }
 
@@ -204,7 +204,7 @@ h1{
     text-align: center;
     font-size: 16px;
     background: #411025;
-    color: white;
+    color: #fafafa;
     border: 2px solid;
 }
 h3 {
@@ -223,7 +223,7 @@ h3 {
     height: 60px;
     background: none;
     box-shadow: 0 0 10px grey;
-    color: white;
+    color: #fafafa;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -232,7 +232,7 @@ h3 {
 }
 
 .btn:hover{
-    background: white;
+    background: #fafafa;
     color: #7C0B2B;
 }
 
@@ -266,7 +266,7 @@ h2 {
     justify-content: center;
     text-align: center;
     top: 5px;
-    color: rgb(255, 251, 199);
+    color:#fafafa;
     font-size: 45px;
 
 }
@@ -369,7 +369,7 @@ h2 {
     }
 
     .descripcion > p {
-        color: rgb(255, 251, 199);
+        color:#fafafa;
     }
 
     .imgdesc {
@@ -384,7 +384,7 @@ h2 {
         justify-content: center;
         padding-top: 20px;
         margin: 10px auto;
-        color: rgb(255, 251, 199);
+        color:#fafafa;
     }
 
     .valor {
@@ -426,7 +426,7 @@ h2 {
         width: 192px;
         height: 29px;
         background-color: rgba(50, 34, 192, 0.1);
-        color: rgb(255, 251, 199);
+        color:#fafafa;
         padding-top: 1px;
         display: inline-block;
         }
@@ -452,7 +452,7 @@ h2 {
         display: flex;
         justify-content: center;
         top: 5px;
-        color: rgb(255, 251, 199);
+        color:#fafafa;
         font-size: 45px;
     }
 
@@ -473,7 +473,7 @@ h2 {
 /* --FOOTER-- */
 
 .linea{
-    border-top: 2px inset white;
+    border-top: 2px inset #fafafa;
     width: 80%;
     margin: auto;
 }
@@ -495,13 +495,13 @@ footer {
 }
 .flex3 li a {
     font-size: 20px;
-    color: white;
+    color: #fafafa;
     text-decoration:none;
     padding: 20px;
     display: inline-block;
 }
 .flex3 li a:hover {
-    background: white;
+    background: #fafafa;
     color:rgb(42, 1, 4);
 }
 
@@ -516,7 +516,7 @@ footer {
     
     .flex4 li a {
         font-size: 20px;
-        color:white;
+        color:#fafafa;
         text-decoration: none;
         padding: 20px;
         display: inline-block;
