@@ -10,9 +10,11 @@
     <h1>Iniciar Sesión</h1>
     
     <form action="" method="POST">
-       <!--AGREGAR LOS LABEL Y MODIFICAR CSS-->
+        
+        <label for="email"></label>
         <div class="email">
         <input type="email" placeholder="Escribe tu email" name="email" id="email" > </div>
+        <label for="password"></label>
         <div class="password">
         <input type="password" placeholder="Escribe tu contraseña" name="password" id="password"></div>
         <div class="otp"><a href="#">¿Olvidaste tu contraseña?</a></div>
@@ -21,6 +23,5 @@
 
     </div>
     <%- include('partials/footer') %>
-</div>
 </body>
 </html>
