@@ -12,9 +12,9 @@ let mainController = {
         return res.render('productdetail')},
     register: function(req, res){
         return res.render('register')},
-    formulario: function(req, res){
-        return res.render('formulario')
-    }    
+    productadd: function(req, res){
+        return res.render('formulario')},
+
 }
 
 

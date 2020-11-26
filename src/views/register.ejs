@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrate</title>
-    <link rel="stylesheet" href="css/register.css">
-</head>
+    <%- include('partials/head', {title: "Registrate"}) %>
 <body>
-    <header>
-        <div class="logo"><img class="logo" src= "/img/logo-28.png" alt="">
-        </div>
-        <nav>
-            <a href="/"> Botannys Essence </a>
-            <a href="/productdetail"> Nuestras Boxes </a>
-            <a href="/register"> Registrate </a>
-            <a href="/login"> Usuario </a>
-            <a href="/productcart"> Carrito </a>
-         </nav>
-</header>
+    <%- include('partials/header') %>
      
-    <section>
+    <section class="registro">
         <h2>Completá tus datos</h2>
-        </section>
-        <section class="registro">
+        
+
+        
             <div class="formulariocompleto">
         <form>
             <label for="name"></label>
-            <input class="formulario" type="name" id="name" name="name" placeholder="Nombre"><br>
+            <input class="formulario" type="text" id="name" name="name" placeholder="Nombre"><br>
            
             <label for="surname"></label>
-            <input class="formulario" type="surname" id="surname" name="surname" placeholder="Apellido"><br>
+            <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido"><br>
            
             <label for="email"></label>
             <input class="formulario" type="email" id="email" name="email" placeholder="E-mail"><br>
@@ -48,16 +34,6 @@
         </section>
 
         <div class="linea"></div>
-    <footer>
-        <ul class="flex3">
-            <li><a href="https://www.instagram.com/botannys_essence/" target="_blank"><i class="fab fa-instagram"></i>  @Botanny's essence </a></li>
-        </ul>
-        <ul class="flex4">
-            <li>| Contacto: +5492615092047 |</li>
-            <li> | Contacto: +5492613688713 |</li>
-            <li> | Email: botannysessence@outlook.com |</li>
-    
-        </ul>
-    </footer>
+        <%- include('partials/footer') %>
 </body>
 </html>

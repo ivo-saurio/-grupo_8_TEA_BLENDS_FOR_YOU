@@ -444,7 +444,6 @@ h2 {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
     box-shadow: 0 0 10px gray;
 }
 
@@ -469,6 +468,7 @@ h2 {
         height: 20px;
         text-align: center;
     }
+
 
 /* --FOOTER-- */
 
