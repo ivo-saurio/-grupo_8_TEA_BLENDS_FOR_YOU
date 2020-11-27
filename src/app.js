@@ -26,7 +26,7 @@ app.use('/productdetail', mainRouter);
 
 app.use('/register', mainRouter);
 
-app.use('/formulario', mainRouter);
+app.use('/productadd', mainRouter);
 
 app.use('/productos', productosRouter)
 
