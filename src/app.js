@@ -4,8 +4,10 @@ const app = express();
 const path = require('path');
 const mainController = require('./controllers/mainController');
 const productosController = require('./controllers/productosController')
+const usersController = require('./controllers/usersController')
 const mainRouter = require('./routes/main');
 const productosRouter = require('./routes/productos');
+const usersRouter = require('./routes/users')
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
@@ -18,13 +20,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', mainRouter);
 
-app.use('/login', mainRouter);
+app.use('/login', usersRouter);
 
-app.use('/productcart', mainRouter);
+app.use('/productcart', usersRouter);
 
 app.use('/productdetail', mainRouter);
 
-app.use('/register', mainRouter);
+app.use('/register', usersRouter);
 
 app.use('/productadd', mainRouter);
 
