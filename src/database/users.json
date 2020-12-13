@@ -1,2 +1,9 @@
 [
+    {
+        "id": 1,
+        "name": "Maxi",
+        "surname": "Rawe",
+        "email": "maxirawe@hotmail.com",
+        "password": "$2b$12$0laKSDomEFYGFDI.71laUO.I6MmTQN6NSlDFm2B4NPFeLiHLlhxWa"
+    }
 ]
