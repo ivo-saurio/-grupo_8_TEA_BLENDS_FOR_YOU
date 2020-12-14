@@ -10,9 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+<<<<<<< HEAD
     "method-override": "^3.0.0",
+=======
+    "fs": "0.0.1-security",
+>>>>>>> b2b5af355156d09b99919c6c23f2bc551a05401a
     "nodemon": "^2.0.6",
     "path": "^0.12.7"
   }

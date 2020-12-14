@@ -8,6 +8,11 @@ module.exports = {
         //let arrayProductos = JSON.parse(productos)
         //return res.render('productdetail', {productosEnLaVista: arrayProductos})
         return res.send(productos)
-    }
+    },
+    productdetail: function(req, res){
+        return res.render('productdetail')},
+    productadd: function(req, res){
+        return res.render('productadd')}
+    
 }
 
