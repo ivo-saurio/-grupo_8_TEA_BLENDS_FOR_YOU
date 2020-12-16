@@ -5,5 +5,19 @@
         "surname": "Rawe",
         "email": "maxirawe@hotmail.com",
         "password": "$2b$12$0laKSDomEFYGFDI.71laUO.I6MmTQN6NSlDFm2B4NPFeLiHLlhxWa"
+    },
+    {
+        "id": 2,
+        "name": "Batman",
+        "surname": "Rawe",
+        "email": "batman@gmail.com",
+        "password": "$2b$12$whcqdPtX1LIWyvaC2BhpbOyRVgax8SElRmLQtDjJcg6irUlXJVQAC"
+    },
+    {
+        "id": 3,
+        "name": "Rufina",
+        "surname": "Rawe",
+        "email": "rufina@gmail.com",
+        "password": "$2b$12$sxdYAPc5DAVz0TpmGCED5.g6cPjtVw1QKxL2QSMK0vlC5fqj7mkH2"
     }
 ]
