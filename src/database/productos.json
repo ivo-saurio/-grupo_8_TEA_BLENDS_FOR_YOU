@@ -1,26 +1,30 @@
 [
     {
         "id": 1,
-        "nombre": "Box Small",
+        "name": "Box Small",
         "description": "Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados",
-        "items": "Pimienta De Jamaica, Bayas De Enebro, Hibiscus, Anis Estrellado, Flor Lavanda, Cascara De Naranja, y Cuchara Coctelera"
+        "items": "Pimienta De Jamaica, Bayas De Enebro, Hibiscus, Anis Estrellado, Flor Lavanda, Cascara De Naranja, y Cuchara Coctelera",
+        "price": "$2300"
     },
     {
         "id": 2,
-        "nombre": "Box Medium",
+        "name": "Box Medium",
         "description": "Nuestra Box Medium esta diseñada para aquellos fanaticos de la cocteleria, quienes entendienden que para ser irremplazables, primero deben buscar ser diferentes",
-        "items": "Pimienta Negra, Pimienta Rosa, Bayas De Enebro, Clavo De Olor, Anis Estrellado, Hibiscus, Cardamomo, Lavanda, Canela En Rama, Cuchara Coctelera y jigger"
+        "items": "Pimienta Negra, Pimienta Rosa, Bayas De Enebro, Clavo De Olor, Anis Estrellado, Hibiscus, Cardamomo, Lavanda, Canela En Rama, Cuchara Coctelera y jigger",
+        "price": "$4200"
     },
     {
         "id": 3,
-        "nombre": "Box Large",
+        "name": "Box Large",
         "description": "Entrena los sentidos disfrutando lo exotico, enfrentate a lo desconocido y demuestrale al mundo de que estas hecho ",
-        "items": "Pimienta Negra, Pimienta Rosa, Pimienta Verde, Pimienta de Jamaica, Pimienta Blanca, Canela en Rama, Bayas De Enebro, Anis Estrellado, Corteza De Citricos (4 Variedades), Rodajas De Citricos (4 variedades), Clavo De Olor, Cardamomo, Hibiscus, Lavanda, Jengibre, Cuchara Coctelera y Jigger"
+        "items": "Pimienta Negra, Pimienta Rosa, Pimienta Verde, Pimienta de Jamaica, Pimienta Blanca, Canela en Rama, Bayas De Enebro, Anis Estrellado, Corteza De Citricos (4 Variedades), Rodajas De Citricos (4 variedades), Clavo De Olor, Cardamomo, Hibiscus, Lavanda, Jengibre, Cuchara Coctelera y Jigger",
+        "price": "$5000"
     },
     {
         "id": 4,
-        "nombre": "Box Tea",
+        "name": "Box Tea",
         "description": "Para aquellos fanaticos de la hora del té, hemos seleccionado 5 variedades de tes importados de la mejor calidad, te invitamos a que descubras nuevos sabores combinando estas clasicas hebras con nuestros blends ",
-        "items": "Té Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor"
+        "items": "Té Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor",
+        "price": "$1900"
     }
 ]
