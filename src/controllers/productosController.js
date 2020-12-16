@@ -42,7 +42,13 @@ module.exports = {
     delete: function(req, res){
 
     },
-        
-    }
 
+    productdetail: function(req, res){
+        return res.render('productdetail')
+    },
+    
+    productadd: function(req, res){
+        return res.render('productadd')}
+    
+}
 

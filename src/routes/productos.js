@@ -32,14 +32,8 @@ router.put('/:id', productosController.sendedit);
 // Acción de borrado
 router.delete('/:id', productosController.delete);
 
+router.get('/productdetail', productosController.productdetail)
 
-
-
-
-
-
-
-
-
+router.get('/productadd', productosController.productadd)
 
 module.exports = router;
