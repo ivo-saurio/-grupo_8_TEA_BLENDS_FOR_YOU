@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-
+const path = require('path')
 const productosController = require('../controllers/productosController');
 
 var storage = multer.diskStorage({
@@ -25,11 +25,11 @@ router.get('/create', productosController.create);
 
 // 3. /products/ :id (GET)
 // Detalle de un producto particular
-router.get('/detalle/:idProducto/:categoria?', productosController.porId);
+router.get('/:idProducto/:categoria?', productosController.porId);
 
 // 4. /products (POST)
 // Acción de creación (a donde se envía el formulario)
-router.post('/', upload.any('image'), productosController.sendcreation);
+router.post('/create', upload.single('img'), productosController.sendcreation);
 
 // 5. /products/ :id /edit (GET)
 // Formulario de edición de productos
