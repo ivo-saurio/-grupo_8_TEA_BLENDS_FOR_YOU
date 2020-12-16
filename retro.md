@@ -1,51 +1,56 @@
-<!--- PRIMER RETROSPECTIVA 5/11/20 ---!>
+*<!--- PRIMER RETROSPECTIVA 5/11/20 ---!>*
 
-CONTINUAR HACIENDO: 
+*CONTINUAR HACIENDO:* 
 
-1- Dividir tareas;
-2- Compartir conocimientos;
-3- Buen compromiso;
-4- buena comunicación;
-5- buena predisposición;
+*1- Dividir tareas;*
+*2- Compartir conocimientos;*
+*3- Buen compromiso;*
+*4- buena comunicación;*
+*5- buena predisposición;*
 
-COSAS A MEJORAR:
+* - *
 
-1- Mejorar uso de la plataforma TRELLO;
+*COSAS A MEJORAR:*
 
+*1- Mejorar uso de la plataforma TRELLO;*
 
-DEJAR DE HACER:
+* - *
 
-1- Todo perfecto por ahora;
+*DEJAR DE HACER:*
 
-HACER MENOS:
+*1- Todo perfecto por ahora;*
 
-1- Todo perfecto por ahora;
+*HACER MENOS:*
 
-----------------------------------------------
-FECHA 26/11/2020
+*1- Todo perfecto por ahora;*
 
-CONTINUAR HACIENDO: 
+* - *
 
-1- Dividir tareas;
-2- Compartir conocimientos;
-3- Buen compromiso;
-4- buena comunicación;
-5- buena predisposición;
+*----------------------------------------------*
 
-COSAS A MEJORAR:
+*FECHA 26/11/2020*
 
-1- Mejorar uso de la plataforma TRELLO;
-2- Mejorar las vistas;
+*CONTINUAR HACIENDO:* 
 
-COMENZAR A HACER:
+*1- Dividir tareas;*
+*2- Compartir conocimientos;*
+*3- Buen compromiso;*
+*4- buena comunicación;*
+*5- buena predisposición;*
+* - *
+*COSAS A MEJORAR:*
 
-1- Implementar daily standup;
+*1- Mejorar uso de la plataforma TRELLO;*
+*2- Mejorar las vistas;*
+* - *
+*COMENZAR A HACER:*
 
+*1- Implementar daily standup;*
+* - *
+*DEJAR DE HACER:*
 
-DEJAR DE HACER:
+*1- Todo perfecto por ahora;*
+* - *
+*HACER MENOS:*
 
-1- Todo perfecto por ahora;
-
-HACER MENOS:
-
-1- Todo perfecto por ahora;
+*1- Todo perfecto por ahora;*
