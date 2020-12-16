@@ -15,9 +15,16 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage })
+
+
+
 // /products (GET)
 // Listado de productos
 router.get('/', productosController.todo);
+
+router.get('/productdetail', productosController.productdetail)
+
+router.get('/productadd', productosController.productadd)
 
 // 2. /products/create (GET)
 // Formulario de creación de productos
@@ -43,8 +50,6 @@ router.put('/:id', productosController.sendedit);
 // Acción de borrado
 router.delete('/:id', productosController.delete);
 
-router.get('/productdetail', productosController.productdetail)
 
-router.get('/productadd', productosController.productadd)
 
 module.exports = router;
