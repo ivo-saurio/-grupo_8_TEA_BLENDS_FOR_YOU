@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
 
 let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
 usuarios = JSON.parse(usuarios)
@@ -11,6 +11,8 @@ for(let i = 0; i < usuarios.length; i++) {
         ultimoId = usuarios[i].id
     }
 }
+
+
 
 module.exports = {
     
@@ -26,12 +28,16 @@ module.exports = {
                         name: req.body.name,
                         surname: req.body.surname,
                         email: req.body.email,
+                        avatar: req.file.filename,
                         password: bcrypt.hashSync(req.body.password, 12)
                 }
                 usuarios.push(nuevoUsuario)
                 fs.writeFileSync(path.join(__dirname,'../database/users.json'), JSON.stringify(usuarios, null, 4));
 
                 res.redirect('/')
+        },
+        perfil: function(req, res){
+        return res.render('perfil');
         }
     
 }

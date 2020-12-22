@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: "Iniciar Sesión"}) %>
+<body>
+    <div class="container">
+    
+        <%- include('partials/header') %>  
+
+    <div class="perfil">
+    <h1>Mi Perfil</h1>
+    
+    <form action="" method="POST">
+        
+        <div class="fotoPerfil"><img class="" src="/images/users/" alt=""></div>
+        <div class="name">
+        <label for="name"></label>
+        <input class="formulario" type="text" id="name" name="name" placeholder="Nombre"><br>
+        </div>
+        <div class="surname">   
+        <label for="surname"></label>
+        <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido"><br>
+        </div>
+        <div class="email">
+        <label for="email"></label>
+        <input class="formulario" type="email" id="email" name="email" placeholder="E-mail">
+        </div>
+        <div class="password">
+        <label for="password"></label>
+        <input class="formulario" type="password" placeholder="Cambiar tu contraseña" name="password" id="password"></div>
+        <div class="submit"><button class="btn" type="button">Guardar</button></div>
+        
+
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
