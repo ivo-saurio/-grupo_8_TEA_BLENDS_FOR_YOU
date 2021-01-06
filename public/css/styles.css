@@ -499,6 +499,22 @@ h2 {
         color: #7C0B2B;
     }
 
+/* --PERFIL-- */
+
+.perfil{
+    justify-content: space-between;
+}
+
+.fotoPerfil{
+    display: flex;
+    justify-content: center;
+}
+.fotoPerfil img{
+    width:200px;
+    height:200px;
+    border-radius:150px;
+}
+
 /* --FOOTER-- */
 
 .linea{

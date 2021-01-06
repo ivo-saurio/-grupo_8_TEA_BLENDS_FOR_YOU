@@ -82,3 +82,25 @@
 *HACER MENOS:*
 
 *1- Todo perfecto por ahora;*
+
+
+*SPRINT 5*
+
+*COSAS A MEJORAR:*
+
+*1- Mejorar las vistas;*
+*2- Dedicar mas tiempo al proyecto*
+*3- Juntarse mas seguido*
+
+* - *
+*COMENZAR A HACER:*
+
+*1- Implementar daily standup;*
+* - *
+*DEJAR DE HACER:*
+
+*1- Todo perfecto por ahora;*
+* - *
+*HACER MENOS:*
+
+*1- Todo perfecto por ahora;*
