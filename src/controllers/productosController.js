@@ -14,23 +14,23 @@ for(let i = 0; i < productos.length; i++) {
 
 
 module.exports = {
-    todo: function(req, res) {
+    listado: function(req, res) {
         return res.send(productos)
     },
 
     create: function(req, res){
-        return res.render ('productadd', {productosEnLaVista: productos})
+        return res.render ('create', {arrayProductos: productos})
     },
 
     porId: function(req, res){
-        for(let i = 0; i < arrayProductos.length; i++){
+        for(let i = 1; i < arrayProductos.length; i++){
             if(req.params.idProducto == arrayProductos[i].id){
                 if(req.params.categoria){
                     return res.send(arrayProductos[i].category)
                 } else{
-                    return res.send(arrayProductos[i])
-                }
-            }
+                    return res.send(arrayProductos[i],)
+                } 
+            } return res.render('productdetail')
         }
         return res.send("Este producto no existe")
     },
@@ -51,24 +51,18 @@ module.exports = {
 
     },
 
-    edit: function(req, res){
+    edit: (req, res) => {
+        res.render('edit')
+    }, 
 
-    },
 
     sendedit: function(req, res){
-
+            return res.redirect('/')
     },
 
     delete: function(req, res){
-
+        return res.redirect('/')
     },
-
-    productdetail: function(req, res){
-        return res.render('productdetail')
-    },
-    
-    productadd: function(req, res){
-        return res.render('productadd')}
     
 }
 

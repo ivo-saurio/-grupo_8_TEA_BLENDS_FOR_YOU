@@ -16,15 +16,14 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
+// 5. /products/ :id /edit (GET)
+// Formulario de edición de productos
+router.get('/:id/edit', productosController.edit);
 
-
-// /products (GET)
+// 1. /products (GET)
 // Listado de productos
-router.get('/', productosController.todo);
+router.get('/', productosController.listado);
 
-router.get('/productdetail', productosController.productdetail)
-
-router.get('/productadd', productosController.productadd)
 
 // 2. /products/create (GET)
 // Formulario de creación de productos
@@ -38,13 +37,10 @@ router.get('/:idProducto/:categoria?', productosController.porId);
 // Acción de creación (a donde se envía el formulario)
 router.post('/create', upload.single('img'), productosController.sendcreation);
 
-// 5. /products/ :id /edit (GET)
-// Formulario de edición de productos
-router.get('/:id/edit', productosController.edit);
 
 // 6. /products/ :id (PUT)
 // Acción de edición (a donde se envía el formulario):
-router.put('/:id', productosController.sendedit);
+router.put('/:id/', productosController.sendedit);
 
 // 7. /products/ :id (DELETE)
 // Acción de borrado
