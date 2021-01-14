@@ -2,45 +2,64 @@
 <html lang="en">
     <%- include('partials/head', {title: "Registrate"}) %>
 <body>
-    <div class="container">
-
     <%- include('partials/header') %>
-         
-
-        <div class="register">
-        <h2>Completá tus datos</h2>
-        
-
-        <form action="" method="POST" enctype="multipart/form-data">
-            <div class="name">
-            <label for="name"></label>
-            <input class="formulario" type="text" id="name" name="name" placeholder="Nombre"><br>
-            </div>
-            <div class="surname">   
-            <label for="surname"></label>
-            <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido"><br>
-            </div>
-            <div class="email">
-            <label for="email"></label>
-            <input class="formulario" type="email" id="email" name="email" placeholder="E-mail">
-            </div>
-            <div class="avatar">
-            <label for="avatar"></label>
-            <input class="avatar" type="file" id="avatar" name="avatar" placeholder="Imagen de perfil">
-            </div>      
-            <div class="password"> 
-            <label for="password"></label>
-            <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña"><br>
-            </div>
-            <div class="repassword">
-            <label for="repassword"></label>
-            <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña"><br>
-            </div>
-            <div class="formulario"><button class="btn2" type="submit">Crear Cuenta</button></div>
-
-        </form>
-            </div>
+    <div class="principalregister">
+       
+        <div class="imgregister">
+            <a href="/">
+                <img src="/images/logo-28.png" alt="">
+                </a>
         </div>
+    
+        <div class="register">
+            <h2>Registrate</h2>
+    
+            <form action="" method="POST">
+                <div class="name">
+                    <label for="name"></label>
+                    <input class="formulario" type="text" id="name" name="name" placeholder="Nombre"><br>
+                </div>
+
+                <div class="surname">   
+                    <label for="surname"></label>
+                    <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido"><br>
+                </div>
+
+                <div class="avatar">
+                        <label for="avatar"></label>
+                        <input class="avatar" type="file" id="avatar" name="avatar" placeholder="Imagen de perfil">
+                </div> 
+
+                <div class="email">
+
+                    <label for="email"></label>
+                    <input type="email" placeholder="Escribe tu email" name="email" id="email" >
+
+                </div>
+
+                <div class="password"> 
+                        <label for="password"></label>
+                        <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña"><br>
+                </div>
+
+                <div class="repassword">
+                        <label for="repassword"></label>
+                        <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña"><br>
+                </div>
+
+                
+
+                <div class="buttonregister">
+                    <button class="btn" type="submit">Iniciar Sesión</button>
+                
+                </div>
+            </form>     
+
+        </div>  
+
+
+    </div>
+        
         <%- include('partials/footer') %>
 </body>
 </html>

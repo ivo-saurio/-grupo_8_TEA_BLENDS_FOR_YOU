@@ -4,19 +4,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-
-
-body {
-    font-family: 'Bebas neue';   
-    background: linear-gradient(-45deg, #250902, #38040e, #7C0B2B, #0e131f);
-    background-size: 400% 400%; 
+    font-family: 'Bebas neue'; 
+   
     color:  #fafafa;
-    
 }
 
-.container {
+
+/*.container {
     width: 90%;
     max-width: 1000px;
     height: 100 vh; 
@@ -30,19 +24,16 @@ body {
 /* --HEADER-- */
 
 header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
-    padding: 0px 20px 0px 20px;
+    height: 8vh;
     align-content: center;
     align-items: center;
 }
-.logo {
-    width: 250px;  
-}
+
 header nav {
-    width: 80%;
+    width: 100%;
+    height: 8vh;
+    background-color: black;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -56,10 +47,8 @@ header nav a {
     font-size: 20px;
     color:  #fafafa;
     text-decoration:none;
-    padding: 20px;
     display: inline-block;
     border-right: 1px solid #fafafa;
-    border-left: 1px solid #fafafa;
 }
 header nav a:hover {
     background: #fafafa;
@@ -68,63 +57,84 @@ header nav a:hover {
 }
 
 /* --INDEX-- */
+.principal {
+    
+    height: 78vh;
+    background-image: url("/images/copa_gin_1.jpg");
+    background-position: center;
+    background-size: cover;
+  
+}
 
-.img {
-    width: 230px;
-    border-style: double;
+.logo {
+    width: 300px;
+    margin: auto;
     
 }
-.titulo {
-    text-align: center;
-    color: #fafafa;
+
+.imglogo {
+    width: 300px;
+    margin-top: 20px;
 }
 
-.degrades {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+.barraprincipal {
+    margin-top: 40px;
     width: 100%;
+    padding: 15px 0;
+    background-color: rgba(44, 44, 46, 0.6);
+    font-size: 65px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: center;
     align-items: center;
+    justify-content: space-around;
+    
+}
+/* --LOGIN-- */
+.principallogin {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    height: 78vh;
+    background-image: url("/images/te_4.jpeg");
+    background-position: center;
+    background-size: cover;
+    
+    
+  
 }
 
-/* --LOGIN-- */
 
 .login{
-    display: flex;
+    width: 40%;
+    background-color: rgba(44, 44, 46, 0.6);
+    display: inline-block;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin: auto;
+    justify-content: left;
+    border-radius: 10px;
     } 
 
-    .login h1{
-        color:#fafafa;
-        text-align: center;
-        padding: 20px;
-        font-size: 40px;
-
-    }
 
     .login form{
-        padding: 0 60px;
+        margin-top: 10px;
+        padding: 20px 60px;
         box-sizing: border-box;
         box-shadow: 0 0 10px grey;
+        border-radius: 10px;
     }
 
-    .login input[type="email"]{
+    .login input{
         margin: 30px 0;
         width: 100%;
         height: 32px;
         font-size: 15px;
         border-radius: 2px;
     }
-    .login input[type="password"]{
-        width: 100%;
-        height: 32px;
-        font-size: 15px;
-        border-radius: 2px;
-    }
+    
     .otp{
         position: relative;
         font-size: 14px;
@@ -132,14 +142,17 @@ header nav a:hover {
     .otp a{
         color: #fafafa;
     }
-    .submit{
-        padding: 20px;
+
+    .buttonlogin {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
 
     .btn {
-        padding: 20px;
-        width: 200px;
-        height: 60px;
+        margin-top: 17px;
+        padding: 5px;
+        width: 150px;
         background: none;
         border: 4px solid;
         box-shadow: 0 0 10px grey;
@@ -152,7 +165,14 @@ header nav a:hover {
 
     .btn:hover{
         background: #fafafa;
-        color: #7C0B2B;
+        color: #000000;
+    }
+    .imglogin {
+        display: inline-block;
+    }
+    .imglogin img {
+        width: 466px;
+        
     }
 
 /* --PRODUCT CART-- */
@@ -217,7 +237,7 @@ h3 {
     padding: 20px;
 }
 
-.btn {
+/*.btn {
     padding: 20px;
     width: 200px;
     height: 60px;
@@ -241,6 +261,19 @@ h3 {
 }
 
 /* --PRODUCT DEATAIL-- */
+
+.principaldetalle {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    height: 78vh;
+    background-image: url("/images/te_4.jpeg");
+    background-position: center;
+    background-size: cover;
+       
+}
 
 .general {
     display: flex;
@@ -422,7 +455,7 @@ h2 {
         top: 10px;
     }
 
-    button {
+   /* button {
         width: 192px;
         height: 29px;
         background-color: rgba(50, 34, 192, 0.1);
@@ -439,50 +472,62 @@ h2 {
 
 /* --REGISTER-- */
 
-.register {
+.principalregister {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    height: 78vh;
+    background-image: url("/images/copa_gin_2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.imgregister {
+    display: inline-block;
+}
+.imgregister img {
+    width: 466px;
+    
 }
 
-    h2 {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        color:#fafafa;
-        font-size: 45px;
-    }
-    
+.register{
+    width: 40%;
+    background-color: rgba(44, 44, 46, 0.6);
+    display: inline-block;
+    flex-direction: column;
+    justify-content: left;
+    border-radius: 10px;
+    } 
 
-    .formulario {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center; 
-         margin: 20px auto;
-         height: 32px;
-         font-size: 15px;
-         border-radius: 2px;
-             
-    }
-        
+
     .register form{
-        padding: 0 100px;
+        margin-top: 10px;
+        padding: 20px 60px;
         box-sizing: border-box;
         box-shadow: 0 0 10px grey;
-    }
-    
-    .avatar{
-        margin: 30px auto;
+        border-radius: 10px;
     }
 
-    .btn2 {
-        padding: 20px;
-        width: 200px;
-        height: 60px;
+    .register input{
+        margin: 5px 0;
+        width: 100%;
+        height: 32px;
+        font-size: 15px;
+        border-radius: 2px;
+    }
+    
+
+    .buttonregister {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .btn {
+        margin-top: 17px;
+        padding: 5px;
+        width: 150px;
         background: none;
         border: 4px solid;
         box-shadow: 0 0 10px grey;
@@ -491,13 +536,15 @@ h2 {
         text-transform: uppercase;
         cursor: pointer;
         font-size: 16px;
-        margin: -30px;
     }
 
-    .btn2:hover{
+    .btn:hover{
         background: #fafafa;
-        color: #7C0B2B;
+        color: #000000;
     }
+
+
+    
 
 /* --PERFIL-- */
 
@@ -516,19 +563,14 @@ h2 {
 }
 
 /* --FOOTER-- */
-
-.linea{
-    border-top: 2px inset #fafafa;
-    width: 80%;
-    margin: auto;
-}
-
 footer {
+    height: 14vh;
+    background-color: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
-    padding: 0px 20px 0 20px;
+    
+    padding: 7px 60px 0 60px;
     justify-content: space-between;
     margin: auto;  
 }
@@ -550,9 +592,9 @@ footer {
     color:rgb(42, 1, 4);
 }
 
+
 .flex4 {
         display: flex;
-        padding: 50px;
         flex-direction: column;
         list-style-type: none;
         align-content: center;
@@ -569,12 +611,12 @@ footer {
 
 
 
-@media(max-width: 940px) {
+/*@media(max-width: 940px) {
 .container {
     width: 100%;
 }
 /*---HEADER---*/
-header nav {
+/*header nav {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -589,12 +631,12 @@ header nav a {
 
 /*--LOGIN--*/
 
-.login{
+/*.login{
     width: max-content;
 }
 
 /*--PRODUCT CART--*/
-.cart{
+/*.cart{
     display: flex;
     flex-direction: column;
 }
@@ -610,7 +652,7 @@ header nav a {
 
 /*--PRODUCT DETAIL--*/ 
 
-.conteiner {
+/*.conteiner {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -629,7 +671,8 @@ header nav a {
 
 /*--FOOTER--*/
 
-footer{
+/*footer{
+    background-color: black;
     width: 100%;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -640,9 +683,9 @@ footer ul {
     justify-content: center;
 }   
 }
-@media(max-width: 460px) {
+/*@media(max-width: 460px) {
 /*--HOME--*/
-.degrades {
+/*.degrades {
     justify-content: space-around;
 }
 
@@ -651,9 +694,3 @@ footer ul {
 
 
 /*--FOOTER--*/
-
-footer ul{
-    text-align: center;
- }
- 
-}
