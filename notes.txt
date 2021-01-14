@@ -114,3 +114,13 @@
             <div class="formulario"><button class="btn2" type="submit">Crear Cuenta</button></div>
 
         </form>
+
+
+
+
+
+
+
+        box-shadow: 0 0 10px grey;
+        border-radius: 10px;
+         background-color: rgba(44, 44, 46, 0.6);
