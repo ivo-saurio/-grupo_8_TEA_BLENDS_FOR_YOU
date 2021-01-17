@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path')
 const productosController = require('../controllers/productosController');
+const loginMiddleware = require('../middlewares/loginMiddleware');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -16,14 +17,16 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-// 5. /products/ :id /edit (GET)
-// Formulario de edición de productos
-router.get('/:id/edit', productosController.edit);
+router.get('/productdetail', loginMiddleware, productosController.detalle)
 
 // 1. /products (GET)
 // Listado de productos
-router.get('/', productosController.listado);
+router.get('/', loginMiddleware, productosController.listado);
 
+
+// 5. /products/ :id /edit (GET)
+// Formulario de edición de productos
+router.get('/:id/edit', productosController.edit);
 
 // 2. /products/create (GET)
 // Formulario de creación de productos
