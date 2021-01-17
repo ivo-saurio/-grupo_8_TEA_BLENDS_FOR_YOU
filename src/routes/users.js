@@ -1,10 +1,12 @@
 //  ENRUTADOR USERS //
 
-//const path = require('path');
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const usersController = require('../controllers/usersController');
+const registerValidator = require('../validators/registerValidator');
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -18,14 +20,12 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 
-const usersController = require('../controllers/usersController')
-
 router.get('/login', usersController.login)
 
 router.get('/productcart', usersController.productcart)
 
 router.get('/register', usersController.register)
-router.post('/register', upload.single('avatar'), usersController.create)
+router.post('/register', upload.single('avatar'), registerValidator,  usersController.create)
 
 router.get('/perfil', usersController.perfil)
 
