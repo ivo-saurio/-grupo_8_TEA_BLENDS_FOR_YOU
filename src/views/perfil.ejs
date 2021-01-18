@@ -5,13 +5,22 @@
     <div class="container">
     
         <%- include('partials/header') %>  
-
-    <h1>Mi Perfil</h1>
-    <div class="perfil">
+      
     
+
+    <div class="perfil">  
+        <div class="imgregister">
+            <a href="/">
+                <img src="/images/logo-28.png" alt="">
+                </a>
+        </div>    
+    
+        <div class="perfilForm">
     <form action="" method="POST">
         
-        <div class="fotoPerfil"><img class="" src="" alt=""></div>
+        <h1>Mi Perfil</h1>
+        <div class="fotoPerfil"><img class="" src="/images/te_1.jpeg" alt=""></div>
+        <div class="formPerfil">
         <div class="name">
         <label for="name"></label>
         <input class="formulario" type="text" id="name" name="name" placeholder="Nombre">
@@ -28,8 +37,9 @@
         <label for="password"></label>
         <input class="formulario" type="password" placeholder="Cambiar tu contraseña" name="password" id="password"></div>
         <div class="submit"><button class="btn" type="button">Guardar</button></div>
+        </div>
+    </div>
         
-
     </div>
     <%- include('partials/footer') %>
 </body>

@@ -27,7 +27,7 @@ router.get('/productcart', loginMiddleware, usersController.productcart)
 router.get('/register', usersController.register)
 router.post('/register', upload.single('avatar'), usersController.create)
 
-router.get('/perfil', loginMiddleware, usersController.perfil)
+router.get('/perfil', usersController.perfil)
 
 
 module.exports = router;
