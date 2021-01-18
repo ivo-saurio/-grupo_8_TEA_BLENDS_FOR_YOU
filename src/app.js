@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require ("method-override");
+const session = require('express-session')
 
 const app = express();
 
@@ -22,11 +23,14 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(methodOverride("_method"));
+app.use(session ({secret: 'sarasa'}));
 
 //RECURSOS
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/productos', productosRouter)
+
+
 
 app.listen(process.env.PORT || 3000, function(){
     console.log('Servidor corriendo en el puerto 3000');

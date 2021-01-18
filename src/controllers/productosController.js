@@ -17,6 +17,9 @@ module.exports = {
     listado: function(req, res) {
         return res.send(productos)
     },
+    detalle: function(req, res){
+        return res.send('productDetail')
+    },
 
     create: function(req, res){
         return res.render ('create', {arrayProductos: productos})
