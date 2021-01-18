@@ -4,8 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Bebas neue'; 
-   
+    font-family: 'Bebas neue';
     color:  #fafafa;
 }
 
@@ -92,6 +91,32 @@ header nav a:hover {
     justify-content: space-around;
     
 }
+
+@media (max-width: 320px){
+    .imglogo {
+        width: 200px;
+    }
+    .barraprincipal {
+        font-size: 40px;
+        
+    }
+    footer {
+        padding: 0px 0px 0px 0px;
+    }
+
+    
+
+    footer a {
+        font-size: 10px;
+    }
+
+    .flex3 li a {
+        padding: 0px 0px 0px 0px;
+    }
+    
+
+}
+
 /* --LOGIN-- */
 .principallogin {
     display: flex;
