@@ -516,16 +516,14 @@ h3 {
     border-radius:150px;
 }
 .imgPerfil img {
-    width: 466px;
-    background-color: green;
-    
+    width: 466px;    
 }
 
 .perfilForm {
     width:40%;
 }
-
 .perfil form{
+    background-color: rgba(44, 44, 46, 0.6);
     margin-top: 10px;
     padding: 20px 60px;
     box-sizing: border-box;
