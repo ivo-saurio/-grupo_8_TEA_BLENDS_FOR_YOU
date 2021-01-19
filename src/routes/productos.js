@@ -17,11 +17,11 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-router.get('/productdetail', loginMiddleware, productosController.detalle)
+//router.get('/productdetail',loginMiddleware, productosController.detalle) //loginMiddleware
 
 // 1. /products (GET)
 // Listado de productos
-router.get('/', loginMiddleware, productosController.listado);
+router.get('/catalogo',  productosController.listado); //loginMiddleware *AGREGAR DESPUES*
 
 
 // 5. /products/ :id /edit (GET)

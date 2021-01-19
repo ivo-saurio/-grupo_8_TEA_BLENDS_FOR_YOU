@@ -15,7 +15,7 @@ for(let i = 0; i < productos.length; i++) {
 
 module.exports = {
     listado: function(req, res) {
-        return res.send(productos)
+        return res.render('catalogo')
     },
     detalle: function(req, res){
         return res.send('productDetail')
