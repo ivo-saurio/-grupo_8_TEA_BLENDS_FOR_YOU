@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="/css/catalogo.css">
     <%- include('partials/head', {title: "Catalog"}) %>
 <body>
     <%- include('partials/header') %>  
-    <div class="principallogin">
+    <div class="principalcatalogo">
+
+        <div class="contenedorProducto">
+            
+            <div class="imgContenedorProducto">
+                <img src="/images/box_medium_abierta.jpeg" alt="">
+            </div> 
+
+            <div class="descContenedorProducto">
+                <h2>Producto</h2>
+                <p class="descCp">Esta es la pequeña descripcion del producto</p>
+                <p class="precio">$2500</p>
+                <button class="btnCatalogo">Seguir viendo</button>
+                <button class="btnCatalogo">Agregar al Carrito</button>
+            </div>
+        </div>
     
-        <div class="boxSmall">
-
-        </div>
-
-        <div class="boxMedium">
-
-        </div>
-
-        <div class="boxLarge">
-
-        </div>
-
-        <div class="boxTea"></div>
+        
         
     </div>
     <%- include('partials/footer') %>

@@ -7,17 +7,47 @@
     
         <div class="login">
             <h2>Iniciar Sesión</h2>
+            <% if(typeof errors != 'undefined') { %>
+                <p style="color: black">ERROR</p>
+                <ul>
+                    <% for(let i = 0; i < errors.length; i++) { %>
+                        <li>
+                            <%= errors[i].msg %>
+                        </li>     
+                        
+                        <% } %>
+                </ul>
+            
+                <% } %>
     
-            <form action="" method="POST">
+            <form action="/users/login" method="POST">
         
              <div class="email">
+
              <label for="email"></label>
-             <input class="formulario" type="email" placeholder="Escribe tu email" name="email" id="email" > </div>
+             <input class="formulario" type="email" placeholder="Escribe tu email" name="email" id="email" > 
+            
+            </div>
+
              <div class="password">
+
              <label for="password"></label>
-             <input class= "formulario" type="password" placeholder="Escribe tu contraseña" name="password" id="password"></div>
-             <div class="otp"><a href="#">¿Olvidaste tu contraseña?</a></div>
-             <div class="buttonlogin"><button class="btn" type="submit">Iniciar Sesión</button></div>
+             <input class= "formulario" type="password" placeholder="Escribe tu contraseña" name="password" id="password">
+            
+            </div>
+
+             <div class="otp">
+                 
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            
+            </div>
+             
+            <div class="buttonlogin">
+                
+                <button class="btn" type="submit">Iniciar Sesión</button>
+            
+            </div>
+
             </form>     
 
         </div>

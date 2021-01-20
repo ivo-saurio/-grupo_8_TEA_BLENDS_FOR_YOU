@@ -19,6 +19,13 @@
         "surname": "Rawe",
         "email": "rufina@gmail.com",
         "password": "$2b$12$sxdYAPc5DAVz0TpmGCED5.g6cPjtVw1QKxL2QSMK0vlC5fqj7mkH2"
+    },
+    {
+        "id": 3,
+        "name": "ivan",
+        "surname": "muñoz",
+        "email": "ivan@gmail.com",
+        "password": "123456789"
     }
     
 ]

@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const {check, validationResult, body} = require('express-validator')
 
 let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
-usuarios = JSON.parse(usuarios)
+let usuariosJson = JSON.parse(usuarios)
+
 
 let ultimoId = 0;
 for(let i = 0; i < usuarios.length; i++) {
@@ -17,7 +19,29 @@ for(let i = 0; i < usuarios.length; i++) {
 module.exports = {
     
         login: function(req, res){
-        return res.render('login')},
+                return res.render('login')
+        
+        },
+        processLogin: function(req, res) {
+            let errors = validationResult(req);
+            
+            if  (errors.isEmpty()){
+                let usuarioYaLogeado;
+                for (let i = 0; i< usuariosJson.length; i++) {
+                    if (usuariosJson[i].email == req.body.email){
+                        if (usuariosJson[i].password == req.body.password) {
+                            usuarioYaLogeado = usuariosJson[i];
+                            req.session.usuarioYaLogeado = usuariosJson
+                            return res.redirect('/')
+                        } else {
+                            return res.redirect("/users/login")
+                        }
+                    }  
+                } 
+            } else {return res.redirect('/users/login')}
+        },
+        
+
         productcart: function(req, res){
         return res.render('productcart')},
         register: function(req, res){

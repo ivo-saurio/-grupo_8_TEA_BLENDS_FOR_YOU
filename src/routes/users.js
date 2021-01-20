@@ -6,6 +6,8 @@ const multer = require('multer');
 const path = require('path');
 const usersController = require('../controllers/usersController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
+const {check, validationResult, body} = require('express-validator')
+
 
 
 var storage = multer.diskStorage({
@@ -19,15 +21,22 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-
+//RUTA AL LOGIN
 router.get('/login', usersController.login)
+
+//RUTA PARA GUARDAR UN LOGIN
+router.post('/login',[
+    check('email').isEmail().withMessage('Email Invalido'),
+    check('password').isLength({min:8}).withMessage('La contraseña debe tener minimo de 8 caracteres'),
+],usersController.processLogin)
 
 router.get('/productcart', loginMiddleware, usersController.productcart)
 
 router.get('/register', usersController.register)
-router.post('/register', upload.single('avatar'), usersController.create)
 
-router.get('/perfil', loginMiddleware, usersController.perfil)
+router.post('/register', loginMiddleware ,upload.single('avatar'), usersController.create)
+
+router.get('/perfil', usersController.perfil)
 
 
 module.exports = router;
