@@ -2,28 +2,40 @@
 <html lang="en">
 <%- include('partials/head', {title: "Carrito de Compras"}) %>
 <body>
-    <div class="container">
-    
-        <%- include('partials/header') %> 
-          
-    <div class="carrito">
-
-    <h1>Tu Carrito</h1>
-    <div class="cart">
-        <div class="cartImg">
-        <img src="/images/boc_large_cerrada.jpeg" alt=""><p>Lorem ipsum dolor sit amet.</p> </div><!--Link del producto-->
-        <div class="cartCantidad">
-        <label for="cantidad">Cantidad:</label>
-        <!-- <button type="button">-</button>--><input id="cantidad" name="cantidad" type="number"min="0" max="100" value="Cantidad:"></div><!--<button type="button">+</button>-->
-        <p>$1000</p>
-    </div>
-        <h3>Subtotal $1000</h3> 
-        <div class="fin"><button class='btn' type="submit">Comprar</button></div>
-        <div class="seguir"><button class='btn' type="submit">Seguir Comprando</button></div>
-    </div>
-       
-    <%- include('partials/footer') %>
+    <%- include('partials/header') %> 
+    <div class="containerCart">
         
-</div>    
+        <section class="containerProductAdd">
+            <h1>Tu carrito</h1>
+      
+          
+        <div class="productCart">
+            <div class="cartImg">
+                <img src="/images/boc_large_cerrada.jpeg" alt="">
+             </div>
+            
+            <div class="productCartDetail">
+                <h2>Nombre del producto</h2>
+                <p>$2500</p>
+                <label for="cantidad">Cantidad:</label>
+                <input id="cantidad" name="cantidad" type="number"min="0" max="100" value="Cantidad:">
+            
+            </div>    
+        </div>    
+
+        </section>
+        <section class="bill">
+        <div class="billCart">
+            <p>Total $2500</p>
+            <p>Descuento 20%</p>
+            <p>Total con descuento $2000</p>
+           
+        </div>
+          
+        </section>
+    
+        
+    </div>    
+    <%- include('partials/footer') %>
 </body>
 </html>

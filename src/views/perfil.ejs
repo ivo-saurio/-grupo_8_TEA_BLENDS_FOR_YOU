@@ -2,44 +2,46 @@
 <html lang="en">
     <%- include('partials/head', {title: "Iniciar Sesión"}) %>
 <body>
-    <div class="container">
-    
-        <%- include('partials/header') %>  
-      
-    
-
-    <div class="perfil">  
+    <%- include('partials/header') %> 
+    <div class="containerProfile">
+        
         <div class="imgregister">
             <a href="/">
                 <img src="/images/logo-28.png" alt="">
                 </a>
         </div>    
     
-        <div class="perfilForm">
-    <form action="" method="POST">
+
+        <div class="perfil">  
+            
         
-        <h1>Mi Perfil</h1>
-        <div class="fotoPerfil"><img class="" src="/images/te_1.jpeg" alt=""></div>
-        <div class="formPerfil">
-        <div class="name">
-        <label for="name"></label>
-        <input class="formulario" type="text" id="name" name="name" placeholder="Nombre">
-        </div>
-        <div class="surname">   
-        <label for="surname"></label>
-        <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido">
-        </div>
-        <div class="email">
-        <label for="email"></label>
-        <input class="formulario" type="email" id="email" name="email" placeholder="E-mail">
-        </div>
-        <div class="password">
-        <label for="password"></label>
-        <input class="formulario" type="password" placeholder="Cambiar tu contraseña" name="password" id="password"></div>
-        <div class="submit"><button class="btn" type="button">Guardar</button></div>
-        </div>
-    </div>
+                <form action="" method="POST">
+            
+                 <h2 class="titulo">Mi Perfil</h2>
+                <div class="fotoPerfil">
+                    <img class="" src="/images/te_1.jpeg" alt="">
+                </div>
+                <div class="formPerfil">
+                <div class="name">
+                 <label for="name"></label>
+                <input class="formulario" type="text" id="name" name="name" placeholder="Nombre">
+                </div>
+                <div class="surname">   
+                <label for="surname"></label>
+                <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido">
+                </div>
+                <div class="email">
+                <label for="email"></label>
+                <input class="formulario" type="email" id="email" name="email" placeholder="E-mail">
+                </div>
+                <div class="password">
+                <label for="password"></label>
+                <input class="formulario" type="password" placeholder="Cambiar tu contraseña" name="password" id="password"></div>
+                <div class="submit"><button class="btn" type="button">Guardar</button></div>
+                </div>
         
+            
+        </div>
     </div>
     <%- include('partials/footer') %>
 </body>

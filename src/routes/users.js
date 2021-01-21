@@ -30,7 +30,8 @@ router.post('/login',[
     check('password').isLength({min:8}).withMessage('La contraseña debe tener minimo de 8 caracteres'),
 ],usersController.processLogin)
 
-router.get('/productcart', loginMiddleware, usersController.productcart)
+//agregar middleware delogin retirada***
+router.get('/productcart',  usersController.productcart)
 
 router.get('/register', usersController.register)
 
