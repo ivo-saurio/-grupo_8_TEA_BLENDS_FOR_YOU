@@ -12,7 +12,7 @@ const {check, validationResult, body} = require('express-validator')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../../public/img/users'));
+        cb(null, path.join(__dirname, '../../public/images/users'));
     },
     filename: function (req, file, cb) {
         cb(null, req.body.email + path.extname(file.originalname))
@@ -35,7 +35,7 @@ router.get('/productcart',  usersController.productcart)
 
 router.get('/register', usersController.register)
 
-router.post('/register', loginMiddleware ,upload.single('avatar'), usersController.create)
+router.post('/register', upload.single('avatar'), usersController.create)
 
 router.get('/perfil', usersController.perfil)
 

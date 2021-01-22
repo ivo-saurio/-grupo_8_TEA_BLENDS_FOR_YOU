@@ -13,7 +13,6 @@ const app = express();
 const mainRouter = require('./routes/main');
 const productosRouter = require('./routes/productos');
 const usersRouter = require('./routes/users')
-const loginMiddleware = require('./middlewares/loginMiddleware')
 
 //VIEW ENGINE SETUP
 app.set('view engine', 'ejs');

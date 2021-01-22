@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const {check, validationResult, body} = require('express-validator')
 
 let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
-let usuariosJson = JSON.parse(usuarios)
+usuarios = JSON.parse(usuarios)
 
 
 let ultimoId = 0;
