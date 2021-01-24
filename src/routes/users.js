@@ -25,10 +25,7 @@ var upload = multer({ storage: storage })
 router.get('/login', usersController.login)
 
 //RUTA PARA GUARDAR UN LOGIN
-router.post('/login',[
-    check('email').isEmail().withMessage('Email Invalido'),
-    check('password').isLength({min:8}).withMessage('La contraseña debe tener minimo de 8 caracteres'),
-],usersController.processLogin)
+router.post('/login',usersController.processLogin)
 
 //agregar middleware delogin retirada***
 router.get('/productcart',  usersController.productcart)
