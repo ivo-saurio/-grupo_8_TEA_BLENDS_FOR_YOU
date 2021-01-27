@@ -13,5 +13,13 @@
         "email": "maxirawe@hotmail.com",
         "avatar": "undefined.jfif",
         "password": "$2b$12$wfXQ0FNvIAzshhXI0yc7A..fhLfMVN7t0ZHGu2FpIspm1OWGd135q"
+    },
+    {
+        "id": 5,
+        "name": "ivo",
+        "surname": "muñoz",
+        "email": "ivan@gmail.com",
+        "avatar": "undefined.jpeg",
+        "password": "$2b$12$E0cov2cujnwGesYZD7QhM.dfnF1YmpibdM9/ed4MGh4T9k69zbQrO"
     }
 ]
