@@ -214,6 +214,11 @@ header nav a:hover {
     display: inline-block;
 }
 
+.containerProductAdd h1{
+    text-align: center;
+    font-size: 50px;
+}
+
 .productCart{
     box-shadow: 0 0 10px grey;
     border-radius: 10px;
@@ -506,6 +511,8 @@ footer {
     display: flex;
     list-style-type: none;
     align-items: center;
+    flex-direction: column;
+    align-self: center;
 
 }
 .flex3 li a {
@@ -515,18 +522,16 @@ footer {
     padding: 20px;
     display: inline-block;
 }
-.flex3 li a:hover {
-    background: #fafafa;
-    color:rgb(42, 1, 4);
+.flex3 i:hover{
+    color: #07ff8b;
 }
-
 
 .flex4 {
         display: flex;
         flex-direction: column;
         list-style-type: none;
-        align-content: center;
-
+        align-self: center;
+        
     }
     
     .flex4 li a {
