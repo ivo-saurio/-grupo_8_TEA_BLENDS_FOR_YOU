@@ -22,16 +22,6 @@ Box tea:
 
 ● ¿Quienes somos?
 
-Nombre: Nicolas Sac
-Edad: 36 Años
-Profesion: Preparador Fisico
-
-
-Nombre: Luca Finochio
-Edad: 24 Años
-Profesion: comerciante
-
-
 Nombre y apellido: Iván Muñoz
 Edad: 27 años 
 Ocupación: Cajero

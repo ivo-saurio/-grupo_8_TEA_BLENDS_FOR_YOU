@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path')
 const productosController = require('../controllers/productosController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
+const adminMidleware = require('../middlewares/adminMidleware')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -22,33 +23,23 @@ var upload = multer({ storage: storage })
 // 1. /products (GET)
 // Listado de productos
 router.get('/catalogo',  productosController.listado); //loginMiddleware *AGREGAR DESPUES*
+router.get('/cart', loginMiddleware, productosController.cart);
 
+// 2. /productos/create (GET) Formulario de creación de productos
+router.get('/create',  productosController.create); //adminMidleware,
 
-// 5. /products/ :id /edit (GET)
-// Formulario de edición de productos
-router.get('/:id/edit', productosController.edit);
+// 4. /productos/create (POST) Acción de creación (a donde se envía el formulario) 
+router.post ("/", upload.any(), productosController.productCreate);
+// 5. /productos/ :id /edit (GET) Formulario de edición de productos
+router.get('/:id/edit', productosController.productEdit); //adminMidleware,
+// 6. /productos/ :id (PUT) Acción de edición (a donde se envía el formulario): 
+router.put('/:id/edit', productosController.edit) //adminMidleware,
 
-// 2. /products/create (GET)
-// Formulario de creación de productos
-router.get('/create', productosController.create);
+router.post('/:id', productosController.save)
+// 7. /productos/ :id (DELETE) Acción de borrado
+router.delete('/:id/delete', productosController.delete) //adminMidleware,
 
-// 3. /products/ :id (GET)
-// Detalle de un producto particular
-router.get('/:idProducto/:categoria?', productosController.porId);
-
-// 4. /products (POST)
-// Acción de creación (a donde se envía el formulario)
-router.post('/create', upload.single('img'), productosController.sendcreation);
-
-
-// 6. /products/ :id (PUT)
-// Acción de edición (a donde se envía el formulario):
-router.put('/:id/', productosController.sendedit);
-
-// 7. /products/ :id (DELETE)
-// Acción de borrado
-router.delete('/:id', productosController.delete);
-
-
+// 3. /productos/ :id (GET) Detalle de un producto particular
+router.get('/:id', productosController.productDetail);
 
 module.exports = router;

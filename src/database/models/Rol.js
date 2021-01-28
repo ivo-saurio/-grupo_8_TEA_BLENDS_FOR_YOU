@@ -1,4 +1,4 @@
-odule.exports = function(sequelize, dataTypes) {
+module.exports = function(sequelize, dataTypes) {
     let alias = "Rol";
     let cols = {
         id: {
@@ -13,7 +13,7 @@ odule.exports = function(sequelize, dataTypes) {
         },
          }
          let config = {
-            tableName: 'roles',
+            tableName: 'rol',
             timestamps: false,
         }
 

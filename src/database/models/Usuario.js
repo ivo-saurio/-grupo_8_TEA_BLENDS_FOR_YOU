@@ -29,7 +29,7 @@ let cols = {
     },
 }
 let config = {
-    tableName: 'usuarios',
+    tableName: 'usuario',
     timestamps: false
 }
 

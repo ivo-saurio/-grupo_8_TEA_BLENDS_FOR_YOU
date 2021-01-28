@@ -1,43 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url("https://use.fontawesome.com/releases/v5.15.1/css/all.css");
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-.conteiner {
+.principal{
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 30px;
-    height: 78vh;
-    background-image: url("/images/te_4.jpeg");
-    background-position: center;
-    background-size: cover;
-   
-       
-}  
-
-
-.agregar{
-    display: flex;
-    flex-direction: column;
-  
-
-    } 
-
-.agregar h2 {
-    
-    color:white;
-    text-align: center;
-    
+    height: 72vh;
 }
 
-.agregar form{
-    height: 90%;
-    padding: 5px;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px grey;
+.edit-form{
+    background-color: rgba(80, 00, 20,0.1);
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+    margin-top: 25px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+
 }
+
+.principal-container-right-title{
+    font-size: 20px;            
+    margin-bottom: 15px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 550;
+}
+
+input{
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px;
+    width: 95%;  
+
+}
+
+
+
+.subir-imagen{
+    border-radius: 5px;
+    border: none;
+}
+
+.selector-categorias{
+    border: none;
+    margin: 5px;
+    font-size: 15px;
+    border-color: grey;
+    border-radius: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+.crear-producto-input{
+    font-weight: 550;
+    font-size: 18px;
+    margin-top: 25px;
+                
+}
+
