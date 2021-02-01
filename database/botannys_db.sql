@@ -1,0 +1,1 @@
+SELECT * FROM botannys_db.usuarios;

@@ -15,6 +15,10 @@ let cols = {
         type: dataTypes.STRING,
         notNull: true
     },
+    avatar: {
+        type: dataTypes.STRING,
+        alowNull: true
+    },
     email: {
         type: dataTypes.STRING,
         notNull: true
@@ -25,22 +29,23 @@ let cols = {
     },
     id_rol: {
         type: dataTypes.INTEGER,
-        notNull: true
+        alowNull: true
     },
 }
 let config = {
-    tableName: 'usuario',
-    timestamps: false
+    tableName: 'usuarios',
+    timestamps: false,
+    underscored: true
 }
 
 const Usuario = sequelize.define(alias, cols, config);
 
 Usuario.associate = function(models) {
 
-    Usuario.belongsTo(models.Rol, {
-        as: 'usuarioEsRol',
-        foreignKey: 'id_rol'
-    })
+   Usuario.belongsTo(models.Rol, {
+    as: 'usuarioEsRol',
+    foreignKey: 'id_rol'
+  })
 
 }
 

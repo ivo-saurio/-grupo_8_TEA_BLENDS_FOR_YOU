@@ -1,19 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const db = require('../database/models')
 const {check, validationResult, body} = require('express-validator')
-
-let usuarios = fs.readFileSync(path.join(__dirname, '../database/users.json'), 'utf8');
-usuarios = JSON.parse(usuarios)
-
-
-let ultimoId = 0;
-for(let i = 0; i < usuarios.length; i++) {
-    if(ultimoId < usuarios[i].id) {
-        ultimoId = usuarios[i].id
-    }
-}
-
 
 
 module.exports = {
@@ -44,24 +33,31 @@ module.exports = {
 
         productcart: function(req, res){
         return res.render('productcart')},
+        
         register: function(req, res){
         return res.render('register')},
+        
         create: function(req, res){
-                let nuevoUsuario = {
-                        id: ultimoId + 1,
+                db.Usuario.create({
                         name: req.body.name,
                         surname: req.body.surname,
                         email: req.body.email,
                         avatar: req.file.filename,
                         password: bcrypt.hashSync(req.body.password, 12)
-                }
-                usuarios.push(nuevoUsuario)
-                fs.writeFileSync(path.join(__dirname,'../database/users.json'), JSON.stringify(usuarios, null, 4));
-
-                res.redirect('/')
+                })
+                .then(function(usuarioCreado){
+                    res.redirect('/')
+                })
+               
         },
         perfil: function(req, res){
         return res.render('perfil')
+        },
+        editarPerfil: function(req, res){
+
+        },
+        perfilEditado: function(req, res){
+
         }
     
 }
