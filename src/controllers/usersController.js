@@ -46,18 +46,60 @@ module.exports = {
                         password: bcrypt.hashSync(req.body.password, 12)
                 })
                 .then(function(usuarioCreado){
-                    res.redirect('/')
+                    res.render('users/perfil/' + usuarioCreado.id)
                 })
                
         },
         perfil: function(req, res){
-        return res.render('perfil')
+            db.Usuario.findByPk(req.params.id, {
+                include: {
+                    all: true,
+                    nested: true
+                }
+            }) 
+        .then(function(miPerfil) {
+
+        return res.render('perfil', {
+            miPerfil:miPerfil
+        })
+            })
         },
         editarPerfil: function(req, res){
+            db.Usuario.findByPk(req.params.id, {
+                include: {
+                    all:true,
+                    nested: true
+                }
+            })
+            .then(function(miPerfil){
+                res.render('perfil', {
+                    miPerfil: miPerfil
+                })
+            })
 
+         },
+        perfilEditar: function(req,res){
+            db.Usuario.findByPk(req.params.id)
+            .then(function(miPerfil) {
+                res.render('perfil', {miPerfil:miPerfil})
+            })
         },
         perfilEditado: function(req, res){
-
+            db.Usuario.update({
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.body.email,
+                avatar: req.file.filename,
+                password: bcrypt.hashSync(req.body.password, 12)
+        },
+        {
+            where: {
+                id:req.params.id
+            }
+        })
+        .then(function(usuarioCreado){
+            res.redirect('/perfil/' + usuarioCreado.id)
+        })
         }
     
 }

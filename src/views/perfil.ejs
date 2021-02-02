@@ -19,20 +19,20 @@
             
                  <h2 class="titulo">Mi Perfil</h2>
                 <div class="fotoPerfil">
-                    <img class="" src="/images/te_1.jpeg" alt="">
+                    <img class="" src="/public/images/box_large.jpeg" alt="" value="">
                 </div>
                 <div class="formPerfil">
                 <div class="name">
                  <label for="name"></label>
-                <input class="formulario" type="text" id="name" name="name" placeholder="Nombre">
+                <input class="formulario" type="text" id="name" name="name" value="<%= miPerfil.name %>">
                 </div>
                 <div class="surname">   
                 <label for="surname"></label>
-                <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido">
+                <input class="formulario" type="text" id="surname" name="surname" value="<%= miPerfil.surname %>">
                 </div>
                 <div class="email">
                 <label for="email"></label>
-                <input class="formulario" type="email" id="email" name="email" placeholder="E-mail">
+                <input class="formulario" type="email" id="email" name="email" value="<%= miPerfil.email %>">
                 </div>
                 <div class="password">
                 <label for="password"></label>
