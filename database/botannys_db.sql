@@ -19,6 +19,11 @@
 -- Table structure for table `categorias`
 --
 
+DROP DATABASE IF EXISTS botannys_db;
+CREATE DATABASE botannys_db;
+USE botannys_db;
+
+
 DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
