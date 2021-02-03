@@ -17,7 +17,7 @@ let cols = {
     },
     avatar: {
         type: dataTypes.STRING,
-        alowNull: true
+        notNull: false
     },
     email: {
         type: dataTypes.STRING,

@@ -36,8 +36,8 @@ router.post('/register', upload.single('avatar'), usersController.create)
 
 router.get('/perfil/:id', usersController.perfil)
 
-router.get('/perfil/edit', usersController.perfilEditar)
-router.post('/perfil/edit', usersController.perfilEditado)
+router.get('/perfil/edit/:id', usersController.perfilEditar)
+router.post('/perfil/edit/:id', usersController.perfilEditado)
 
 
 module.exports = router;
