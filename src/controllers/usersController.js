@@ -46,20 +46,15 @@ module.exports = {
                         password: bcrypt.hashSync(req.body.password, 12)
                 })
                 .then(function(usuarioCreado){
-                    res.render('users/perfil/' + usuarioCreado.id)
+                    res.redirect('/users/perfil/' + usuarioCreado.id)
                 })
                
         },
         perfil: function(req, res){
             db.Usuario.findByPk(req.params.id, {
-                include: {
-                    all: true,
-                    nested: true
-                }
             }) 
         .then(function(miPerfil) {
-
-        return res.render('perfil', {
+            res.render('perfil', {
             miPerfil:miPerfil
         })
             })
