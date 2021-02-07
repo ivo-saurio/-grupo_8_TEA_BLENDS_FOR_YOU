@@ -59,7 +59,7 @@ header nav a:hover {
 .principal {
     
     height: 78vh;
-    background-image: url("/images/copa_gin_1.jpg");
+    background-image: url("http://sevilla.abc.es/contenidopromocionado/wp-content/uploads/sites/2/2019/07/portada-wp-ginebras.jpeg");
     background-position: center;
     background-size: cover;
   
@@ -94,20 +94,14 @@ header nav a:hover {
 
 @media (max-width: 320px){
     .imglogo {
-        width: 200px;
+        width: 300px;
     }
     .barraprincipal {
         font-size: 40px;
         
     }
     footer {
-        padding: 0px 0px 0px 0px;
-    }
-
-    
-
-    footer a {
-        font-size: 10px;
+        padding: 5px;
     }
 
     .flex3 li a {
@@ -116,6 +110,34 @@ header nav a:hover {
     
 
 }
+
+@media (max-width: 768px){
+   
+    footer {
+        padding: 5px;
+    }
+}
+
+@media (min-width: 769px){
+    .imglogo {
+        width: 350px;
+    }
+
+    footer {
+        padding : 10px 
+    }
+}
+
+@media (min-width: 1440px){
+    .imglogo {
+        width: 362px;
+        margin: auto;
+    }
+    footer {
+        padding : 10px 
+    }
+}
+
 
 /* --LOGIN-- */
 .principallogin {
@@ -502,8 +524,6 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    padding: 7px 60px 0 60px;
     justify-content: space-between;
     margin: auto;  
 }

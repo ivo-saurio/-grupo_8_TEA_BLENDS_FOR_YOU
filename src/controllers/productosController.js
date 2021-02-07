@@ -5,12 +5,12 @@ const path = require('path')
 module.exports = {
 
     listado: function(req, res) {
-      db.Producto.findAll()
-      .then(function(productos){
-        return res.render('catalogo', {
-          productos : productos
-        })
-      })
+      //db.Producto.findAll()
+      //.then(function(productos){
+        return res.render('catalogo')//, {
+          //productos : productos
+        //})
+      //})
         
     },
 
@@ -18,11 +18,7 @@ module.exports = {
         res.render('create')
         },  
 
-      productDetail : function(req, res, next) {
-          let detalle = req.params.id;
-  
-          res.render('productDetail', {productos : productos[detalle]})
-        },
+      
       
         productEdit : (req, res, next) => {
           res.render ("edit")
@@ -79,7 +75,13 @@ module.exports = {
         }).then(function(){
           res.redirect('catalogo')
         })
-        }
+        },
+
+        productDetail : function(req, res) {
+          let detalle = req.params.id;
+  
+          res.render('productdetail', {productos : productos[detalle]})
+        },
   }
   
 
