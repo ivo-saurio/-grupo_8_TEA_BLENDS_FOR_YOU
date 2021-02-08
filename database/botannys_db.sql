@@ -19,11 +19,6 @@
 -- Table structure for table `categorias`
 --
 
-DROP DATABASE IF EXISTS botannys_db;
-CREATE DATABASE botannys_db;
-USE botannys_db;
-
-
 DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -54,17 +49,19 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `productos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
+  `image` varchar(100) NOT NULL,
   `description` text NOT NULL,
-  `img` varchar(45) NOT NULL,
-  `id_categoria` int(11) DEFAULT NULL,
+  `size` varchar(45) NOT NULL,
+  `price` decimal(10,0) NOT NULL,
+  `id_categorias` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`),
-  KEY `FK_CATEGORIASID` (`id_categoria`),
-  CONSTRAINT `FK_CATEGORIASID` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `id_categorias_idx` (`id_categorias`),
+  CONSTRAINT `id_categorias` FOREIGN KEY (`id_categorias`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,6 +70,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (2,'prueba','image.jpeg','Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados','prueba',1500,NULL);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +109,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `surname` varchar(45) NOT NULL,
-  `avatar` varchar(45) DEFAULT NULL,
+  `avatar` varchar(100) DEFAULT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(100) NOT NULL,
   `id_rol` int(11) DEFAULT NULL,
@@ -121,7 +119,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `avatar_UNIQUE` (`avatar`),
   KEY `FK_ROLID` (`id_rol`),
   CONSTRAINT `FK_ROLID` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -130,7 +128,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL),(10,'Bob','Esponja','1a23fa7f-3263-4c3d-85e5-5115e58c36f1.png','bob@gmail.com','$2b$12$9tGpO.MslE..Zq7YMXn7w.85/722p1wri2sJgv',NULL),(11,'Batman','Rawe','411db55a-0c59-4b12-8a3c-b8fac214049e.jpg','batman@gmail.com','$2b$12$rE4iwVuLSxyxhTVeOsZwAuagGuQNVJ7qx.0M/j',NULL),(12,'barman','tevez','9340c0e3-7533-4198-900a-833c42603987.jpg','batmaan@gmail.com','$2b$12$31CEE7qgfTSVVASSsCcpdu6puPJXby9dEbze1k',NULL),(13,'barman','tevez','40fad4d2-a348-40eb-b9a2-e8e9b02a432b.jpg','batmaaan@gmail.com','$2b$12$3sJ0WjiBA.z9NIUN4ay/euHlQ.gk8fwBmRRVea',NULL),(14,'Maxi Rawe','jorgito','b694c430-db3d-401e-8a8f-93583ca8efd6.jpeg','maxirawee@hotmail.com','$2b$12$39IUmmBj7bOOtuuecwLVMO4Hwfb/6azIpoGLWD',NULL),(15,'hola','prueba','e9d08cbc-e55e-4239-bc9f-c38a62c068af.jpg','prueba@hotmail.com','$2b$12$TCaf8Y1Sdn4XcqJh7btCcOd5vmDvn5ie/6iRcZ',NULL),(16,'prueba','dos','f9b79cf4-7d8a-4514-ad26-8847f6b003a1.jpg','prueba2@gmail.com','$2b$12$6B5FwIpnJ9K3bBCdkbUN5eqS//a76xIcmhqtFs',NULL),(17,'Masi','dos','b15d2f95-16f0-4393-aa7d-0fab5ac8bf43.png','masi@gmail.com','$2b$12$0rx1VUM5uZ3xKGGxndOAYeFLYMQl2nwd0Qp9Ad',NULL),(19,'nombre','apellido','f21bbc1e-bec5-4013-852f-bbadfffd00fb.png','email@email.com','$2b$12$Cl2xtbBv2e8AFtc2ijDGMeO02PWp6iel3DWVMU',NULL),(20,'jajajja','ajajajaj','e3ce10e7-b2bf-40cc-8355-8ee58738bfcf.png','asinfaos@gdlksnd.com','$2b$12$w7kZNmDXzF2Cmwy6AbCKhOnXWEkE.INihsRrVR',NULL),(21,'carlos','tevez','1cbce7f1-d8b4-4a5d-a7d3-d56d8cf01d11.png','carlitos@gmail.com','$2b$12$6xH/XfZ4yR.4iK.kBQYXNuDLJfWwoW5Mo20zLj',NULL);
+INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-02 21:41:31
+-- Dump completed on 2021-02-07 22:21:42

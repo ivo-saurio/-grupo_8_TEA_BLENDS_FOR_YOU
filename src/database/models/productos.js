@@ -17,11 +17,19 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.STRING,
             notNull: true
         },
-        img: {
+        image: {
             type: dataTypes.STRING,
             notNull: true
         },
-        id_categoria: {
+        size: {
+            type: dataTypes.STRING,
+            notNull: true
+        },
+        price: {
+             type: dataTypes.INTEGER,
+             notNull: true
+        },
+        id_categorias: {
             type:dataTypes.INTEGER,
             notNull: true
         }
@@ -37,8 +45,8 @@ module.exports = function(sequelize, dataTypes){
 
     Producto.associate = function(models){
         Producto.belongsTo(models.Categoria, {
-            as: 'categoriaDePelicula',
-            foreignKey: 'id_categoria'
+            as: 'categoriaProducto',
+            foreignKey: 'id_categorias'
         })
 
     }

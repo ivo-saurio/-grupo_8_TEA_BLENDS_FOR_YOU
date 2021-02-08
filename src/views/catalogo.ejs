@@ -8,67 +8,19 @@
     <div class="principalcatalogo">
 
         <div class="contenedorProducto">
-            
-            <div class="imgContenedorProducto">
-                <img src="/images/box_medium_abierta.jpeg" alt="">
-            </div> 
-
-            <div class="descContenedorProducto">
-                <h2>Producto</h2>
-                <p class="descCp">Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados</p>
-                
-            </div>
-            <button class="btnCatalogo">Más Info</button>
-        </div>
-
-        <div class="contenedorProducto">
-            
-            <div class="imgContenedorProducto">
-                <img src="/images/box_medium_abierta.jpeg" alt="">
-            </div> 
-
-            <div class="descContenedorProducto">
-                <h2>Producto</h2>
-                <p class="descCp">Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados</p>
-                
-                
-            </div>
-            <button class="btnCatalogo">Más Info</button>
-        </div>
-
-        <div class="contenedorProducto">
-            
-            <div class="imgContenedorProducto">
-                <img src="/images/box_medium_abierta.jpeg" alt="">
-            </div> 
-
-            <div class="descContenedorProducto">
-                <h2>Producto</h2>
-                <p class="descCp">Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados</p>
-                
-                
-            </div>
-            <button class="btnCatalogo">Más Info</button>
-        </div>
-
-        <div class="contenedorProducto">
-            
-            <div class="imgContenedorProducto">
-                <img src="/images/box_medium_abierta.jpeg" alt="">
-            </div> 
-
-            <div class="descContenedorProducto">
-                <h2>Producto</h2>
-                <p class="descCp">Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados</p>
-                
-                
-            </div>
-            <a href="/productdetail/">
-            <button class="btnCatalogo">Más Info</button>
-            </a>
-        </div>
-    
-        
+            <section class="cards">
+                <% for(let i = 0; i < productos.length; i++) {%>
+                    <article>
+                        <div class="imgContenedorProducto">
+                            <img src="/images/box_medium_abierta.jpeg" alt="">
+                        </div> 
+                        <h2><%= productos[i].name %></h2>
+                        <p class="descCp"><%= productos[i].description %> </p>
+                        <a href="/productos/<%= productos[i].id %>"><button class="btnCatalogo">Mas info</button></a>
+                    </article>
+                <% } %>
+            </section>
+        </div>        
         
     </div>
     <%- include('partials/footer') %>

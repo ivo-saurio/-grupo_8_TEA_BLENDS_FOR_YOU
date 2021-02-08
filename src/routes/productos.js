@@ -2,17 +2,17 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const path = require('path')
+const path = require('path');
 const productosController = require('../controllers/productosController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
 const adminMidleware = require('../middlewares/adminMidleware')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../../public/img'));
+        cb(null, path.join(__dirname, '../../public/images/products'));
     },
     filename: function (req, file, cb) {
-        cb(null, req.body.descripcion + path.extname(file.originalname))
+        cb(null, file.fieldname + path.extname(file.originalname))
     }
 })
 
@@ -29,7 +29,7 @@ router.get('/cart', loginMiddleware, productosController.cart);
 router.get('/create',  productosController.create); //adminMidleware,
 
 // 4. /productos/create (POST) Acción de creación (a donde se envía el formulario) 
-router.post ("/", upload.any(), productosController.productCreate);
+router.post ('/create', upload.single('image'), productosController.productCreate);
 // 5. /productos/ :id /edit (GET) Formulario de edición de productos
 router.get('/:id/edit', productosController.productEdit); //adminMidleware,
 // 6. /productos/ :id (PUT) Acción de edición (a donde se envía el formulario): 
