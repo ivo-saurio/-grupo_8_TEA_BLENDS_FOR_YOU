@@ -24,14 +24,14 @@
 
 header {
     width: 100%;
-    height: 8vh;
+    height: 10vh;
     align-content: center;
     align-items: center;
 }
 
 header nav {
     width: 100%;
-    height: 8vh;
+    height: 10vh;
     background-color: black;
     display: flex;
     flex-wrap: nowrap;
@@ -55,10 +55,21 @@ header nav a:hover {
     
 }
 
+.homelogo :hover {
+    color: black;
+    
+}
+
+.alogo {
+    width: 65px;
+}
+
+
+
 /* --INDEX-- */
 .principal {
     
-    height: 78vh;
+    height: 82vh;
     background-image: url("http://sevilla.abc.es/contenidopromocionado/wp-content/uploads/sites/2/2019/07/portada-wp-ginebras.jpeg");
     background-position: center;
     background-size: cover;
@@ -92,40 +103,41 @@ header nav a:hover {
     
 }
 
-@media (max-width: 320px){
+.barraprincipal a {
+    font-size: 60px;
+}
+
+@media (min-width: 320px){
     .imglogo {
         width: 300px;
     }
-    .barraprincipal {
-        font-size: 40px;
-        
-    }
-    footer {
-        padding: 5px;
-    }
 
+    .barraprincipal a {
+        font-size: 30px;
+    }
     .flex3 li a {
         padding: 0px 0px 0px 0px;
     }
-    
-
-}
-
-@media (max-width: 768px){
-   
-    footer {
-        padding: 5px;
+    header nav a {
+    font-size: 16px;
     }
+    .alogo {
+        width: 40px;
+    }
+
 }
 
-@media (min-width: 769px){
+
+
+@media (min-width: 768px){
     .imglogo {
         width: 350px;
     }
-
-    footer {
-        padding : 10px 
+    .barraprincipal a {
+        font-size: 40px;
     }
+
+    
 }
 
 @media (min-width: 1440px){
@@ -133,9 +145,7 @@ header nav a:hover {
         width: 362px;
         margin: auto;
     }
-    footer {
-        padding : 10px 
-    }
+    
 }
 
 
@@ -146,7 +156,7 @@ header nav a:hover {
     justify-content: space-around;
     align-items: center;
     padding-top: 30px;
-    height: 78vh;
+    height: 82vh;
     background-image: url("/images/te_4.jpeg");
     background-position: center;
     background-size: cover;
@@ -211,13 +221,30 @@ header nav a:hover {
         background: #fafafa;
         color: #000000;
     }
-    .imglogin {
-        display: inline-block;
+
+    @media(min-width: 320px){
+        .principallogin{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .imglogin img {
+            width: 20px;
+        }
+        .login {
+            width: 90%;
+        }
     }
-    .imglogin img {
-        width: 466px;
+    
+    @media(min-width: 768px){
         
     }
+    
+    @media(min-width: 1024px){
+        
+    }
+    
+    
+
 
 /* --PRODUCT CART-- */
 .containerCart {
@@ -519,47 +546,67 @@ header nav a:hover {
 
 /* --FOOTER-- */
 footer {
-    height: 14vh;
+    width: 100%;
+    height: 8vh;
+    align-content: center;
+    align-items: center;
+}
+
+footer nav {
+    width: 100%;
+    height: 8vh;
     background-color: black;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;  
-}
-.flex3 {
-    display: flex;
     list-style-type: none;
+    text-align: center;
     align-items: center;
-    flex-direction: column;
-    align-self: center;
-
+    justify-content: space-between;   
 }
-.flex3 li a {
+footer nav a {
+    flex-grow: 1;
     font-size: 20px;
-    color: #fafafa;
+    color:  #fafafa;
     text-decoration:none;
     display: inline-block;
+    border-right: 1px solid #fafafa;
 }
-.flex3 i:hover{
-    color: #07ff8b;
+footer nav a:hover {
+    background: #fafafa;
+    color:rgb(42, 1, 4);
+    
 }
 
-.flex4 {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        align-self: center;
-        
-    }
+.linklogo :hover {
+    color: black;
     
-    .flex4 li a {
-        font-size: 20px;
-        color:#fafafa;
-        text-decoration: none;
-        padding: 20px;
-        display: inline-block;
+}
+
+.alink {
+    width: 265px;
+}
+
+@media (min-width : 320px) {
+    .alink {
+        width: 30px;
     }
+    footer nav a {
+        flex-grow: 1;
+        font-size: 13px;
+     }
+
+}
+
+@media (min-width : 768px){
+    .alink {
+        width: 100px;
+    }
+    footer nav a {
+        flex-grow: 1;
+        font-size: 20px;
+     }
+}
 
 
 

@@ -3,67 +3,110 @@
     margin: 0;
     padding: 0;
 }
-.principal{
+.principalEdit{
     display: flex;
-    height: 72vh;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 78vh;
+    background-image: url("/images/copa_gin_2.jpg");
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .edit-form{
-    background-color: rgba(80, 00, 20,0.1);
-    width: 80%;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px 15px;
-    margin-top: 25px;
-    margin: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(44, 44, 46, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px grey;
+    margin: 10px;
+    height: 90%;
+    width: 45%;
+    padding: 20px;
     border-radius: 5px;
-
+    
 
 }
 
-.principal-container-right-title{
-    font-size: 20px;            
-    margin-bottom: 15px;
-}
-
-label{
-    font-size: 16px;
-    font-weight: 550;
+.edit-form h2 {
+    font-size: 30px;
 }
 
 input{
+    
     border: none;
-    border-radius: 5px;
-    font-size: 15px;
+    border-radius: 25px;
+    font-size: 16px;
     margin: 5px;
-    width: 95%;  
-
+    width: 95%;
+    padding: 7px;
+    color:#000000
+    
+}
+.name {
+    margin-top: 8px;
 }
 
-
-
-.subir-imagen{
-    border-radius: 5px;
-    border: none;
+.opciones {
+    color: #000000;
+    appearance: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+   
+  .opciones option {
+      color: #000000;
+}
+ 
+  input #file-upload-button {
+      color: brown;
+      margin-left: 10px;
 }
 
-.selector-categorias{
-    border: none;
-    margin: 5px;
-    font-size: 15px;
-    border-color: grey;
-    border-radius: 5px;
+  textarea {
+      color: #000000;
+      width: 95%;
+      height: 60px;
+      border-radius: 25px;
+      padding: 8px;
+      overflow: hidden;
 }
 
-li {
-    list-style: none;
+.buttonEdit {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-.crear-producto-input{
-    font-weight: 550;
-    font-size: 18px;
-    margin-top: 25px;
-                
+.btn:hover{
+    background: #fafafa;
+    color: #000000;
 }
 
+@media(min-width: 320px){
+    .edit-form{
+        width: 90%;
+    }
+    input {
+        height: 27px;
+    }
+}
+
+@media(min-width: 768px){
+    .edit-form{
+        width: 70%;
+    }
+    input {
+        height: 27px;
+    }
+}
+
+@media(min-width: 1024px){
+    .edit-form{
+        width: 60%;
+    }
+    input {
+        height: 27px;
+    }
+}

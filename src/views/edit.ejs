@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head', {title: "Editar producto"}) %>
-<link rel="stylesheet" href="/css/edit.css">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Editar</title>
+</head>
 <body>
+     
     <main>
-        <%- include('partials/header') %> 
+        <%- include('partials/header') %>
+<div class="principalEdit">
 
-        <div class="principal">
-            
-            <div class="edit-form"> 
-                <h4 class="principal-container-right-title">Editar producto</h4>
+    <div class="edit-form">
+        <h2>Editar un producto</h2>
 
-                <form action="/productos" method="PUT" enctype="multipart/form-data" >
-                <ul>
-                    <li>
-                    <label for="name">Nombre: <br></label>
-                    <input type="text" id="name" name="nombre">
-                    </li>
+        <form action="" method="POST" enctype="multipart/form-data">
+           
 
-                    <li>
-                    <label for="text">Descripcion: <br></label>
-                    <input type="textarea" id="Description" name="Description">
-                    </li>
-
-                    <li>
-                    <label for="imagen">Imagen: <br></label>
-                    <input type="file" id="imagen" name="upload file" class="subir-imagen">
-                    </li>
-
-                    <li>
-                    <label for="categoria">Categoria: <br></label>
-                    <select name="categoria" id="categoria" class="selector-categorias">
-                        <option value="">Promociones</option>
-                        <option value="">Cervezas</option>
-                        <option value="">Vinos</option>
-                        <option value="">Espumantes</option>
-                        <option value="">Aperitivos</option>
-                        <option value="">Espirituosas</option>
-                    </select>
-                    </li>
-
-                    <li>
-                    <label for="brand">Marca: <br></label>
-                    <input type="text" id="brand" name="brand">
-                    </li>
-                    
-                    <li>
-                    <label for="price">Precio: <br></label>
-                    <input type="number" id="price" name="price" min="1.0" max="100000.00">
-                    </li>
-
-                    <li>
-                    <input type="submit" value="Editar producto" class="crear-producto-input">    
-                    </li>
-
+            <div class="name">
+                    <input type="name" placeholder="Nombre del Producto" name="name" id="name">      
+            </div>
+      
     
+            <div class="Tamaño">
+                <input type="text" placeholder="Tamaño" name="size" id="size">
+            </div>
 
-                </ul>
+            <div class="precio">
+                <input type="number" placeholder="Precio" name="price" id="price">
+            </div>
 
+            <div class="categoria">
+                
+                <select class="opciones">
+                    <option selected disabled>-- Seleccione una opción --</option>
+                    <option>Tea</option>
+                    <option>Gin</option>    
+                  </select>
+            </div>
 
+            <div class="imagen">
+                <input class= 'image' type="file" placeholder="Editar imagen" name="image" id="image">
+            </div>
 
+            <div class="descripcion">
+                    <textarea id="description" name="description" minlength="20" maxlength="2000" placeholder="Descripción del producto">
 
-                </form>
-            </div>    
+                    </textarea>
+            </div>
+            <div class="buttonEdit">
+                
+                <button class="btn" type="submit">Editar</button>
 
-
-        </div>
-
-
-          
-        <%- include('partials/footer') %>
+                <button class="btn" type="submit">Eliminar</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
     </main>
+    <%- include('partials/footer') %>
 </body>
+</html>

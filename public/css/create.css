@@ -97,33 +97,30 @@ input{
     color: #000000;
 }
 
-
-
-@media (max-width: 768px){
-    .create-form {
+@media(min-width: 320px){
+    .create-form{
         width: 90%;
-        height: 95%;
     }
-
     input {
-        height: 25px;
-    }
-    textarea {
-        height: 50px;
+        height: 27px;
     }
 }
 
-@media (max-width: 1440px){
-    .create-form {
-        width: 66%;
-        height: 95%;
+@media(min-width: 768px){
+    .create-form{
+        width: 70%;
     }
-
     input {
-        height: 25px;
-        margin-bottom: 20px;
-    }
-    textarea {
-        height: 50px;
+        height: 27px;
     }
 }
+
+@media(min-width: 1024px){
+    .create-form{
+        width: 60%;
+    }
+    input {
+        height: 27px;
+    }
+}
+
