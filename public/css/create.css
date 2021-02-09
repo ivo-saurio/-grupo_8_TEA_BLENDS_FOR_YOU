@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.principalCreate{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 78vh;
+    background-image: url("/images/copa_gin_2.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.create-form{
+    background-color: rgba(44, 44, 46, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px grey;
+    margin: 10px;
+    height: 90%;
+    width: 45%;
+    padding: 20px;
+    border-radius: 5px;
+    
+
+}
+
+.create-form h2 {
+    font-size: 30px;
+}
+
+input{
+    
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 5px;
+    width: 95%;
+    padding: 7px;
+    color:#000000
+    
+}
+.name {
+    margin-top: 8px;
+}
+
+.opciones {
+    color: #000000;
+    appearance: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+   
+  .opciones option {
+      color: #000000;
+  }
+ 
+  input #file-upload-button {
+      color: brown;
+      margin-left: 10px;
+  }
+
+  textarea {
+      color: #000000;
+      width: 95%;
+      height: 60px;
+      border-radius: 25px;
+      padding: 8px;
+  }
+
+.buttonCreate {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 17px;
+    padding: 5px;
+    width: 150px;
+    background: none;
+    border: 4px solid;
+    box-shadow: 0 0 10px grey;
+    color: #fafafa;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background: #fafafa;
+    color: #000000;
+}
+
+
+
+@media (max-width: 768px){
+    .create-form {
+        width: 90%;
+        height: 95%;
+    }
+
+    input {
+        height: 25px;
+    }
+    textarea {
+        height: 50px;
+    }
+}
+
+@media (max-width: 1440px){
+    .create-form {
+        width: 66%;
+        height: 95%;
+    }
+
+    input {
+        height: 25px;
+        margin-bottom: 20px;
+    }
+    textarea {
+        height: 50px;
+    }
+}

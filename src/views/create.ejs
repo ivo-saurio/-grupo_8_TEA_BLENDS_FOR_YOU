@@ -3,48 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/edit.css">
+    <link rel="stylesheet" href="/css/create.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Agregar</title>
 </head>
 <body>
-    <%- include('partials/header') %> 
+     
     <main>
-    <div class="principal">
+        <%- include('partials/header') %>
+<div class="principalCreate">
 
-    <div class="edit-form">
+    <div class="create-form">
         <h2>Agregar un producto</h2>
 
         <form action="" method="POST" enctype="multipart/form-data">
            
-          <div class="imagen">
-                <input class= 'image' type="file" placeholder="Agregar imagen" name="image" id="image"></div>
 
-          <div class="name">
-                    <input type="name" placeholder="Nombre del Producto" name="name" id="name"></div>
+            <div class="name">
+                    <input type="name" placeholder="Nombre del Producto" name="name" id="name">      
+            </div>
       
-            <div class="categoria">
-                <input type="text" placeholder="Categoría" name="id_category" id="id_category"></div>
     
             <div class="Tamaño">
-                <input type="text" placeholder="Tamaño" name="size" id="size"></div>
+                <input type="text" placeholder="Tamaño" name="size" id="size">
+            </div>
 
             <div class="precio">
-                <input type="number" placeholder="Precio" name="price" id="price"></div>
+                <input type="number" placeholder="Precio" name="price" id="price">
+            </div>
+
+            <div class="categoria">
+                
+                <select class="opciones">
+                    <option selected disabled>-- Seleccione una opción --</option>
+                    <option>Tea</option>
+                    <option>Gin</option>    
+                  </select>
+            </div>
+
+            <div class="imagen">
+                <input class= 'image' type="file" placeholder="Agregar imagen" name="image" id="image">
+            </div>
 
             <div class="descripcion">
-                    <textarea id="description" name="description" minlength="20" maxlength="2000" placeholder="Descripción del producto"></textarea>
+                    <textarea id="description" name="description" minlength="20" maxlength="2000" placeholder="Descripción del producto">
 
-            <div class="btn">
-                <button class="button" type="submit">Agregar</button>
+                    </textarea>
+            </div>
+            <div class="buttonCreate">
+                <button class="btn" type="submit">Agregar</button>
             </div>
             
-            
-            </div>
         </form>
     </div>
-    </div>
-    <%- include('partials/footer') %>
+</div>
     </main>
+    <%- include('partials/footer') %>
 </body>
 </html>
