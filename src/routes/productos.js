@@ -31,13 +31,12 @@ router.get('/create',  productosController.create); //adminMidleware,
 // 4. /productos/create (POST) Acción de creación (a donde se envía el formulario) 
 router.post ('/create', upload.single('image'), productosController.productCreate);
 // 5. /productos/ :id /edit (GET) Formulario de edición de productos
-router.get('/:id/edit', productosController.productEdit); //adminMidleware,
+router.get('/edit/:id', productosController.productEdit); //adminMidleware,
 // 6. /productos/ :id (PUT) Acción de edición (a donde se envía el formulario): 
-router.put('/:id/edit', productosController.edit) //adminMidleware,
+router.post('/edit/:id', productosController.save) //adminMidleware,
 
-router.post('/:id', productosController.save)
 // 7. /productos/ :id (DELETE) Acción de borrado
-router.delete('/:id/delete', productosController.delete) //adminMidleware,
+router.delete('/edit/:id', productosController.delete) //adminMidleware,
 
 // 3. /productos/ :id (GET) Detalle de un producto particular
 router.get('/:id', productosController.productDetail);

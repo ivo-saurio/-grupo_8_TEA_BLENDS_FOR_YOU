@@ -20,16 +20,16 @@
            
 
             <div class="name">
-                    <input type="name" placeholder="Nombre del Producto" name="name" id="name">      
+                    <input type="name" name="name" id="name" value="<%= productoEditado.name %> ">      
             </div>
       
     
             <div class="Tamaño">
-                <input type="text" placeholder="Tamaño" name="size" id="size">
+                <input type="text" name="size" id="size" value="<%= productoEditado.size %> " >
             </div>
 
             <div class="precio">
-                <input type="number" placeholder="Precio" name="price" id="price">
+                <input type="number" name="price" id="price" value="<%= productoEditado.price %> ">
             </div>
 
             <div class="categoria">
@@ -46,7 +46,7 @@
             </div>
 
             <div class="descripcion">
-                    <textarea id="description" name="description" minlength="20" maxlength="2000" placeholder="Descripción del producto">
+                    <textarea id="description" name="description" minlength="20" maxlength="2000" value="<%= productoEditado.description %> ">
 
                     </textarea>
             </div>

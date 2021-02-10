@@ -30,26 +30,27 @@ module.exports = {
     res.redirect('/')
 })
         },  
-
+     
       
-      
-        productEdit : (req, res, next) => {
-          res.render ("edit")
-        },
-
-        edit :  function(req, res) {
-          db.Producto.findByPk(req.params.id)
-          .then(function(productoEditado){
-            res.render('catalogo', {productoEditado: productoEditado})
+    productEdit : function(req, res) {
+      db.Producto.findByPk(req.params.id, {
+        include: {
+        all:true,
+        nested:true
+        }
           })
-        }, 
+          .then(function(productoEditado){
+            res.render('edit', {productoEditado: productoEditado})
+          })
+        },
 
         save: function(req, res){
           db.Producto.update({
           name: req.body.name,
           description: req.body.description,
           img: req.body.imagen,
-          id_categoria: req.body.category
+          size: req.body.size,
+          price: req.body.price
           
           },
           {
@@ -74,7 +75,7 @@ module.exports = {
           }
         })
         .then(function(){
-          res.redirect('catalogo')
+          res.redirect('/')
         })
       }, 
       
