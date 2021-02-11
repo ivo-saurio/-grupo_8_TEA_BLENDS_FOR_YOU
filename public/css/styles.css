@@ -155,9 +155,8 @@ header nav a:hover {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    padding-top: 30px;
     height: 82vh;
-    background-image: url("/images/te_4.jpeg");
+    background-image: url("https://www.bacanal.com.ar/wp-content/uploads/2014/01/i3525-te-portada.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -180,21 +179,27 @@ header nav a:hover {
         box-shadow: 0 0 10px grey;
         border-radius: 10px;
     }
-
-    .login input{
+    
+    .inlogin {
         margin: 30px 0;
         width: 100%;
         height: 32px;
         font-size: 15px;
         border-radius: 2px;
+        color: #000000;
     }
-    
+
     .otp{
         position: relative;
         font-size: 14px;
     }
     .otp a{
         color: #fafafa;
+    }
+
+    .remember {
+        width: 10px;
+        height: 10px;
     }
 
     .buttonlogin {
@@ -223,24 +228,28 @@ header nav a:hover {
     }
 
     @media(min-width: 320px){
-        .principallogin{
+        .login{
             display: flex;
             flex-wrap: wrap;
-        }
-        .imglogin img {
-            width: 20px;
-        }
-        .login {
             width: 90%;
+        }
+
+        .login form{
+            margin-top: 10px;
+            padding: 20px 20px;
         }
     }
     
     @media(min-width: 768px){
-        
+        .login{
+            width: 60%;
+        }
     }
     
     @media(min-width: 1024px){
-        
+        .login{
+            width: 30%;
+        }
     }
     
     
@@ -249,7 +258,7 @@ header nav a:hover {
 /* --PRODUCT CART-- */
 .containerCart {
     width: 100%;
-    height: 78vh;
+    height: 82vh;
     display: flex;
     justify-content: space-evenly;
     padding: 20px 20px;
@@ -277,9 +286,12 @@ header nav a:hover {
     flex-wrap: nowrap;
     padding: 10px 20px;
     justify-content: space-around;
-
-
 }
+
+.productCart .cantidad {
+    color: #000000;
+}
+
 .cartImg{
     display: inline-block;
     width: 30%;
@@ -306,12 +318,6 @@ header nav a:hover {
     background-color: rgba(44, 44, 46, 0.6);
 
 }
-
-
-
-
-
-
 
 /* --PRODUCT DEATAIL-- */
 
@@ -396,18 +402,12 @@ header nav a:hover {
     justify-content: space-around;
     align-items: center;
     padding-top: 30px;
-    height: 78vh;
+    height: 82vh;
     background-image: url("/images/copa_gin_2.jpg");
     background-position: center;
     background-size: cover;
 }
-.imgregister {
-    display: inline-block;
-}
-.imgregister img {
-    width: 466px;
-    
-}
+
 
 .register{
     width: 40%;
@@ -460,6 +460,25 @@ header nav a:hover {
         color: #000000;
     }
 
+    @media(min-width: 320px){
+        .register{
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+    }
+    
+    @media(min-width: 768px){
+        .register{
+            width: 60%;
+        }
+    }
+    
+    @media(min-width: 1024px){
+        .register{
+            width: 41%;
+        }
+    }
 
     
 
@@ -467,7 +486,7 @@ header nav a:hover {
 
 .containerProfile{
     width: 100%;
-    height: 78vh;
+    height: 82vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

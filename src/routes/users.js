@@ -34,10 +34,10 @@ router.get('/productcart',  usersController.productcart)
 router.get('/register', usersController.register)
 router.post('/register', upload.single('avatar'), usersController.create)
 
-router.get('/perfil/:id', usersController.perfil)
+router.get('/perfil', usersController.perfil)
 
-router.get('/perfil/edit/:id', usersController.perfilEditar)
-router.post('/perfil/edit/:id', usersController.perfilEditado)
+//router.get('/perfil', usersController.perfilEditar)
+//router.post('/perfil', usersController.perfilEditado)
 
 
 module.exports = router;
