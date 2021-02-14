@@ -13,23 +13,32 @@ module.exports = {
         },
         processLogin: function(req, res) {
             let errors = validationResult(req);
-            
-            if  (errors.isEmpty()){
-                let usuarioYaLogeado;
-                for (let i = 0; i< usuariosJson.length; i++) {
-                    if (usuariosJson[i].email == req.body.email){
-                        if (usuariosJson[i].password == req.body.password) {
-                            usuarioYaLogeado = usuariosJson[i];
-                            req.session.usuarioYaLogeado = usuariosJson
-                            return res.redirect('/')
-                        } else {
-                            return res.redirect("/users/login")
-                        }
-                    }  
-                } 
-            } else {return res.redirect('/users/login')}
-        },
-        
+            db.Usuarios.findOne({
+                where: {
+                    email: req.body.email, 
+                }
+            })
+            .then(function(resultado){
+                let usuarioYaLogeado = resultado
+                if (usuarioYaLogeado != undefined){
+                    if (bcrypt.compareSync(req.body.password, usuarioYaLogeado.password)){
+                        req.session.usuario = usuarioYaLogeado
+                        if (req.body.remember) {
+                            res.cookie('usuario', usuarioYaLogeado.email, {maxAge: 2592000000 })
+                        } 
+                        res.redirect('/');
+                    } else {
+                        res.render ('login',{errors:errors})
+                    };
+                }else{
+                    res.render('login', {errors:errors})
+                }
+                })
+                .catch(function(e){
+                    console.log(e);
+                })
+                
+            },
 
         productcart: function(req, res){
         return res.render('productcart')},
@@ -38,20 +47,23 @@ module.exports = {
         return res.render('register')},
         
         create: function(req, res){
-                db.Usuario.create({
+                db.Usuarios.create({
                         name: req.body.name,
                         surname: req.body.surname,
                         email: req.body.email,
-                        avatar: req.file.filename,
+                        //avatar: req.file.filename,
                         password: bcrypt.hashSync(req.body.password, 12)
                 })
                 .then(function(usuarioCreado){
                     res.redirect('/users/perfil/' + usuarioCreado.id)
                 })
+                .catch(function(e){
+                    console.log(e);
+                })
                
         },
         perfil: function(req, res){
-            db.Usuario.findByPk(req.params.id, {
+            db.Usuarios.findByPk(req.params.id, {
             }) 
         .then(function(miPerfil) {
             res.render('perfil', {
@@ -60,7 +72,7 @@ module.exports = {
             })
         },
         editarPerfil: function(req, res){
-            db.Usuario.findByPk(req.params.id, {
+            db.Usuarios.findByPk(req.params.id, {
                 include: {
                     all:true,
                     nested: true
@@ -74,13 +86,13 @@ module.exports = {
 
          },
         perfilEditar: function(req,res){
-            db.Usuario.findByPk(req.params.id)
+            db.Usuarios.findByPk(req.params.id)
             .then(function(miPerfil) {
                 res.render('perfil', {miPerfil:miPerfil})
             })
         },
         perfilEditado: function(req, res){
-            db.Usuario.update({
+            db.Usuarios.update({
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
