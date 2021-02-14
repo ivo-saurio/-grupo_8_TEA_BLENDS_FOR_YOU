@@ -562,6 +562,12 @@ header nav a:hover {
     color: #000000;
 }
 
+.datosperfil {
+    text-align: center;
+    font-size: 40px;
+    padding: 25px;
+}
+
 
 /* --FOOTER-- */
 footer {
