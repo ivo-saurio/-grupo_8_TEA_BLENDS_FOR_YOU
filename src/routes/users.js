@@ -39,7 +39,7 @@ router.get('/perfil/:id', usersController.perfil)
 
 //EDITAR PERFIL
 router.get('/perfil/:id/edit', usersController.perfilEditar)
-router.post('/perfil/:id', usersController.perfilEditado)
+router.put('/perfil/:id/edit', usersController.perfilEditado)
 
 
 

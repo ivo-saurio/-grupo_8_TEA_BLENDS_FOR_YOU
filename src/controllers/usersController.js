@@ -87,7 +87,7 @@ module.exports = {
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
-                avatar: req.file.filename,
+                //avatar: req.file.filename,
                 password: bcrypt.hashSync(req.body.password, 12)
         },
         {
@@ -95,8 +95,12 @@ module.exports = {
                 id:req.params.id
             }
         })
-        .then(function(usuarioCreado){
-            res.redirect('/perfil' + usuarioCreado.id)
+        .then(function(miPerfil){
+            db.Usuarios.findByPk(req.params.id)
+            res.redirect('/users/perfil/' + req.params.id)
+        })
+        .catch(function(e){
+            console.log(e);
         })
         }
     
