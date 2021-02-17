@@ -26,7 +26,7 @@ module.exports = {
                         if (req.body.remember) {
                             res.cookie('usuario', usuarioYaLogeado.email, {maxAge: 2592000000 })
                         } 
-                        res.redirect('/perfil/:id');
+                        res.redirect('/');
                     } else {
                         res.render ('login',{errors:errors})
                     };
@@ -55,7 +55,7 @@ module.exports = {
                         password: bcrypt.hashSync(req.body.password, 12)
                 })
                 .then(function(usuarioCreado){
-                    res.redirect('/perfil/' + usuarioCreado.id)
+                    res.redirect('/users/perfil/' + usuarioCreado.id)
                 })
                 .catch(function(e){
                     console.log(e);
@@ -95,8 +95,7 @@ module.exports = {
                 id:req.params.id
             }
         })
-        .then(function(miPerfil){
-            db.Usuarios.findByPk(req.params.id)
+        .then(function(){
             res.redirect('/users/perfil/' + req.params.id)
         })
         .catch(function(e){
