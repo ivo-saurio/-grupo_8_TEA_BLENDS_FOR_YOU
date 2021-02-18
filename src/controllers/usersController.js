@@ -26,7 +26,7 @@ module.exports = {
                         if (req.body.remember) {
                             res.cookie('usuario', usuarioYaLogeado.email, {maxAge: 2592000000 })
                         } 
-                        res.redirect('/perfil/:id');
+                        res.redirect('/users/perfil/' + usuarioYaLogeado.id);
                     } else {
                         res.render ('login',{errors:errors})
                     };
@@ -55,7 +55,7 @@ module.exports = {
                         password: bcrypt.hashSync(req.body.password, 12)
                 })
                 .then(function(usuarioCreado){
-                    res.redirect('/perfil/' + usuarioCreado.id)
+                    res.redirect('/users/login')
                 })
                 .catch(function(e){
                     console.log(e);
@@ -63,9 +63,8 @@ module.exports = {
                
         },
         perfil: function(req, res){
-            db.Usuarios.findByPk(req.params.id, {
-            }) 
-        .then(function(miPerfil) {
+            db.Usuarios.findByPk(req.params.id)
+            .then(function(miPerfil) {
             res.render('perfil', {
             miPerfil:miPerfil
         })
@@ -82,6 +81,7 @@ module.exports = {
             })
         },
 
+        
         perfilEditado: function(req, res){
             db.Usuarios.update({
                 name: req.body.name,
@@ -95,13 +95,14 @@ module.exports = {
                 id:req.params.id
             }
         })
-        .then(function(miPerfil){
-            db.Usuarios.findByPk(req.params.id)
-            res.redirect('/users/perfil/' + req.params.id)
+        .then(function(){
+            return res.redirect('/users/perfil/' + req.params.id)
         })
+        
         .catch(function(e){
             console.log(e);
         })
         }
     
 }
+
