@@ -4,13 +4,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height: 78vh;
+    height: 82vh;
     background-position: center;
     background-size: cover;
-    overflow-y: scroll;
+    
 }
 
-.principalcatalogo :-webkit-scrollbar {display: none;}
+
 
 .contenedorProducto {
     background-color: rgba(44, 44, 46, 0.5);

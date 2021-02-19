@@ -12,7 +12,7 @@
            
             
             <div class="imgdetalle">
-                <img class="img4" src="/images/box_small.jpeg" alt="">
+                <img class="img4" src= "/images/products/<%= productos.image %>" alt="">
             </div>
         </section>
 
@@ -20,15 +20,15 @@
 
             <div class="descripcion">
                 
-                <h2>Nombre de producto</h2>
+                <h2><%= productos.name %></h2>
                 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut laudantium repellat eligendi quos expedita soluta quas corporis laboriosam atque similique, reiciendis minima cumque accusamus eveniet ad distinctio dicta, qui voluptatum? Cupiditate dignissimos explicabo recusandae inventore sint ab ad consequatur, repellendus, deserunt cumque, ratione porro vel? Tempore quisquam voluptatem non, placeat laboriosam quis, at earum eligendi eius itaque nemo architecto.</p>
+            <p><%= productos.description %></p>
             </div>
 
             
                 
                 <div class="valor">
-                    <p class="precio">$500
+                    <p class="precio"><%= productos.price %>
                     </p>
                 </div>
 

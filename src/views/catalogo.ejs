@@ -6,22 +6,22 @@
     <%- include('partials/header') %>  
     <main>
     <div class="principalcatalogo">
-
+        <% for(let i = 0; i < productos.length; i++) {%>
         <div class="contenedorProducto">
             <section class="cards">
-                <% for(let i = 0; i < productos.length; i++) {%>
+                
                     <article>
                         <div class="imgContenedorProducto">
-                            <img src="/images/box_medium_abierta.jpeg" alt="">
+                            <img src="/images/products/<%= productos[i].image %>" alt="">
                         </div> 
                         <h2><%= productos[i].name %></h2>
                         <p class="descCp"><%= productos[i].description %> </p>
                         <a href="/productos/<%= productos[i].id %>"><button class="btnCatalogo">Mas info</button></a>
                     </article>
-                <% } %>
+                
             </section>
         </div>        
-        
+        <% } %>
     </div>
     <%- include('partials/footer') %>
     </main>
