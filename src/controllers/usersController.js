@@ -73,8 +73,8 @@ module.exports = {
         
         perfilEditar: function(req,res){
             db.Usuarios.findByPk(req.params.id)
-            .then(function(miPerfil) {
-                res.render('perfiledit', {miPerfil:miPerfil})
+            .then(function(editarPerfil) {
+                res.render('perfiledit', {editarPerfil:editarPerfil})
             })
             .catch(function(e){
                 console.log(e);

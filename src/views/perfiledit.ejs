@@ -9,7 +9,7 @@
         <div class="perfil">  
             
         
-                <form action="/users/perfil/:id/edit?_method=PUT" method="POST">
+                <form action="/users/perfil/<%= editarPerfil.id  %> /edit?_method=PUT" method="POST">
             
                  <h2 class="titulo">Mi Perfil</h2>
                 <div class="fotoPerfil">
@@ -18,15 +18,15 @@
                 <div class="formPerfil">
                 <div class="name">
                  <label for="name"></label>
-                <input class="formulario" type="text" id="name" name="name" value="<%= miPerfil.name %>">
+                <input class="formulario" type="text" id="name" name="name" value="<%= editarPerfil.name %>">
                 </div>
                 <div class="surname">   
                 <label for="surname"></label>
-                <input class="formulario" type="text" id="surname" name="surname" value="<%= miPerfil.surname %>">
+                <input class="formulario" type="text" id="surname" name="surname" value="<%= editarPerfil.surname %>">
                 </div>
                 <div class="email">
                 <label for="email"></label>
-                <input class="formulario" type="email" id="email" name="email" value="<%= miPerfil.email %>">
+                <input class="formulario" type="email" id="email" name="email" value="<%= editarPerfil.email %>">
                 </div>
                 <div class="password">
                 <label for="password"></label>
