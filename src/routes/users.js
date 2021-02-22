@@ -7,7 +7,9 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid'); //generador de nombres unicos para archivos
 const usersController = require('../controllers/usersController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
-const {check, validationResult, body} = require('express-validator')
+const loggedMiddleware = require('../middlewares/loggedMiddleware')
+const {check, validationResult, body} = require('express-validator');
+const { login } = require('../controllers/usersController');
 
 
 
@@ -23,19 +25,19 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 //RUTA AL LOGIN
-router.get('/login', usersController.login)
+router.get('/login', loggedMiddleware, usersController.login)
 
 //RUTA PARA GUARDAR UN LOGIN
 router.post('/login',usersController.processLogin)
 
 //agregar middleware delogin retirada***
-router.get('/productcart',  usersController.productcart)
+router.get('/productcart', loginMiddleware, usersController.productcart)
 
-router.get('/register', usersController.register)
+router.get('/register', loggedMiddleware, usersController.register)
 router.post('/register', upload.single('avatar'), usersController.create)
 
 //IR A MI PERFIL
-router.get('/perfil/:id', usersController.perfil)
+router.get('/perfil/:id', loggedMiddleware, loginMiddleware, usersController.perfil)
 
 //EDITAR PERFIL
 router.get('/perfil/:id/edit', usersController.perfilEditar)

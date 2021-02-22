@@ -1,13 +1,18 @@
 <header>
    
     <nav>
+        
         <a href="/users/register"> Registrate </a>
         <a href="/users/login"> Iniciar Sesión </a>
         <div class="homelogo">
             <a href="/" class="alogo"><i class="fas fa-home"></i></a>
         </div>
-       
-        <a href=""> Mi Perfil </a>
-        <a href="/users/productcart"> Carrito </a>        
+        <% if (typeof usuario != 'undefined'){ %>
+        <a href="/users/perfil/<%= miPerfil.id  %> "> Mi Perfil </a>
+        <% } else {%>
+            <a href="/users/login"> Mi Perfil </a>
+        <% } %>      
+        <a href="/users/productcart"> Carrito </a>  
+        
      </nav>
 </header>
