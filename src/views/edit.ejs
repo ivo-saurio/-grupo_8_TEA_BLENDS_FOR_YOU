@@ -20,7 +20,7 @@
            
 
             <div class="name">
-                    <input type="name" name="name" id="name" value="<%= productoEditado.name %> ">      
+                    <input type="text" name="name" id="name" value="<%= productoEditado.name %> ">      
             </div>
       
     
@@ -29,7 +29,7 @@
             </div>
 
             <div class="precio">
-                <input type="number" name="price" id="price" value="<%= productoEditado.price %> ">
+                <input type="text" name="price" id="price" value="$<%= productoEditado.price %> ">
             </div>
 
             <div class="categoria">
@@ -46,7 +46,7 @@
             </div>
 
             <div class="descripcion">
-                    <textarea id="description" name="description" minlength="20" maxlength="2000" value="<%= productoEditado.description %> ">
+                    <textarea id="description" name="description" minlength="20" maxlength="2000"><%= productoEditado.description %>
 
                     </textarea>
             </div>

@@ -3,6 +3,6 @@
        res.locals.usuario = req.session.user;
        next();
       } else {
-      return res.redirect('/');
+      return res.redirect('/users/login');
       }
     }

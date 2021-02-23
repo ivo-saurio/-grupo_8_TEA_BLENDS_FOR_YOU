@@ -25,19 +25,19 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 //RUTA AL LOGIN
-router.get('/login', loggedMiddleware, usersController.login)
+router.get('/login', loginMiddleware, usersController.login)
 
 //RUTA PARA GUARDAR UN LOGIN
 router.post('/login',usersController.processLogin)
 
 //agregar middleware delogin retirada***
-router.get('/productcart', loginMiddleware, usersController.productcart)
+router.get('/productcart', loggedMiddleware, usersController.productcart)
 
-router.get('/register', loggedMiddleware, usersController.register)
+router.get('/register', loginMiddleware, usersController.register)
 router.post('/register', upload.single('avatar'), usersController.create)
 
 //IR A MI PERFIL
-router.get('/perfil/:id', loggedMiddleware, loginMiddleware, usersController.perfil)
+router.get('/perfil/:id', loginMiddleware, loginMiddleware, usersController.perfil)
 
 //EDITAR PERFIL
 router.get('/perfil/:id/edit', usersController.perfilEditar)
