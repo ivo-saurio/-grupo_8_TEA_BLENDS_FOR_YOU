@@ -35,14 +35,14 @@
             <div class="categoria">
                 
                 <select class="opciones">
-                    <option selected disabled>-- Seleccione una opción --</option>
+                    <option  selected disabled>-- Seleccione una opción --</option>
                     <option>Tea</option>
                     <option>Gin</option>    
                   </select>
             </div>
 
             <div class="imagen">
-                <input class= 'image' type="file" placeholder="Editar imagen" name="image" id="image">
+                <input class= 'image' type="filename" placeholder="Editar imagen" name="filename" id="filename">
             </div>
 
             <div class="descripcion">
@@ -50,14 +50,19 @@
 
                     </textarea>
             </div>
+        </form>
+        <form action="" method="POST">
+
             <div class="buttonEdit">
                 
                 <button class="btn" type="submit">Editar</button>
-
+            </form>
+            <form action="/productos/edit/<%= productoEditado.id %>?_method=DELETE" method="POST">
                 <button class="btn" type="submit">Eliminar</button>
             </div>
-            
         </form>
+            
+        
     </div>
 </div>
     </main>

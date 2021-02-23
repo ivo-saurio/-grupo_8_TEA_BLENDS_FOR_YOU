@@ -26,7 +26,7 @@ module.exports = {
         id_categoria: req.body.id_categoria,
         price: req.body.price
 })
-.then(function(productoCreado){
+.then(function(){
     res.redirect('/')
 })
         },  
@@ -75,7 +75,7 @@ module.exports = {
           }
         })
         .then(function(){
-          res.redirect('/')
+          res.redirect('/productos/catalogo')
         })
       }, 
       
