@@ -34,7 +34,7 @@ router.post ('/create', upload.single('image'), productosController.productCreat
 // 5. /productos/ :id /edit (GET) Formulario de edición de productos
 router.get('/edit/:id', productosController.productEdit); //adminMidleware,
 // 6. /productos/ :id (PUT) Acción de edición (a donde se envía el formulario): 
-router.put('/edit/:id', productosController.save) //adminMidleware,
+router.post('/edit/:id', upload.any(), productosController.save) //adminMidleware,
 
 // 7. /productos/ :id (DELETE) Acción de borrado
 router.delete('/edit/:id', productosController.delete) //adminMidleware,
