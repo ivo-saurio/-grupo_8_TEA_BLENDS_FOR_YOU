@@ -1,0 +1,61 @@
+.principalListado {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 82vh;
+    background-image: url("https://www.bacanal.com.ar/wp-content/uploads/2014/01/i3525-te-portada.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow-x: scroll;
+}
+
+.tabla {
+    width: 90%;
+    
+    display: inline-block;
+    flex-direction: column;
+    justify-content: left;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+.tabla th {
+    padding: 10px 30px;
+}
+
+.tabla td {
+    padding: 5px 30px;
+    border-bottom: 1px solid black;
+    background-color: rgba(44, 44, 46, 0.6);
+}
+
+.nombresColumna {
+    font-size: 24px;
+}
+
+.nombresColumna tr {
+    background-color: black;
+    padding: 10px;
+}
+
+.botonEditar {
+
+        padding: 5px;
+        width: 70px;
+        background: none;
+        border: 4px solid;
+        box-shadow: 0 0 10px grey;
+        color: #fafafa;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+
+.botonEditar:hover{
+    background: #fafafa;
+    color: #000000;
+}
+

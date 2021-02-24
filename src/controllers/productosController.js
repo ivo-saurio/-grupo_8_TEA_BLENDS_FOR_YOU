@@ -5,6 +5,15 @@ const path = require('path')
 module.exports = {
 
     listado: function(req, res) {
+        db.Productos.findAll()
+        .then(function(productos){
+          return res.render('listado', {
+            productos : productos
+          })
+        })   
+    },
+
+    catalogo: function(req, res) {
       db.Productos.findAll()
       .then(function(productos){
         return res.render('catalogo', {
@@ -46,11 +55,12 @@ module.exports = {
 
         save: function(req, res){
           db.Productos.update({
-          name: req.body.name,
-          description: req.body.description,
-          img: req.body.imagen,
-          size: req.body.size,
-          price: req.body.price
+            name: req.body.name,
+            description: req.body.description,
+            size: req.body.size,
+            image: req.file.filename,
+            id_categoria: req.body.id_categoria,
+            price: req.body.price
           
           },
           {
@@ -59,7 +69,7 @@ module.exports = {
             }
           })
           .then(function(){
-            return res.redirect('catalogo')
+            return res.redirect('/productos/listado')
           })
         },
 
@@ -75,7 +85,7 @@ module.exports = {
           }
         })
         .then(function(){
-          res.redirect('/productos/catalogo')
+          res.redirect('/productos/listado')
         })
       }, 
       

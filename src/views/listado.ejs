@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: "Iniciar Sesión"}) %>
+    <link rel="stylesheet" href="/css/listado.css">
+<body>
+    <%- include('partials/header') %>  
+    <div class="principalListado">
+       
+        <table class="tabla">
+
+            <thead class="nombresColumna">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Tamaño</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+            </thead>
+                
+            <tbody>
+                <% for(let i = 0; i < productos.length; i++) {%>
+                <tr >
+                    <td><%= productos[i].name %></td>
+                    <td><%= productos[i].image %></td>
+                    <td><%= productos[i].description %></td>
+                    <td><%= productos[i].size %></td>
+                    <td><%= productos[i].id_categoria %></td>
+                    <td><%= productos[i].price %></td>
+                    <td><a href="/productos/edit/<%= productos[i].id %>"><button class="botonEditar">Editar</button></a></td>
+                </tr>
+                <% } %>
+            </tbody>
+
+        </table>
+        
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>

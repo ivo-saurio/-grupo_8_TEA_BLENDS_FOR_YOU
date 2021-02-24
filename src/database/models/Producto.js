@@ -29,7 +29,7 @@ module.exports = function(sequelize, dataTypes){
              type: dataTypes.INTEGER,
              notNull: true
         },
-        id_categorias: {
+        id_categoria: {
             type:dataTypes.INTEGER,
             notNull: true
         }
@@ -46,7 +46,7 @@ module.exports = function(sequelize, dataTypes){
     Producto.associate = function(models){
         Producto.belongsTo(models.Categorias, {
             as: 'categoriaProducto',
-            foreignKey: 'id_categorias'
+            foreignKey: 'id_categoria'
         })
 
     }

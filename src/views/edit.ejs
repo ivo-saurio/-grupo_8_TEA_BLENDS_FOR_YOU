@@ -16,7 +16,8 @@
     <div class="edit-form">
         <h2>Editar un producto</h2>
 
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="/productos/edit/<%= productoEditado.id %>" method="POST" enctype="multipart/form-data">
+        
            
 
             <div class="name">
@@ -42,7 +43,7 @@
             </div>
 
             <div class="imagen">
-                <input class= 'image' type="filename" placeholder="Editar imagen" name="filename" id="filename">
+                <input class= 'image' type="file" placeholder="Agregar imagen" name="image" id="image">
             </div>
 
             <div class="descripcion">
@@ -50,9 +51,8 @@
 
                     </textarea>
             </div>
-        </form>
-        <form action="" method="POST">
-
+        
+        
             <div class="buttonEdit">
                 
                 <button class="btn" type="submit">Editar</button>

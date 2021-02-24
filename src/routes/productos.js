@@ -22,7 +22,8 @@ var upload = multer({ storage: storage })
 
 // 1. /products (GET)
 // Listado de productos
-router.get('/catalogo',  productosController.listado); //loginMiddleware *AGREGAR DESPUES*
+router.get('/listado', productosController.listado)
+router.get('/catalogo',  productosController.catalogo); //loginMiddleware *AGREGAR DESPUES*
 router.get('/cart', productosController.cart);
 
 // 2. /productos/create (GET) Formulario de creación de productos
@@ -33,7 +34,7 @@ router.post ('/create', upload.single('image'), productosController.productCreat
 // 5. /productos/ :id /edit (GET) Formulario de edición de productos
 router.get('/edit/:id', productosController.productEdit); //adminMidleware,
 // 6. /productos/ :id (PUT) Acción de edición (a donde se envía el formulario): 
-router.post('/edit/:id', productosController.save) //adminMidleware,
+router.put('/edit/:id', productosController.save) //adminMidleware,
 
 // 7. /productos/ :id (DELETE) Acción de borrado
 router.delete('/edit/:id', productosController.delete) //adminMidleware,
