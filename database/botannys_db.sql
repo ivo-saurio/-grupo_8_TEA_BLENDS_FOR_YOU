@@ -55,13 +55,13 @@ CREATE TABLE `productos` (
   `description` text NOT NULL,
   `size` varchar(45) NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `id_categorias` int(11) DEFAULT NULL,
+  `id_categoria` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`),
   UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `id_categorias_idx` (`id_categorias`),
-  CONSTRAINT `id_categorias` FOREIGN KEY (`id_categorias`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+  KEY `id_categorias_idx` (`id_categoria`),
+  CONSTRAINT `id_categorias` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (2,'prueba','image.jpeg','Nuestra Box Small esta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados','prueba',1500,NULL);
+INSERT INTO `productos` VALUES (6,'Box Small','image.jpeg','Nuestra Box Small contiene Pimienta De Jamaica, Bayas De Enebro, Hibiscus, Anis Estrellado, Flor Lavanda, Cascara De Naranja, y Cuchara Coctelera.\r\nEsta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados\r\n                    ','Small',2300,NULL),(7,'Box Medium','image.jpeg','Nuestra Box Medium contiene Pimienta Negra, Pimienta Rosa, Bayas De Enebro, Clavo De Olor, Anis Estrellado, Hibiscus, Cardamomo, Lavanda, Canela En Rama, Cuchara Coctelera y jigger.\r\nEsta diseñada para aquellos fanaticos de la cocteleria, quienes entendienden que para ser irremplazables, primero deben buscar ser diferentes\r\n                    ','Medium',4200,NULL),(8,'Box Large ','image.jpeg','Nuestra Box Large contiene Pimienta Negra, Pimienta Rosa, Pimienta Verde, Pimienta de Jamaica, Pimienta Blanca, Canela en Rama, Bayas De Enebro, Anis Estrellado, Corteza De Citricos, Rodajas De Citricos, Clavo De Olor, Cardamomo, Hibiscus, Lavanda, Jengibre, Cuchara Coctelera y Jigger.\r\nEntrena los sentidos disfrutando lo exotico, enfrentate a lo desconocido y demuestrale al mundo de que estas hecho.\r\n                    \r\n\r\n                    ','Large ',0,NULL),(9,'Box Tea','image.jpeg','Nuestra Box Tea contiene Té Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor.\r\nTé Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor.\r\n                    ','Medium',1900,NULL);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,7 +119,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `avatar_UNIQUE` (`avatar`),
   KEY `FK_ROLID` (`id_rol`),
   CONSTRAINT `FK_ROLID` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,13 +128,9 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL);
+INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL),(25,'Ivo','muñoz',NULL,'ivan@gmail.com','$2b$12$VScUQJhYHT7NV0i2Puy2TuAeVn.IK1jH1Q.3fCM62eq/8R.UVxVte',NULL),(27,'pepito','pepitoss',NULL,'pepito@gmail.com','$2b$12$CFLJwIbtRFftqim9aZ9txuZO4/t11ibp0/9ihQiehin6Zl399k3CS',NULL),(28,'ivan','probando',NULL,'ivanprobando@gmail.com','$2b$12$DGj4dBDIPoN5x4y/tMtLM.ls8h4.YU9D8FcVxCJErnf7164seASe6',NULL),(29,'ivan','probandoPROBANDO',NULL,'ivanprobandoPROBANDO@gmail.com','$2b$12$fX.v6LsZ9bUhuEAeQfgtqOImfK5bTcVY28oPXVRwjdU1acXXdXvxC',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'botannys_db'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -145,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-07 22:21:42
+-- Dump completed on 2021-02-25 19:50:18
