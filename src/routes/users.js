@@ -26,6 +26,7 @@ var upload = multer({ storage: storage })
 //RUTA PARA EL LOGIN
 router.get('/login', loginMiddleware, usersController.login)
 router.post('/login',usersController.processLogin)
+router.get('/logOut',usersController.logOut);
 
 //RUTA CARRITO DE COMPRAS
 router.get('/productcart', loggedMiddleware, usersController.productcart)

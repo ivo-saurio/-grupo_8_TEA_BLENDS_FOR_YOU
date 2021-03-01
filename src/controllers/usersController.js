@@ -38,6 +38,10 @@ module.exports = {
                 })
                 
             },
+            logOut:function(req,res){
+                req.session.destroy();
+                res.redirect('/');
+            },
 
         productcart: function(req, res){
         return res.render('productcart')},
