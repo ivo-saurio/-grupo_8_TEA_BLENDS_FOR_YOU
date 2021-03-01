@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `botannys_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `botannys_db`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: botannys_db
@@ -119,7 +121,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `avatar_UNIQUE` (`avatar`),
   KEY `FK_ROLID` (`id_rol`),
   CONSTRAINT `FK_ROLID` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,9 +130,13 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL),(25,'Ivo','muñoz',NULL,'ivan@gmail.com','$2b$12$VScUQJhYHT7NV0i2Puy2TuAeVn.IK1jH1Q.3fCM62eq/8R.UVxVte',NULL),(27,'pepito','pepitoss',NULL,'pepito@gmail.com','$2b$12$CFLJwIbtRFftqim9aZ9txuZO4/t11ibp0/9ihQiehin6Zl399k3CS',NULL),(28,'ivan','probando',NULL,'ivanprobando@gmail.com','$2b$12$DGj4dBDIPoN5x4y/tMtLM.ls8h4.YU9D8FcVxCJErnf7164seASe6',NULL),(29,'ivan','probandoPROBANDO',NULL,'ivanprobandoPROBANDO@gmail.com','$2b$12$fX.v6LsZ9bUhuEAeQfgtqOImfK5bTcVY28oPXVRwjdU1acXXdXvxC',NULL);
+INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL),(25,'Ivo','muñoz',NULL,'ivan@gmail.com','$2b$12$VScUQJhYHT7NV0i2Puy2TuAeVn.IK1jH1Q.3fCM62eq/8R.UVxVte',NULL),(27,'pepito','pepitoss',NULL,'pepito@gmail.com','$2b$12$CFLJwIbtRFftqim9aZ9txuZO4/t11ibp0/9ihQiehin6Zl399k3CS',NULL),(28,'ivan','probando',NULL,'ivanprobando@gmail.com','$2b$12$DGj4dBDIPoN5x4y/tMtLM.ls8h4.YU9D8FcVxCJErnf7164seASe6',NULL),(29,'ivan','probandoPROBANDO',NULL,'ivanprobandoPROBANDO@gmail.com','$2b$12$fX.v6LsZ9bUhuEAeQfgtqOImfK5bTcVY28oPXVRwjdU1acXXdXvxC',NULL),(30,'Rufi','Rawe',NULL,'rufina@gmail.com','$2b$12$cZnbn48x2QUKdJMHAI9uPulPDTiXVT7xfGELH9S5ObFCHFinV809a',NULL),(31,'Maxi','Rawe','undefined.jpg','maxirawe@gmail.com','$2b$12$lvEva8nExAONzh6k7TL8ueInOyre6JfprQGTFZYT1pRUpemUUthBm',NULL),(32,'Jorge','Garcia','undefined-1614542094135.png','jg@gmail.com','$2b$12$QGxys7qa8yTfR72fmrQt6e5xVoC4mDpVgVgGDHfvequYxdY6ivX06',NULL),(33,'Alberto','Rawe','undefined-1614543961536.png','arawe@gmail.com','$2b$12$v6HbKxvfWDd0wlgKT2aGBuWP1kWUjyA8H3p91byGN2nDcYfkXxS/q',NULL),(34,'Sole','Rawe','undefined-1614544197976.png','sole@gmail.com','$2b$12$YLBOFb1kn4P.j8YcuddfReCiAgAqgrTqW8HdPN4gK4YxWtgDSv2RC',NULL),(35,'belen','nadeo','avatar','belen@gmail.com','$2b$12$/v0enYQ080mJLLoh0unDGO6kFn5HbKwVl9ylZbIxqe9MZZDow2bTC',NULL),(36,'manu','rawe','undefined-1614545751202.png','manu@gmail.com','$2b$12$aLflmDl8C.0/HvZB9y3zc.m75xTbmkHBDqrVJXFaFEPJFTaumH6I6',NULL),(37,'Admin','Botannys','undefined-1614556678529.png','admin@gmail.com','$2b$12$8/bR86cvEr4HiQVkXX5RVe0Btp01agRx5dmAnCBGH/.H0Dh5cD.x6',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'botannys_db'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -141,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-25 20:23:57
+-- Dump completed on 2021-02-28 21:31:22

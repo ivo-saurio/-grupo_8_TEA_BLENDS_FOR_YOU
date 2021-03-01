@@ -4,7 +4,6 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const { v4: uuidv4 } = require('uuid'); //generador de nombres unicos para archivos
 const usersController = require('../controllers/usersController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
 const loggedMiddleware = require('../middlewares/loggedMiddleware')
@@ -18,30 +17,29 @@ var storage = multer.diskStorage({
         cb(null, path.join(__dirname, '../../public/images/users'));
     },
     filename: function (req, file, cb) {
-        cb(null, uuidv4() + path.extname(file.originalname))
+        cb(null, req.body.email + '-' + Date.now() + path.extname(file.originalname))
     }
 })
 
 var upload = multer({ storage: storage })
 
-//RUTA AL LOGIN
+//RUTA PARA EL LOGIN
 router.get('/login', loginMiddleware, usersController.login)
-
-//RUTA PARA GUARDAR UN LOGIN
 router.post('/login',usersController.processLogin)
 
-//agregar middleware delogin retirada***
+//RUTA CARRITO DE COMPRAS
 router.get('/productcart', loggedMiddleware, usersController.productcart)
 
+//RUTA PARA REGISTRARSE
 router.get('/register', loginMiddleware, usersController.register)
 router.post('/register', upload.single('avatar'), usersController.create)
 
 //IR A MI PERFIL
-router.get('/perfil/:id', loginMiddleware, loginMiddleware, usersController.perfil)
+router.get('/perfil/:id', usersController.perfil)
 
 //EDITAR PERFIL
 router.get('/perfil/:id/edit', usersController.perfilEditar)
-router.put('/perfil/:id/edit', usersController.perfilEditado)
+router.post('/perfil/:id/edit', upload.single('avatar'), usersController.perfilEditado)
 
 
 

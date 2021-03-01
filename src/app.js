@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require ("method-override");
-const session = require('express-session')
+const session = require('express-session');
 
 
 const app = express();
@@ -12,7 +12,9 @@ const app = express();
 //RUTAS REQUERIDAS
 const mainRouter = require('./routes/main');
 const productosRouter = require('./routes/productos');
-const usersRouter = require('./routes/users')
+const usersRouter = require('./routes/users');
+const rememberMiddleware = require('./middlewares/rememberMiddleware');
+
 
 //VIEW ENGINE SETUP
 app.set('view engine', 'ejs');
@@ -27,6 +29,7 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(methodOverride("_method"));
 app.use(session ({secret: 'sarasa'}));
+app.use(rememberMiddleware)
 
 
 //RECURSOS

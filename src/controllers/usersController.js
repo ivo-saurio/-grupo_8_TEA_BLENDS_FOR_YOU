@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const db = require('../database/models')
@@ -19,14 +18,14 @@ module.exports = {
                 }
             })
             .then(function(resultado){
-                let usuarioYaLogeado = resultado
-                if (usuarioYaLogeado != undefined){
-                    if (bcrypt.compareSync(req.body.password, usuarioYaLogeado.password)){
-                        req.session.usuario = usuarioYaLogeado
+                let usuarioYaLogueado = resultado
+                if (usuarioYaLogueado != undefined){
+                    if (bcrypt.compareSync(req.body.password, usuarioYaLogueado.password)){
+                        req.session.usuario = usuarioYaLogueado
                         if (req.body.remember) {
-                            res.cookie('usuario', usuarioYaLogeado.email, {maxAge: 2592000000 })
+                            res.cookie('usuario', usuarioYaLogueado.email, {maxAge: 2592000000 })
                         } 
-                        res.redirect('/users/perfil/' + usuarioYaLogeado.id);
+                        res.redirect('/users/perfil/' + usuarioYaLogueado.id);
                     } else {
                         res.render ('login',{errors:errors})
                     };
@@ -51,8 +50,8 @@ module.exports = {
                         name: req.body.name,
                         surname: req.body.surname,
                         email: req.body.email,
-                        //avatar: req.file.filename,
-                        password: bcrypt.hashSync(req.body.password, 12)
+                        password: bcrypt.hashSync(req.body.password, 12),
+                        avatar: req.file.filename
                 })
                 .then(function(usuarioCreado){
                     res.redirect('/users/login')
@@ -87,7 +86,7 @@ module.exports = {
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
-                //avatar: req.file.filename,
+                avatar: req.file.filename,
                 password: bcrypt.hashSync(req.body.password, 12)
         },
         {

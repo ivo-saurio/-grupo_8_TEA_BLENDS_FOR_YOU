@@ -4,8 +4,8 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const productosController = require('../controllers/productosController');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 //const loginMiddleware = require('../middlewares/loginMiddleware');
-//const adminMidleware = require('../middlewares/adminMidleware')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -27,12 +27,12 @@ router.get('/catalogo',  productosController.catalogo); //loginMiddleware *AGREG
 router.get('/cart', productosController.cart);
 
 // 2. /productos/create (GET) Formulario de creación de productos
-router.get('/create',  productosController.create); //adminMidleware,
+router.get('/create', adminMiddleware, productosController.create); //adminMidleware,
 
 // 4. /productos/create (POST) Acción de creación (a donde se envía el formulario) 
 router.post ('/create', upload.single('image'), productosController.productCreate);
 // 5. /productos/ :id /edit (GET) Formulario de edición de productos
-router.get('/edit/:id', productosController.productEdit); //adminMidleware,
+router.get('/edit/:id', adminMiddleware, productosController.productEdit); //adminMidleware,
 // 6. /productos/ :id (PUT) Acción de edición (a donde se envía el formulario): 
 router.post('/edit/:id', upload.any(), productosController.save) //adminMidleware,
 
