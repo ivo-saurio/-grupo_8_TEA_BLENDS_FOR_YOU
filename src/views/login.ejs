@@ -8,10 +8,10 @@
         <div class="login">
             <h2>Iniciar Sesión</h2>
             <% if(typeof errors != 'undefined') { %>
-                <p style="color: black">ERROR</p>
+                <p style="color: red">ERROR</p>
                 <ul>
                     <% for(let i = 0; i < errors.length; i++) { %>
-                        <li>
+                        <li style="color: red;">
                             <%= errors[i].msg %>
                         </li>     
                         
