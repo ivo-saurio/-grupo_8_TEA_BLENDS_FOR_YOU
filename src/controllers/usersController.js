@@ -56,6 +56,7 @@ module.exports = {
         
         create: function(req, res){
             let errors = validationResult(req);
+            console.log(errors);
             if(errors.isEmpty()){
                 db.Usuarios.create({
                     name: req.body.name,

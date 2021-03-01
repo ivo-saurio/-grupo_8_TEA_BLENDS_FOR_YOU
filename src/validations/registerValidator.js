@@ -15,10 +15,12 @@ module.exports = [
 
    check('email').notEmpty().withMessage('Este campo es obligatorio')
    .isEmail().withMessage("Debes ingresar un email válido")
-   .custom(async function(email) {
-       let registeredEmail = await db.Users.findOne({ where : { email: email } });
-       if (registeredEmail) {
-           return ("Este email ya está registrado")
+   .custom(async function(email) { // CUSTOM es para 
+       let emailRegistrado = await db.Usuarios.findOne(
+           { 
+               where : { email: email } });
+       if (emailRegistrado) {
+        throw new Error ("Este email ya está registrado")
        }
    }),
 
@@ -27,10 +29,10 @@ module.exports = [
 
    check('repassword').notEmpty().withMessage('Este campo es obligatorio')
    .isLength({ min:8, max:15 }).withMessage("La contraseña debe contener como mínimo 8 caracteres")
-   .custom(async (repassword, {req}) => { 
+   .custom(async function(repassword, req) { 
        let password = req.body.password;
-       if(password !== repassword){ 
-         return ('Las contraseñas no son iguales')
+       if(password != repassword){ 
+        throw new Error ('Las contraseñas no son iguales')
        }
    }),
 ]
