@@ -14,6 +14,7 @@ const mainRouter = require('./routes/main');
 const productosRouter = require('./routes/productos');
 const usersRouter = require('./routes/users');
 const rememberMiddleware = require('./middlewares/rememberMiddleware');
+const sessionMiddleware = require('./middlewares/sessionMiddleware');
 
 
 //VIEW ENGINE SETUP
@@ -29,7 +30,9 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(methodOverride("_method"));
 app.use(session ({secret: 'sarasa'}));
-app.use(rememberMiddleware)
+app.use(sessionMiddleware)
+app.use(rememberMiddleware);
+
 
 
 //RECURSOS

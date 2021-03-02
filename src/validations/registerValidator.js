@@ -29,10 +29,10 @@ module.exports = [
 
    check('repassword').notEmpty().withMessage('Este campo es obligatorio')
    .isLength({ min:8, max:15 }).withMessage("La contraseña debe contener como mínimo 8 caracteres")
-   .custom(async function(repassword, req) { 
-       let password = req.body.password;
-       if(password != repassword){ 
-        throw new Error ('Las contraseñas no son iguales')
-       }
-   }),
+   //.custom(async function(repassword, req) { 
+     //  let password = req.body.password;
+       //if(password != repassword){ 
+        //throw new Error ('Las contraseñas no son iguales')
+       //}
+   //}),
 ]

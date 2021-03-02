@@ -12,21 +12,21 @@ module.exports = {
         },
         processLogin: function(req, res) {
             let errors = validationResult(req);
+            let {email, password, remember} = req.body
             if(errors.isEmpty()){
                 db.Usuarios.findOne({
                     where: {
                         email: req.body.email, 
                     }
                 })
-                .then(function(resultado){
-                    let usuarioYaLogueado = resultado
-                    if (usuarioYaLogueado != undefined){
-                        if (bcrypt.compareSync(req.body.password, usuarioYaLogueado.password)){
-                            req.session.usuario = usuarioYaLogueado
-                            if (req.body.remember) {
-                                res.cookie('usuario', usuarioYaLogueado.email, {maxAge: 2592000000 })
+                .then(function(usuario){
+                    if (usuario != undefined){
+                        if (bcrypt.compareSync(password, usuario.password)){
+                            req.session.usuario = usuario
+                            if (remember != undefined) {
+                                res.cookie('remember', usuario.email, {maxAge: 2592000000 })
                             } 
-                            res.redirect('/users/perfil/' + usuarioYaLogueado.id);
+                            res.redirect('/');
                         } else {
                             res.render ('login',{errors:errors})
                         };
@@ -34,14 +34,9 @@ module.exports = {
                         res.render('login', {errors:errors})
                     }
                     })
-                    .catch(function(e){
-                        console.log(e);
-                    })
             }else {
                 return res.render('login', { errors: errors.errors})
-            }
-            
-                
+                }  
             },
             logOut:function(req,res){
                 req.session.destroy();

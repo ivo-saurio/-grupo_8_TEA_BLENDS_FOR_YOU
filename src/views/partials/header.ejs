@@ -11,17 +11,7 @@
             <a href="/users/productcart"> Mi Perfil </a>      
             <a href="/users/productcart"> Carrito </a>  
         
-        <% }else if(usuario.mail != 'admin@gmail.com'){ %>    
-        
-            <a href=""> Bienvenid@ <%= usuario.name %>  </a>
-            <a href="/users/logOut"> Cerrar Sesión </a>
-            <div class="homelogo">
-                <a href="/" class="alogo"><i class="fas fa-home"></i></a>
-            </div>
-            <a href="/users/perfil/<%= usuario.id %>"> Mi Perfil </a>      
-            <a href="/users/productcart"> Carrito </a>  
-
-        <% }else{ %>
+        <% }else if(usuario.email === "admin@gmail.com"){ %>    
             <a href="/productos/create"> Crear Producto </a>
             <a href="/users/logOut"> Cerrar Sesión </a>
             <div class="homelogo">
@@ -29,7 +19,18 @@
             </div>
             <a href="/users/perfil/<%= usuario.id %>"> Mi Perfil </a>
             <a href="/users/productcart"> Carrito </a> 
+             
+
+        <% }else{ %>
             
+            
+            <a href=""> Bienvenid@ <%= usuario.name %>  </a>
+            <a href="/users/logOut"> Cerrar Sesión </a>
+            <div class="homelogo">
+                <a href="/" class="alogo"><i class="fas fa-home"></i></a>
+            </div>
+            <a href="/users/perfil/<%= usuario.id %>"> Mi Perfil </a>      
+            <a href="/users/productcart"> Carrito </a>
 
         <% } %> 
      </nav>
