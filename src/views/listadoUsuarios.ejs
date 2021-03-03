@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: "Listado Usuarios"}) %>
+    <link rel="stylesheet" href="/css/listado.css">
+<body>
+    <%- include('partials/header') %>  
+    <div class="principalListado">
+       
+        <table class="tabla">
+
+            <thead class="nombresColumna">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>id_rol</th>
+                    <th></th>
+                </tr>
+            </thead>
+                
+            <tbody>
+                <% for(let i = 0; i < usuarios.length; i++) {%>
+                <tr >
+                    <td><%= usuarios[i].name %></td>
+                    <td><%= usuarios[i].surname %></td>
+                    <td><%= usuarios[i].email %></td>
+                    <td><%= usuarios[i].id_rol %></td>
+                    <td><a href="/users/perfil/<%= usuarios[i].id %>/edit"><button class="botonEditar">Editar</button></a></td>
+                </tr>
+                <% } %>
+            </tbody>
+
+        </table>
+        
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>

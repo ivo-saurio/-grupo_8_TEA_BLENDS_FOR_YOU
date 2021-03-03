@@ -10,7 +10,43 @@
 
         <div class="perfil">  
             
-            
+            <% if(typeof usuario === "admin@gmail.com" ) {%>
+                <h2 class="titulo">Mi Perfil</h2>
+
+                <div class="fotoPerfil">
+                    <img class="" src="/images/users/<%= miPerfil.avatar %>" alt="" value="">
+                </div>
+
+            <div class="datosperfil">
+                 <h3><%= miPerfil.name %></h3>
+
+                <h3><%= miPerfil.surname %></h3>
+
+                <h3><%= miPerfil.email %></h3>
+            </div>
+
+                <div class="submit">
+                    <a href="/users/perfil/<%= miPerfil.id %>/edit">
+                    <button class="btn">Editar mi perfil</button></a>
+                </div>
+
+                <div class="submit">
+                    <a href="/users/listadoUsuarios">
+                    <button class="btn">Usuarios</button></a>
+                </div>
+
+                <div class="submit">
+                    <a href="/users/productcart">
+                    <button class="btn">Mi carrito</button></a>
+                </div>
+
+                <div class="submit">
+                    <a href="/users/logOut">
+                    <button class="btn">Cerrar Sesión</button></a>
+                </div>
+
+            <% } else { %>
+
                 <h2 class="titulo">Mi Perfil</h2>
 
                 <div class="fotoPerfil">
@@ -42,13 +78,12 @@
 
                 <div class="submit">
                     <a href="/users/logOut">
-                    <button class="btn">Cerrar Sesión</button></a>
-                </div>
-
-            </div>
-        
-            
+                    <button class="btn">Cerrar Sesión</button></a> 
+            <% } %> 
         </div>
+        </div>    
+            
+        
     </div>
     <%- include('partials/footer') %>
 </body>
