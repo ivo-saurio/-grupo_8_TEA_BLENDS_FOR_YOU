@@ -118,6 +118,14 @@ module.exports = {
                 return res.render('perfiledit')
             }
            
+        },
+        listado: function(req, res) {
+            db.Usuarios.findAll()
+            .then(function(usuarios){
+              return res.render('listadoUsuarios', {
+                usuarios : usuarios
+              })
+            })    
         }
     
 }
