@@ -1,6 +1,7 @@
 let db = require('../database/models')
 const fs = require('fs')
 const path = require('path')
+const { validationResult } = require('express-validator')
 
 module.exports = {
 
@@ -27,17 +28,23 @@ module.exports = {
     },
 
     productCreate : (req, res, next) => {
-      db.Productos.create({
-        name: req.body.name,
-        description: req.body.description,
-        size: req.body.size,
-        image: req.file.filename,
-        id_categoria: req.body.id_categoria,
-        price: req.body.price
-})
-.then(function(){
-    res.redirect('/')
-})
+      let errors = validationResult(req);
+      if(errors.isEmpty()) {
+        db.Productos.create({
+          name: req.body.name,
+          description: req.body.description,
+          size: req.body.size,
+          image: req.file.filename,
+          id_categoria: req.body.id_categoria,
+          price: req.body.price
+  })
+  .then(function(){
+      res.redirect('/')
+  })
+      } else {
+        return res.render('create', {errors:errors.errors})
+      }
+      
         },  
      
       

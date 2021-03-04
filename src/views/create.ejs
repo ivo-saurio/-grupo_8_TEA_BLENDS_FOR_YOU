@@ -15,7 +15,18 @@
 
     <div class="create-form">
         <h2>Agregar un producto</h2>
-
+        <% if(typeof errors != 'undefined') { %>
+            <p style="color: red">ERROR</p>
+            <ul>
+                <% for(let i = 0; i < errors.length; i++) { %>
+                    <li style="color: red;">
+                        <%= errors[i].msg %>
+                    </li>     
+                    
+                    <% } %>
+            </ul>
+        
+            <% } %>
         <form action="" method="POST" enctype="multipart/form-data">
            
 
@@ -34,7 +45,7 @@
 
             <div class="categoria">
                 
-                <select class="opciones">
+                <select class="opciones" name="category">
                     <option selected disabled>-- Seleccione una opción --</option>
                     <option>Tea</option>
                     <option>Gin</option>    
