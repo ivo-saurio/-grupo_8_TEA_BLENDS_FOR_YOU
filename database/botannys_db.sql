@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `botannys_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `botannys_db`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: botannys_db
@@ -133,10 +131,6 @@ LOCK TABLES `usuarios` WRITE;
 INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL),(25,'Ivo','muñoz',NULL,'ivan@gmail.com','$2b$12$VScUQJhYHT7NV0i2Puy2TuAeVn.IK1jH1Q.3fCM62eq/8R.UVxVte',NULL),(27,'pepito','pepitoss',NULL,'pepito@gmail.com','$2b$12$CFLJwIbtRFftqim9aZ9txuZO4/t11ibp0/9ihQiehin6Zl399k3CS',NULL),(28,'ivan','probando',NULL,'ivanprobando@gmail.com','$2b$12$DGj4dBDIPoN5x4y/tMtLM.ls8h4.YU9D8FcVxCJErnf7164seASe6',NULL),(29,'ivan','probandoPROBANDO',NULL,'ivanprobandoPROBANDO@gmail.com','$2b$12$fX.v6LsZ9bUhuEAeQfgtqOImfK5bTcVY28oPXVRwjdU1acXXdXvxC',NULL),(37,'Admin','Botannys','undefined-1614556678529.png','admin@gmail.com','$2b$12$8/bR86cvEr4HiQVkXX5RVe0Btp01agRx5dmAnCBGH/.H0Dh5cD.x6',NULL),(38,'Rufina','Rawe','undefined-1614645051098.png','rufina@gmail.com','$2b$12$Ewrffb1Jo8enIF3uxk0YbuHVQ5V6bCdxQhfxoTrRCgluQXvr3CcEu',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'botannys_db'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -147,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-02 20:26:05
+-- Dump completed on 2021-03-04 21:44:43
