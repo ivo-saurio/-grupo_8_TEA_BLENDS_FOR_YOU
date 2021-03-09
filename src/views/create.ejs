@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/create.css">
@@ -27,7 +28,7 @@
             </ul>
         
             <% } %>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form id="form" action="" method="POST" enctype="multipart/form-data">
            
 
             <div class="name">
@@ -62,7 +63,7 @@
                     </textarea>
             </div>
             <div class="buttonCreate">
-                <button class="btn" type="submit">Agregar</button>
+                <button id="botonCreate" class="btn" type="submit">Agregar</button>
             </div>
             
         </form>
@@ -70,5 +71,6 @@
 </div>
     </main>
     <%- include('partials/footer') %>
+    <script src="/js/createFront.js"></script>
 </body>
 </html>
