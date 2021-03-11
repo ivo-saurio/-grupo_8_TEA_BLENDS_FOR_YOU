@@ -433,6 +433,10 @@ header nav a:hover {
         font-size: 15px;
         border-radius: 2px;
     }
+
+    .register small{
+        color:red;
+    }
     
 
     .buttonregister {

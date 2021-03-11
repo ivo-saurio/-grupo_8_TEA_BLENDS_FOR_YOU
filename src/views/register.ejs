@@ -8,57 +8,50 @@
         <div class="register">
             <h2>Registrate</h2>
 
-            <% if(typeof errors != 'undefined') { %>
-                <p style="color: red">ERROR</p>
-                <ul>
-                    <% for(let i = 0; i < errors.length; i++) { %>
-                        <li style="color: red;">
-                            <%= errors[i].msg %>
-                        </li>     
-                        
-                        <% } %>
-                </ul>
-            
-                <% } %>
+           
 
-
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form id="formRegister" action="" method="POST" enctype="multipart/form-data">
                 <div class="name">
                     <label for="name"></label>
                     <input class="formulario" type="text" id="name" name="name" placeholder="Nombre">
+                    <small id="errorName"></small>
                 </div>
 
                 <div class="surname">   
                     <label for="surname"></label>
                     <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido">
+                    <small id="errorSurname"></small>
                 </div>
 
                 <div class="avatar">
                         <label for="avatar"></label>
                         <input class="avatar" type="file" id="avatar" name="avatar" placeholder="Imagen de perfil">
+                        <small id="errorAvatar"></small>
                 </div> 
 
                 <div class="email">
 
                     <label for="email"></label>
                     <input type="email" class="formulario" placeholder="Escribe tu email" name="email" id="email" >
-
+                    <small id="errorEmail"></small>
                 </div>
 
                 <div class="password"> 
                         <label for="password"></label>
-                        <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña"><br>
+                        <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña">
+                        <small id="errorPassword"></small>
                 </div>
 
                 <div class="repassword">
                         <label for="repassword"></label>
-                        <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña"><br>
+                        <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña">
+                        <small id="errorRepassword"></small>
                 </div>
 
                 
 
                 <div class="buttonregister">
-                    <button class="btn" type="submit">Registrate</button>
+                    <button id="buttonR" class="btn" type="submit">Registrate</button>
                 
                 </div>
             </form>     
@@ -69,5 +62,7 @@
     </div>
         
         <%- include('partials/footer') %>
+
+        <script src="/js/registerFront.js"></script>
 </body>
 </html>
