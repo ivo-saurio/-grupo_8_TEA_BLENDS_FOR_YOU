@@ -93,13 +93,11 @@ module.exports = {
 
         
         perfilEditado: function(req, res){
-            let errors = validationResult(req);
-            if(errors.isEmpty()){
                 db.Usuarios.update({
                     name: req.body.name,
                     surname: req.body.surname,
                     email: req.body.email,
-                    avatar: req.file.filename,
+                    //avatar: req.file.filename,
                     password: bcrypt.hashSync(req.body.password, 12)
             },
             {
@@ -114,9 +112,6 @@ module.exports = {
             .catch(function(e){
                 console.log(e);
             })
-            } else {
-                return res.render('perfiledit')
-            }
            
         },
         listado: function(req, res) {

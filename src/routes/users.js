@@ -42,7 +42,7 @@ router.get('/perfil/:id', usersController.perfil)
 
 //EDITAR PERFIL
 router.get('/perfil/:id/edit', usersController.perfilEditar)
-router.post('/perfil/:id/edit', upload.single('avatar'),registerValidator,usersController.perfilEditado)
+router.post('/perfil/:id/edit', upload.single('avatar'),usersController.perfilEditado)
 
 //LISTADO USUARIOS(ADMIN)
 router.get('/listadoUsuarios', usersController.listado);
