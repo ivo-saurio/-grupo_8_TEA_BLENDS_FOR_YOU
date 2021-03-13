@@ -21,13 +21,10 @@
             <a href="/users/logOut"> Cerrar Sesión </a> 
 
         <% }else{ %>
+            <a href="/users/perfil/<%= usuario.id %>"> Bienvenid@ <%= usuario.name %>  </a>
             <div class="homelogo">
                 <a href="/" class="alogo"><i class="fas fa-home"></i></a>
-            </div>
-            
-            <a href="/users/perfil/<%= usuario.id %>"> Bienvenid@ <%= usuario.name %>  </a>
-            
-              
+            </div>  
             <a href="/users/productcart"> Carrito </a>
             <a href="/users/logOut"> Cerrar Sesión </a>
 
