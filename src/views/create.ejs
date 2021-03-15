@@ -39,10 +39,14 @@
     
             <div class="Tamaño">
                 <input type="text" placeholder="Tamaño" name="size" id="size">
+                <small id="errorSize"></small>
+
             </div>
 
             <div class="precio">
                 <input type="number" placeholder="Precio" name="price" id="price">
+                <small id="errorPrice"></small>
+
             </div>
 
             <div class="categoria">
@@ -52,19 +56,27 @@
                     <option>Tea</option>
                     <option>Gin</option>    
                   </select>
+                  <small id="errorCategory"></small>
+
             </div>
 
             <div class="imagen">
                 <input class= 'image' type="file" placeholder="Agregar imagen" name="image" id="image">
+                <small id="errorImage"></small>
+
             </div>
 
             <div class="descripcion">
                     <textarea id="description" name="description" minlength="20" maxlength="2000" placeholder="Descripción del producto">
 
                     </textarea>
+                    <small id="errorDescription"></small>
+
             </div>
             <div class="buttonCreate">
                 <button id="botonCreate" class="btn" type="submit">Agregar</button>
+                <small id="errorButton"></small>
+
             </div>
             
         </form>
