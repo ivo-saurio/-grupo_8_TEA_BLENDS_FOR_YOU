@@ -28,7 +28,7 @@ register.addEventListener('submit', function(e){
     let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
     let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/
 
-    let errores = {}
+    let errores = {};
 
     //VALIDACION NOMBRE
 
@@ -72,14 +72,14 @@ register.addEventListener('submit', function(e){
     //VALIDACION CONTRASEÑA
 
     if(!inputPassword.value.match(regexPassword)){
-        errores.password = 'Su contraseña debe tener más de 6 caracteres'
+        errores.password = 'Su contraseña debe tener más de 6 caracteres y por lo menos una mayuscula, un caracter especial y un numero'
         errorPassword.innerText = errores.password
     } else {
         errorPassword.innerText = ""
     }
 
 
-    if(Object.keys(errores).length == 0) {
+    if(Object.keys(errores).length === 0) {
         register.submit()
     }
 
