@@ -51,7 +51,7 @@ module.exports = {
         
         create: function(req, res){
             let errors = validationResult(req);
-            console.log(errors);
+            //console.log(errors);
             if(errors.isEmpty()){
                 db.Usuarios.create({
                     name: req.body.name,
@@ -61,13 +61,17 @@ module.exports = {
                     avatar: req.file.filename
             })
             .then(function(usuarioCreado){
+                req.session.usuario = usuarioCreado.dataValues;
                 res.redirect('/users/login')
             })
             .catch(function(e){
-                console.log(e);
+                res.send(e);
             })
             } else {
-                return res.render('register', {errors:errors.errors})
+                return res.render('register', {
+                    errors:errors.mapped(),
+                    old:req.body
+                    })
             }
                 
                

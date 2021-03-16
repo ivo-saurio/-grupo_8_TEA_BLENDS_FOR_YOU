@@ -24,10 +24,11 @@ register.addEventListener('submit', function(e){
             errorRepassword = qs('#errorRepassword');
 
     
-    let regexOnlyLetters = /^[A-Za-z]+$/;
-    let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-    let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/
-
+const expresiones = {
+            name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+            password: /^.{6,12}$/, // 4 a 12 digitos.
+            email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+            }
     let errores = {};
 
     //VALIDACION NOMBRE
@@ -38,7 +39,7 @@ register.addEventListener('submit', function(e){
     } else if(inputName.value.length < 2){
         errores.name = 'El nombre debe tener más de 2 caracteres'
         errorName.innerText = errores.name
-    } else if(!inputName.value.match(regexOnlyLetters)){
+    } else if(!inputName.value.match(expresiones.name)){
         errores.name = 'El nombre debe tener solo letras'
         errorName.innerText = errores.name
     } else {
@@ -53,7 +54,7 @@ register.addEventListener('submit', function(e){
     } else if(inputSurname.value.length < 2){
         errores.surname = 'El nombre debe tener más de 2 caracteres'
         errorSurname.innerText = errores.surname
-    } else if(!inputSurname.value.match(regexOnlyLetters)){
+    } else if(!inputSurname.value.match(expresiones.name)){
         errores.surname = 'El nombre debe tener solo letras'
         errorSurname.innerText = errores.surname
     } else {
@@ -62,7 +63,7 @@ register.addEventListener('submit', function(e){
 
     //VALIDACION EMAIL
 
-    if(!inputEmail.value.match(regexEmail)){
+    if(!inputEmail.value.match(expresiones.email)){
         errores.email = 'Ingresar email valido'
         errorEmail.innerText = errores.email
     } else {
@@ -71,8 +72,8 @@ register.addEventListener('submit', function(e){
 
     //VALIDACION CONTRASEÑA
 
-    if(!inputPassword.value.match(regexPassword)){
-        errores.password = 'Su contraseña debe tener más de 6 caracteres y por lo menos una mayuscula, un caracter especial y un numero'
+    if(!inputPassword.value.match(expresiones.password)){
+        errores.password = 'Su contraseña debe tener más de 6 caracteres'
         errorPassword.innerText = errores.password
     } else {
         errorPassword.innerText = ""
@@ -86,16 +87,3 @@ register.addEventListener('submit', function(e){
     console.log(errores);
     })
 })
-
-
-
-
-
-
-
-// if ( (input_name.value=="") || (input_email.value=="") || (!input_email.value.includes("@")) ) {
-//    alert("Complete los campos con el formato correspondiente");
-// }
-
-// if ((inputName.value!='') && (inputName.value.match(/^[A-Za-z]+$/)) ){
-// }

@@ -13,39 +13,39 @@
             <form id="formRegister" action="" method="POST" enctype="multipart/form-data">
                 <div class="name">
                     <label for="name"></label>
-                    <input class="formulario" type="text" id="name" name="name" placeholder="Nombre">
-                    <small id="errorName"></small>
+                    <input class="formulario" type="text" id="name" name="name" placeholder="Nombre" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.name : (locals.old && !errors.name) ? old.name : '' %>">
+                    <small id="errorName"><%=(locals.errors && errors.name) ? errors.name.msg : "" %> </small>
                 </div>
 
                 <div class="surname">   
                     <label for="surname"></label>
-                    <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido">
-                    <small id="errorSurname"></small>
+                    <input class="formulario" type="text" id="surname" name="surname" placeholder="Apellido" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.surname : (locals.old && !errors.surname) ? old.surname : '' %>" >
+                    <small id="errorSurname"><%=(locals.errors && errors.surname) ? errors.surname.msg : "" %> </small>
                 </div>
 
                 <div class="avatar">
                         <label for="avatar"></label>
-                        <input class="avatar" type="file" id="avatar" name="avatar" placeholder="Imagen de perfil">
-                        <small id="errorAvatar"></small>
+                        <input class="avatar" type="file" id="avatar" name="avatar" placeholder="Imagen de perfil" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.avatar : (locals.old && !errors.avatar) ? old.avatar : '' %>" >
+                        <small id="errorAvatar"><%=(locals.errors && errors.avatar) ? errors.avatar.msg : "" %> </small>
                 </div> 
 
                 <div class="email">
 
                     <label for="email"></label>
-                    <input type="email" class="formulario" placeholder="Escribe tu email" name="email" id="email" >
-                    <small id="errorEmail"></small>
+                    <input type="email" class="formulario" placeholder="Escribe tu email" name="email" id="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : (locals.old && !errors.email) ? old.email : '' %>">
+                    <small id="errorEmail"><%=(locals.errors && errors.email) ? errors.email.msg : "" %> </small>
                 </div>
 
                 <div class="password"> 
                         <label for="password"></label>
-                        <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña">
-                        <small id="errorPassword"></small>
+                        <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña" >
+                        <small id="errorPassword"><%=(locals.errors && errors.password) ? errors.password.msg : "" %> </small>
                 </div>
 
                 <div class="repassword">
                         <label for="repassword"></label>
-                        <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña">
-                        <small id="errorRepassword"></small>
+                        <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña" >
+                        <small id="errorRepassword"><%=(locals.errors && errors.repassword) ? errors.repassword.msg : "" %> </small>
                 </div>
 
                 
