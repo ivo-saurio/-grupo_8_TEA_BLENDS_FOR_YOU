@@ -16,21 +16,25 @@
     <div class="edit-form">
         <h2>Editar un producto</h2>
 
-        <form action="/productos/edit/<%= productoEditado.id %>" method="POST" enctype="multipart/form-data">
+        <form id="formEdit" action="/productos/edit/<%= productoEditado.id %>" method="POST" enctype="multipart/form-data">
         
            
 
             <div class="name">
-                    <input type="text" name="name" id="name" value="<%= productoEditado.name %> ">      
+                    <input type="text" name="name" id="name" value="<%= productoEditado.name %> "> 
+                    <small id="errorName"><%=(locals.errors && errors.name) ? errors.name.msg : "" %></small>
+                         
             </div>
       
     
             <div class="Tamaño">
                 <input type="text" name="size" id="size" value="<%= productoEditado.size %> " >
+                <small id="errorSize"><%=(locals.errors && errors.size) ? errors.size.msg : "" %></small>
             </div>
 
             <div class="precio">
                 <input type="text" name="price" id="price" value="$<%= productoEditado.price %> ">
+                <small id="errorPrice"><%=(locals.errors && errors.price) ? errors.price.msg : "" %></small>
             </div>
 
             <div class="categoria">
@@ -44,6 +48,7 @@
 
             <div class="imagen">
                 <input class= 'image' type="file" placeholder="Agregar imagen" name="image" id="image">
+                <small id="errorImage"><%=(locals.errors && errors.image) ? errors.image.msg : "" %></small>
             </div>
 
             <div class="descripcion">
@@ -67,5 +72,6 @@
 </div>
     </main>
     <%- include('partials/footer') %>
+    <script src="/js/editFront.js"></script>
 </body>
 </html>

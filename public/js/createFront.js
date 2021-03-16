@@ -22,7 +22,7 @@ window.addEventListener('load', function(){
         let errorImage = qs('#errorImage');
         let errorDescription = qs('#errorDescription');
         
-        let letters = /^[A-Za-z]+$/;
+        let letters = /^[a-zA-Z\s]*$/;
 
         let errores = {};
 

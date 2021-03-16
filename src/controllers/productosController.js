@@ -39,25 +39,31 @@ module.exports = {
           price: req.body.price
   })
   .then(function(){
-      res.redirect('/')
+      res.redirect('/listado')
   })
       } else {
-        return res.render('create', {errors:errors.errors})
+        return res.render('create', {errors:errors.mapped()})
       }
       
         },  
      
       
     productEdit : function(req, res) {
+      let errors = validationResult(req);
+      if(errors.isEmpty()) { 
       db.Productos.findByPk(req.params.id, {
         include: {
         all:true,
         nested:true
         }
           })
+        
           .then(function(productoEditado){
             res.render('edit', {productoEditado: productoEditado})
           })
+        } else {
+          return res.render('edit', {errors:errors.mapped()})
+        }
         },
 
         save: function(req, res){
