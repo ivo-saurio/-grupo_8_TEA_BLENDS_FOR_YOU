@@ -26,7 +26,7 @@ register.addEventListener('submit', function(e){
     
 const expresiones = {
             name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-            password: /^.{6,12}$/, // 4 a 12 digitos.
+            password: /^.{6,12}$/, // 6 a 12 digitos.
             email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
             }
     let errores = {};

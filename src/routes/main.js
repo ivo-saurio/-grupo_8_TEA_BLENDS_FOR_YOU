@@ -8,4 +8,6 @@ const mainController = require('../controllers/mainController')
 
 router.get('/', mainController.index)
 
+router.get('/aboutUs', mainController.about)
+
 module.exports = router;

@@ -149,6 +149,33 @@ header nav a:hover {
 }
 
 
+/* --SOBRE NOSOTROS --*/
+
+.aboutContainer {
+    
+    display: flex;
+    flex-wrap: nowrap;
+    height: 82vh;
+    background-image: url(/images/aboutUs.jpeg);
+    background-position: center;
+    background-size: cover;
+  
+}
+
+.descriptionUs{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    padding-left: 12%;
+
+}
+
+.descriptionUs h1{
+    padding-bottom: 5%;
+}
+
+
 /* --LOGIN-- */
 .principallogin {
     display: flex;

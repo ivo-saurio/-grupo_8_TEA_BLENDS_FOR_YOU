@@ -6,6 +6,11 @@ let mainController = {
         function(req, res){
         return res.render('index')
     },
+
+    about:
+        function(req,res){
+            return res.render('aboutUs')
+        }
 } 
 
 
