@@ -3,6 +3,7 @@ let qs = function(element) {
 }
 
 window.addEventListener('load', function(){
+
     let form = qs('#formEdit')
 
     form.addEventListener('submit', function(e){
@@ -75,11 +76,7 @@ window.addEventListener('load', function(){
 
         //VALIDACION CATEGORY
 
-        if(selectCategory.value.length == 0){
-            errores.category = 'Debe seleccionar una categoria'
-            errorCategory.innerText = errores.category
-
-        }
+        
 
         //VALIDACION IMAGE
 
@@ -94,6 +91,7 @@ window.addEventListener('load', function(){
 
         //VALIDACION DESCRIPTION
 
+<<<<<<< HEAD
         if(textareaDescription.value.length == 0){
             errores.description = 'Este campo es obligatorio'
             errorDescription.innerText = errores.description
@@ -101,10 +99,13 @@ window.addEventListener('load', function(){
         } else {
             errorDescription.innerText = ""
         }
+=======
+        
+>>>>>>> 6a8983a6e3c815a4cd64a6e638c0c78dc9618a5e
         
         if(Object.keys(errores).length === 0) {
             form.submit()
           }
-
+          console.log(errores);
     })
 })

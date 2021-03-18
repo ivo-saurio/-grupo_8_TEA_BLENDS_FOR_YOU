@@ -8,18 +8,21 @@
     <div class="principalcatalogo">
         <% for(let i = 0; i < productos.length; i++) {%>
         <div class="contenedorProducto">
-            <section class="cards">
+          
+           
                 
-                    <article>
+                    
                         <div class="imgContenedorProducto">
                             <img src="/images/products/<%= productos[i].image %>" alt="">
                         </div> 
                         <h2><%= productos[i].name %></h2>
                         <p class="descCp"><%= productos[i].description %> </p>
-                        <a href="/productos/<%= productos[i].id %>"><button class="btnCatalogo">Mas info</button></a>
-                    </article>
-                
-            </section>
+                   
+               
+
+                <div class="divBtn">
+                <a href="/productos/<%= productos[i].id %>"><button class="btnCatalogo">Mas info</button></a>
+                </div>
         </div>        
         <% } %>
     </div>

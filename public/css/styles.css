@@ -182,6 +182,7 @@ header nav a:hover {
 
 .login{
     width: 40%;
+    padding: 10px;
     background-color: rgba(44, 44, 46, 0.6);
     display: flex;
     flex-direction: column;
@@ -228,6 +229,7 @@ header nav a:hover {
         color: #000000;
     }
 
+<<<<<<< HEAD
     .otp{
         position: relative;
         font-size: 14px;
@@ -241,11 +243,15 @@ header nav a:hover {
         position: inline;
         height: 13px;
     }
+=======
+    
+>>>>>>> 6a8983a6e3c815a4cd64a6e638c0c78dc9618a5e
 
     .buttonlogin {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+        
     }
 
     .login small{
@@ -456,6 +462,7 @@ header nav a:hover {
 
 .register{
     width: 40%;
+    padding: 10px;
     background-color: rgba(44, 44, 46, 0.6);
     display: inline-block;
     flex-direction: column;
@@ -592,8 +599,8 @@ header nav a:hover {
     justify-content: center;
 }
 
-.btn {
-    margin-top: 17px;
+.btnPerfil {
+    margin-top: 3px;
     padding: 5px;
     width: 150px;
     background: none;
@@ -613,9 +620,43 @@ header nav a:hover {
 
 .datosperfil {
     text-align: center;
-    font-size: 40px;
-    padding: 25px;
+    font-size: 26px;
+    padding: 5px;
 }
+
+.email {
+    font-size: 22px;
+}
+
+@media(min-width: 320px){
+    .perfil {
+        width: 90%;
+    }
+    .fotoPerfil img {
+        width: 115px;
+        height: 115px;
+        border-radius: 150px;
+    }
+}
+
+@media(min-width: 768px){
+    .perfil {
+        width: 50%;
+    }
+}
+
+
+@media(min-width: 1024px){
+    .perfil {
+        width: 35%;
+    }
+    .fotoPerfil img {
+        width: 120px;
+        height: 120px;
+        border-radius: 150px;
+    }
+}
+
 
 
 /* --FOOTER-- */
