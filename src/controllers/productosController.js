@@ -39,8 +39,11 @@ module.exports = {
           price: req.body.price
   })
   .then(function(){
-      res.redirect('/listado')
-  })
+      res.redirect('/productos/listado')
+  
+    }) .catch(function(e){
+    console.log(e);
+    })
       } else {
         return res.render('create', {errors:errors.mapped()})
       }

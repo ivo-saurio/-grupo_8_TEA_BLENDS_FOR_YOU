@@ -179,6 +179,7 @@ header nav a:hover {
 
 .login{
     width: 40%;
+    padding: 10px;
     background-color: rgba(44, 44, 46, 0.6);
     display: flex;
     flex-direction: column;
@@ -228,23 +229,13 @@ header nav a:hover {
         color: #000000;
     }
 
-    .otp{
-        position: relative;
-        font-size: 14px;
-    }
-    .otp a{
-        color: #fafafa;
-    }
-
-    .remember {
-        width: 10px;
-        height: 10px;
-    }
+    
 
     .buttonlogin {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+        
     }
 
     .login small{
@@ -455,6 +446,7 @@ header nav a:hover {
 
 .register{
     width: 40%;
+    padding: 10px;
     background-color: rgba(44, 44, 46, 0.6);
     display: inline-block;
     flex-direction: column;
@@ -643,8 +635,8 @@ header nav a:hover {
         width: 35%;
     }
     .fotoPerfil img {
-        width: 160px;
-        height: 160px;
+        width: 120px;
+        height: 120px;
         border-radius: 150px;
     }
 }

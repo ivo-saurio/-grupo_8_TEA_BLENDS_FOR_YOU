@@ -4,9 +4,9 @@ const { check } = require("express-validator");
 
 module.exports = [
     
-    check('name').notEmpty().withMessage('Este campo es obligatorio').isAlpha().withMessage('Solo letras'),
+    check('name').notEmpty().withMessage('Este campo es obligatorio'),
     
-    check('size').notEmpty().withMessage('Este campo es obligatorio').isAlpha().withMessage('Solo letras posta'),
+    check('size').notEmpty().withMessage('Este campo es obligatorio').isAlpha().withMessage('Solo letras'),
 
     check('price').isNumeric().withMessage('Solo números'),
 
