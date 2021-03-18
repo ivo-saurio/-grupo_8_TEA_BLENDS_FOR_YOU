@@ -67,14 +67,15 @@ module.exports = {
         },
 
         save: function(req, res){
+          let errors = validationResult(req);
+          if(errors.isEmpty()) {
           db.Productos.update({
             name: req.body.name,
             description: req.body.description,
             size: req.body.size,
-            //image: req.file.filename,
+            image: req.file.filename,
             id_categoria: req.body.id_categoria,
             price: req.body.price
-          
           },
           {
             where: {
@@ -82,11 +83,14 @@ module.exports = {
             }
           })
           .then(function(){
-            return res.redirect('/productos/listado')
+            res.redirect('/productos/listado')
           })
           .catch(function(e){
             console.log(e);
         })
+      } else {
+        return res.render('create', {errors:errors.mapped()})
+      }
         },
 
       cart :  (req, res, next) => {

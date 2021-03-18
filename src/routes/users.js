@@ -7,8 +7,6 @@ const path = require('path');
 const usersController = require('../controllers/usersController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
 const loggedMiddleware = require('../middlewares/loggedMiddleware')
-const {check, validationResult, body} = require('express-validator');
-const { login } = require('../controllers/usersController');
 const loginValidator = require('../validations/loginValidator')
 const registerValidator = require('../validations/registerValidator')
 

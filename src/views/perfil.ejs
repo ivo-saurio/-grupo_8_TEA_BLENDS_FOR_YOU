@@ -10,9 +10,8 @@
 
         <div class="perfil">  
             
-            <% if(typeof usuario === "admin@gmail.com" ) {%>
-                <h2 class="titulo">Mi Perfil</h2>
-
+            <% if(typeof usuario.id_rol === 9 ) {%>
+                
                 <div class="fotoPerfil">
                     <img class="" src="/images/users/<%= miPerfil.avatar %>" alt="" value="">
                 </div>

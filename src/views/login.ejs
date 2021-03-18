@@ -11,9 +11,8 @@
             <form id="formLogin" action="/users/login" method="POST">
         
              <div class="email">
-
              <label for="email"></label>
-             <input class="inlogin" type="email" placeholder="Escribe tu email" name="email" id="email" > 
+             <input class="inlogin" type="email" placeholder="Escribe tu email" name="email" id="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : (locals.old && !errors.email) ? old.email : '' %>"> 
              <small id="errorEmail"><%=(locals.errors && errors.email) ? errors.email.msg : "" %></small>
             
             </div>
@@ -26,7 +25,7 @@
             
             </div>
             
-            <div>
+            <div class="remember">
                 <label for="remember">
                 <input type="checkbox" class="remember"> Recuerdame
                 </label>
