@@ -17,11 +17,9 @@
                 </div>
 
             <div class="datosperfil">
-                 <h3><%= miPerfil.name %></h3>
+                 <h3><%= miPerfil.name %> <%= miPerfil.surname %> </h3>
 
-                <h3><%= miPerfil.surname %></h3>
-
-                <h3><%= miPerfil.email %></h3>
+                <h3 class="email"><%= miPerfil.email %></h3>
             </div>
 
                 <div class="submit">
@@ -53,31 +51,30 @@
                 </div>
 
             <div class="datosperfil">
-                 <h3><%= miPerfil.name %></h3>
+                 <h3><%= miPerfil.name %> <%= miPerfil.surname %></h3>
 
-                <h3><%= miPerfil.surname %></h3>
 
-                <h3><%= miPerfil.email %></h3>
+                <h3 class="email"><%= miPerfil.email %></h3>
             </div>
 
                 <div class="submit">
                     <a href="/users/perfil/<%= miPerfil.id %>/edit">
-                    <button class="btn">Editar mi perfil</button></a>
+                    <button class="btnPerfil">Editar mi perfil</button></a>
                 </div>
 
                 <div class="submit">
                     <a href="/productos/catalogo">
-                    <button class="btn">Comprar</button></a>
+                    <button class="btnPerfil">Comprar</button></a>
                 </div>
 
                 <div class="submit">
                     <a href="/users/productcart">
-                    <button class="btn">Mi carrito</button></a>
+                    <button class="btnPerfil">Mi carrito</button></a>
                 </div>
 
                 <div class="submit">
                     <a href="/users/logOut">
-                    <button class="btn">Cerrar Sesión</button></a> 
+                    <button class="btnPerfil">Cerrar Sesión</button></a> 
             <% } %> 
         </div>
         </div>    

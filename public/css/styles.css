@@ -591,8 +591,8 @@ header nav a:hover {
     justify-content: center;
 }
 
-.btn {
-    margin-top: 17px;
+.btnPerfil {
+    margin-top: 3px;
     padding: 5px;
     width: 150px;
     background: none;
@@ -612,9 +612,43 @@ header nav a:hover {
 
 .datosperfil {
     text-align: center;
-    font-size: 40px;
-    padding: 25px;
+    font-size: 26px;
+    padding: 5px;
 }
+
+.email {
+    font-size: 22px;
+}
+
+@media(min-width: 320px){
+    .perfil {
+        width: 90%;
+    }
+    .fotoPerfil img {
+        width: 115px;
+        height: 115px;
+        border-radius: 150px;
+    }
+}
+
+@media(min-width: 768px){
+    .perfil {
+        width: 50%;
+    }
+}
+
+
+@media(min-width: 1024px){
+    .perfil {
+        width: 35%;
+    }
+    .fotoPerfil img {
+        width: 160px;
+        height: 160px;
+        border-radius: 150px;
+    }
+}
+
 
 
 /* --FOOTER-- */
