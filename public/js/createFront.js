@@ -22,7 +22,7 @@ window.addEventListener('load', function(){
         let errorImage = qs('#errorImage');
         let errorDescription = qs('#errorDescription');
         
-        let letters = /^[a-zA-Z\s]*$/;
+        let letters = /^[a-zA-Z\s]+$/;
 
         let errores = {};
 
@@ -36,7 +36,7 @@ window.addEventListener('load', function(){
             errores.name = 'Este campo tiene que tener mínimo 3 caracteres'
             errorName.innerText = errores.name
 
-        } else if (!letters.test(inputName.value)){
+        } else if (letters.test(inputName.value)){
             errores.name = 'Solo letras'
             errorName.innerText = errores.name
 
