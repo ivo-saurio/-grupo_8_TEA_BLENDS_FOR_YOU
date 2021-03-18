@@ -57,8 +57,8 @@ module.exports = {
                     name: req.body.name,
                     surname: req.body.surname,
                     email: req.body.email,
+                    avatar: req.file.filename,
                     password: bcrypt.hashSync(req.body.password, 12),
-                    avatar: req.file.filename
             })
             .then(function(usuarioCreado){
                 req.session.usuario = usuarioCreado.dataValues;

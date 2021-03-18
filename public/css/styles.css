@@ -155,19 +155,22 @@ header nav a:hover {
     flex-direction: column;
     align-self: center;
     align-items: center;
-    padding-left: 12%;
-
+    padding-left: 10%;
 }
 
 .descriptionUs h1{
     padding-bottom: 5%;
 }
 
+.descriptionUs p{
+    line-height: 25px;
+}
+
 
 /* --LOGIN-- */
 .principallogin {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     height: 82vh;
@@ -215,9 +218,6 @@ header nav a:hover {
         border-radius: 2px;
     }
 
-    .remember input{
-       margin-top: 10px;
-    }
 
     .inlogin {
         margin: 10px 0;
@@ -231,14 +231,15 @@ header nav a:hover {
     .otp{
         position: relative;
         font-size: 14px;
+        padding-top: 20px;
     }
     .otp a{
         color: #fafafa;
     }
 
     .remember {
-        width: 10px;
-        height: 10px;
+        position: inline;
+        height: 13px;
     }
 
     .buttonlogin {

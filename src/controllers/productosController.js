@@ -8,10 +8,16 @@ module.exports = {
     listado: function(req, res) {
         db.Productos.findAll()
         .then(function(productos){
+          db.Categorias.findAll()
+           .then(function(categorias){
+
+
           return res.render('listado', {
-            productos : productos
+            productos : productos,
+            categorias : categorias
           })
-        })   
+        })
+      })     
     },
 
     catalogo: function(req, res) {
@@ -24,7 +30,14 @@ module.exports = {
     },
     
     create: function (req, res){
-      res.render('create')
+      db.Categorias.findAll()
+      .then(function(categorias){
+
+      
+      res.render('create', {
+        categorias: categorias
+      })
+    })
     },
 
     productCreate : (req, res, next) => {
@@ -39,7 +52,7 @@ module.exports = {
           price: req.body.price
   })
   .then(function(){
-      res.redirect('/listado')
+      res.redirect('/productos/listado')
   })
       } else {
         return res.render('create', {errors:errors.mapped()})
@@ -59,8 +72,16 @@ module.exports = {
           })
         
           .then(function(productoEditado){
-            res.render('edit', {productoEditado: productoEditado})
+            db.Categorias.findAll()
+            .then(function(categorias){
+          
+            res.render('edit', {
+              productoEditado: productoEditado,
+              categorias: categorias
+            })
           })
+        })
+      
         } else {
           return res.render('edit', {errors:errors.mapped()})
         }
@@ -69,13 +90,14 @@ module.exports = {
         save: function(req, res){
           let errors = validationResult(req);
           if(errors.isEmpty()) {
-          db.Productos.update({
-            name: req.body.name,
-            description: req.body.description,
-            size: req.body.size,
-            image: req.file.filename,
-            id_categoria: req.body.id_categoria,
-            price: req.body.price
+          
+            db.Productos.update({
+              name: req.body.name,
+              description: req.body.description,
+              size: req.body.size,
+              image: req.file.filename,
+              id_categoria: req.body.id_categoria,
+              price: req.body.price
           },
           {
             where: {

@@ -22,8 +22,9 @@ window.addEventListener('load', function(){
         let errorImage = qs('#errorImage');
         let errorDescription = qs('#errorDescription');
         
-        let letters = /^[a-zA-Z\s]*$/;
-
+        const expresiones = {
+            letters:  /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios
+        }
         let errores = {};
 
         // VALIDACIÓN NAME
@@ -36,19 +37,12 @@ window.addEventListener('load', function(){
             errores.name = 'Este campo tiene que tener mínimo 3 caracteres'
             errorName.innerText = errores.name
 
-        } else if (!letters.test(inputName.value)){
+        } else if (!inputName.value.match(expresiones.letters)){
             errores.name = 'Solo letras'
             errorName.innerText = errores.name
 
         } else {
-            delete errores.name
             errorName.innerText = ""
-        }
-
-        if(Object.keys(errores).length != 0) {
-          errorName.innerText = (errores.name)  
-        } else {
-
         }
 
         // VALIDACIÓN SIZE
@@ -61,12 +55,11 @@ window.addEventListener('load', function(){
             errores.size = 'Este campo tiene que tener mínimo 3 caracteres'
             errorSize.innerText = errores.size
 
-        } else if (!letters.test(inputSize.value)){
+        } else if (!inputName.value.match(expresiones.letters)){
             errores.size = 'Solo letras'
             errorSize.innerText = errores.size
 
         } else {
-            delete errores.size
             errorSize.innerText = ""
         }
 
@@ -77,7 +70,6 @@ window.addEventListener('load', function(){
             errorPrice.innerText = errores.price
 
         } else {
-            delete errores.size
             errorSize.innerText = ""
         }
 
@@ -96,7 +88,6 @@ window.addEventListener('load', function(){
             errorImage.innerText = errores.image
 
         } else {
-            delete errores.image
             errorImage.innerText = ""
         }
         
@@ -108,11 +99,10 @@ window.addEventListener('load', function(){
             errorDescription.innerText = errores.description
 
         } else {
-            delete errores.description
             errorDescription.innerText = ""
         }
         
-        if(Object.keys(errores).length == 0) {
+        if(Object.keys(errores).length === 0) {
             form.submit()
           }
 

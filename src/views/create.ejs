@@ -41,9 +41,10 @@
             <div class="categoria">
                 
                 <select class="opciones" name="category" id="category">
-                    <option selected disabled>-- Seleccione una opción --</option>
-                    <option>Tea</option>
-                    <option>Gin</option>    
+                    <option selected>-- Seleccione una categoria --</option>
+                    <% for(let i=0; i < categorias.length; i++) { %>
+                        <option value="<%=categorias[i].id%>"><%=categorias[i].name%></option>
+                    <% } %>   
                   </select>
                   <small id="errorCategory"><%=(locals.errors && errors.category) ? errors.category.msg : "" %></small>
 

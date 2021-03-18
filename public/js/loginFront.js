@@ -19,7 +19,7 @@ login.addEventListener('submit', function(e){
 
     
 const expresiones = {
-            password: /^.{6,12}$/, // 4 a 12 digitos.
+            password: /^.{6,12}$/, // 6 a 12 digitos.
             email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
             }
     let errores = {};

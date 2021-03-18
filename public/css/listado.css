@@ -30,6 +30,11 @@
     background-color: rgba(44, 44, 46, 0.6);
 }
 
+img{
+    width:100px;
+    height:100px;
+}
+
 .nombresColumna {
     font-size: 24px;
 }

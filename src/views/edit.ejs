@@ -33,21 +33,23 @@
             </div>
 
             <div class="precio">
-                <input type="text" name="price" id="price" value="$<%= productoEditado.price %> ">
+                <input type="text" name="price" id="price" value="<%= productoEditado.price %> ">
                 <small id="errorPrice"><%=(locals.errors && errors.price) ? errors.price.msg : "" %></small>
             </div>
 
             <div class="categoria">
                 
-                <select class="opciones">
-                    <option  selected disabled>-- Seleccione una opción --</option>
-                    <option>Tea</option>
-                    <option>Gin</option>    
+                <select class="opciones" id="opciones" name="opciones">
+                    <% for (let i=0; i<categorias.length;i++) { %> 
+                       <option value ="<%=categorias[i].id%>">
+                            <%=categorias[i].name%>
+                        </option>
+                    <% } %>         
                   </select>
             </div>
 
             <div class="imagen">
-                <input class= 'image' type="file" placeholder="Agregar imagen" name="image" id="image">
+                <input class='image' type="file" name="image" id="image" value="<%= productoEditado.image %>">
                 <small id="errorImage"><%=(locals.errors && errors.image) ? errors.image.msg : "" %></small>
             </div>
 
@@ -72,6 +74,6 @@
 </div>
     </main>
     <%- include('partials/footer') %>
-    <script src="/js/editFront.js"></script>
+    <!-- <script src="/js/editFront.js"></script> -->
 </body>
 </html>
