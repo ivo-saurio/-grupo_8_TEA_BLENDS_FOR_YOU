@@ -15,9 +15,11 @@
                         <div class="imgContenedorProducto">
                             <img src="/images/products/<%= productos[i].image %>" alt="">
                         </div> 
+                        
                         <h2><%= productos[i].name %></h2>
+                       
                         <p class="descCp"><%= productos[i].description %> </p>
-                   
+                    
                
 
                 <div class="divBtn">
@@ -27,7 +29,9 @@
         <% } %>
     </div>
     <%- include('partials/footer') %>
+
     </main>
+</script>
 </body>
 </html>
 

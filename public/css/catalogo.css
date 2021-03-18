@@ -52,8 +52,17 @@
 }
 
 .descCp {
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+
 }
+
+
 
 .divBtn {
     position: absolute;
@@ -87,10 +96,6 @@
         width: 47%;
         margin: 10px;
     }
-    .imgContenedorProducto img {
-        
-    
-    }
 }
 
 @media(min-width: 1024px){
@@ -99,16 +104,4 @@
     }
 }
 
-@media(min-width: 1440px){
-    .contenedorProducto {
-        
-    }
-    .imgContenedorProducto img {
-        
-    }
-
-    .descContenedorProducto h2 {
-       
-    }
-    }
 

@@ -11,7 +11,6 @@ module.exports = {
           db.Categorias.findAll()
            .then(function(categorias){
 
-
           return res.render('listado', {
             productos : productos,
             categorias : categorias
@@ -53,14 +52,10 @@ module.exports = {
   })
   .then(function(){
       res.redirect('/productos/listado')
-<<<<<<< HEAD
-  })
-=======
-  
-    }) .catch(function(e){
+      
+  }).catch(function(e){
     console.log(e);
     })
->>>>>>> 6a8983a6e3c815a4cd64a6e638c0c78dc9618a5e
       } else {
         return res.render('create', {errors:errors.mapped()})
       }
