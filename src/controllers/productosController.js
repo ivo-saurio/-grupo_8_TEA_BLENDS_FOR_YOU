@@ -11,7 +11,6 @@ module.exports = {
           db.Categorias.findAll()
            .then(function(categorias){
 
-
           return res.render('listado', {
             productos : productos,
             categorias : categorias
@@ -53,8 +52,8 @@ module.exports = {
   })
   .then(function(){
       res.redirect('/productos/listado')
-  
-    }) .catch(function(e){
+      
+  }).catch(function(e){
     console.log(e);
     })
       } else {

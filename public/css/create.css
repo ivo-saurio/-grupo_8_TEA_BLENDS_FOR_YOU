@@ -42,7 +42,7 @@ input{
     border-radius: 25px;
     font-size: 16px;
     margin: 5px;
-    width: 95%;
+    width: 97%;
     padding: 7px;
     color:#000000
     
@@ -104,6 +104,7 @@ input{
 @media(min-width: 320px){
     .create-form{
         width: 90%;
+        height: 90%;
     }
     input {
         height: 27px;
