@@ -39,7 +39,8 @@
 }
 
 .imgContenedorProducto img {
-    width: 100px;
+    width: 85%;
+    height: 85%;
     border-radius: 5px;
 }
 
@@ -54,19 +55,11 @@
 .descCp {
     position: relative;
     display: -webkit-box;
-<<<<<<< HEAD
-    -webkit-line-clamp: 4;
-=======
     -webkit-line-clamp: 5;
->>>>>>> 881f7a4b5fc56fc04bc36162586e0db2c873d0f3
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
     margin: 0;
-<<<<<<< HEAD
-=======
-
->>>>>>> 881f7a4b5fc56fc04bc36162586e0db2c873d0f3
 }
 
 

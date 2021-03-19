@@ -12,7 +12,7 @@
         
              <div class="email">
              <label for="email"></label>
-             <input class="inlogin" type="email" placeholder="Escribe tu email" name="email" id="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : (locals.old && !errors.email) ? old.email : '' %>"> 
+             <input class="inlogin" type="email" placeholder="Escribe tu email" name="email" id="email" value="<%=(locals.old && !errors.email) ? old.email : '' %>"> 
              <small id="errorEmail"><%=(locals.errors && errors.email) ? errors.email.msg : "" %></small>
             
             </div>
@@ -21,7 +21,8 @@
 
              <label for="password"></label>
              <input class= "inlogin" type="password" placeholder="Escribe tu contraseña" name="password" id="password">
-             <small id="errorPassword"><%=(locals.errors && errors.password) ? errors.password.msg : "" %></small>
+             <small id="errorPassword"><%=(locals.errors && errors.password) ? errors.password.msg : "" %>
+                    <%= (typeof notMatch != 'undefined') ? notMatch[0].msg : "" %></small>
             
             </div>
             

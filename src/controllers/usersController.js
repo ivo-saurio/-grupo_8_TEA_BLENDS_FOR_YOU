@@ -12,7 +12,7 @@ module.exports = {
         },
         processLogin: function(req, res) {
             let errors = validationResult(req);
-            let {email, password, remember} = req.body
+            let {password, remember} = req.body
             if(errors.isEmpty()){
                 db.Usuarios.findOne({
                     where: {
@@ -20,23 +20,29 @@ module.exports = {
                     }
                 })
                 .then(function(usuario){
-                    if (usuario != undefined){
                         if (bcrypt.compareSync(password, usuario.password)){
-                            req.session.usuario = usuario
+                            req.session.usuario = usuario.dataValues;
                             if (remember != undefined) {
-                                res.cookie('remember', usuario.email, {maxAge: 2592000000 })
+                                res.cookie('remember', usuario.dataValues.email, {maxAge: 2592000000 })
                             } 
                             res.redirect('/');
-                        } else {
-                            res.render ('login',{errors:errors.mapped()})
-                        };
-                    }else{
-                        res.render('login', {errors:errors.mapped()})
-                    }
-                    })
-            }else {
-                return res.render('login', { errors: errors.mapped()})
-                }  
+                            }else{
+                                return res.render('login',
+                                {notMatch:[
+                                {msg:'Email o Contraseña incorrectas'}]});
+                            }
+                        })
+                        .catch(function(e){
+                            res.send(e);
+                        })   
+            
+                    } else {           
+                        return res.render('login',
+                            {errors:errors.mapped(),
+                                old:req.body 
+                            });
+                }
+           
             },
             logOut:function(req,res){
                 req.session.destroy();

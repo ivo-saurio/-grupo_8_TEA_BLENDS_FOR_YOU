@@ -41,11 +41,13 @@ const expresiones = {
     if(!inputPassword.value.match(expresiones.password)){
         errores.password = 'Su contraseña debe tener más de 6 caracteres'
         errorPassword.innerText = errores.password
-
-    } else if(){
+        
+    
     } else {
         errorPassword.innerText = ""
     }
+
+
 
 
     if(Object.keys(errores).length === 0) {
