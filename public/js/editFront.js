@@ -91,7 +91,6 @@ window.addEventListener('load', function(){
 
         //VALIDACION DESCRIPTION
 
-<<<<<<< HEAD
         if(textareaDescription.value.length == 0){
             errores.description = 'Este campo es obligatorio'
             errorDescription.innerText = errores.description
@@ -99,9 +98,6 @@ window.addEventListener('load', function(){
         } else {
             errorDescription.innerText = ""
         }
-=======
-        
->>>>>>> 6a8983a6e3c815a4cd64a6e638c0c78dc9618a5e
         
         if(Object.keys(errores).length === 0) {
             form.submit()

@@ -33,7 +33,11 @@
                 </div>
 
                 <div class="buttonagregarcarrito">
-                    <button class="btn" type="submit">Agregar al carrito
+                    <% if(typeof usuario == 'undefined' ) {%>
+                        <a href="/users/login"><button class="btn" type="submit">Agregar al carrito
+                    <% } else { %> 
+                        <a href="/users/productcart"><button class="btn" type="submit">Agregar al carrito
+                    <% } %> 
 
                     </button>
                 </div>

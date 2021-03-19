@@ -28,10 +28,10 @@ module.exports = {
                             } 
                             res.redirect('/');
                         } else {
-                            res.render ('login',{errors:errors})
+                            res.render ('login',{errors:errors.mapped()})
                         };
                     }else{
-                        res.render('login', {errors:errors})
+                        res.render('login', {errors:errors.mapped()})
                     }
                     })
             }else {

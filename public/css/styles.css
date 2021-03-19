@@ -229,7 +229,6 @@ header nav a:hover {
         color: #000000;
     }
 
-<<<<<<< HEAD
     .otp{
         position: relative;
         font-size: 14px;
@@ -243,9 +242,6 @@ header nav a:hover {
         position: inline;
         height: 13px;
     }
-=======
-    
->>>>>>> 6a8983a6e3c815a4cd64a6e638c0c78dc9618a5e
 
     .buttonlogin {
         display: flex;
@@ -488,6 +484,7 @@ header nav a:hover {
 
     .register small{
         color:red;
+        font-size: 14px;
     }
     
 
@@ -555,11 +552,12 @@ header nav a:hover {
     background-color: rgba(44, 44, 46, 0.6);
     margin-top: 10px;
     padding: 20px 60px;
+    flex-direction: column;
     box-sizing: border-box;
     box-shadow: 0 0 10px grey;
     border-radius: 10px;
     width: 30%;
-    height: 95%;
+    height: 97%;
 }
 .perfil h2{
     text-align: center;

@@ -16,12 +16,13 @@
                             <img src="/images/products/<%= productos[i].image %>" alt="">
                         </div> 
                         <h2><%= productos[i].name %></h2>
-                        <p class="descCp"><%= productos[i].description %> </p>
+                        <p class="descCp" maxlength= "20"><%= productos[i].description %> </p>
                    
                
 
                 <div class="divBtn">
                 <a href="/productos/<%= productos[i].id %>"><button class="btnCatalogo">Mas info</button></a>
+                    
                 </div>
         </div>        
         <% } %>

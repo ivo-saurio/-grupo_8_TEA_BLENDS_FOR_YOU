@@ -70,6 +70,17 @@ const expresiones = {
         errorEmail.innerText = ""
     }
 
+     //VALIDACION IMAGEN
+
+     if(inputAvatar.value.length == 0){
+        errores.avatar = 'Debe seleccionar una imagen'
+        errorAvatar.innerText = errores.avatar
+
+    } else {
+        delete errores.avatar
+        errorAvatar.innerText = ""
+    }
+
     //VALIDACION CONTRASEÑA
 
     if(!inputPassword.value.match(expresiones.password)){

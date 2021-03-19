@@ -28,6 +28,10 @@
 
 }
 
+small{
+    width: 100%;
+}
+
 .create-form h2 {
     font-size: 30px;
 }

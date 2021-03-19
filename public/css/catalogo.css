@@ -52,7 +52,13 @@
 }
 
 .descCp {
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
 }
 
 .divBtn {
