@@ -6,9 +6,11 @@ const multer = require('multer');
 const path = require('path');
 const usersController = require('../controllers/usersController');
 const loginMiddleware = require('../middlewares/loginMiddleware');
-const loggedMiddleware = require('../middlewares/loggedMiddleware')
-const loginValidator = require('../validations/loginValidator')
-const registerValidator = require('../validations/registerValidator')
+const loggedMiddleware = require('../middlewares/loggedMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
+const loginValidator = require('../validations/loginValidator');
+const registerValidator = require('../validations/registerValidator');
+
 
 
 
@@ -43,7 +45,7 @@ router.get('/perfil/:id/edit', usersController.perfilEditar)
 router.post('/perfil/:id/edit', upload.single('avatar'),usersController.perfilEditado)
 
 //LISTADO USUARIOS(ADMIN)
-router.get('/listadoUsuarios', usersController.listado);
+router.get('/listadoUsuarios', adminMiddleware, usersController.listado);
 
 
 
