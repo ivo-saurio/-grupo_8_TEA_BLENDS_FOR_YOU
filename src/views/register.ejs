@@ -45,7 +45,7 @@
                 <div class="repassword">
                         <label for="repassword"></label>
                         <input class="formulario" type="password" id="repassword" name="repassword" placeholder="Confirmar Contraseña" >
-                        <small id="errorRepassword"><%=(locals.errors && errors.repassword) ? errors.repassword.msg : "" %> </small>
+                        <small id="errorRepassword"><%= (typeof notMatchError != 'undefined') ? notMatchError[0].msg : "" %></small>
                 </div>
 
                 

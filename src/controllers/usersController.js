@@ -57,9 +57,9 @@ module.exports = {
         
         create: function(req, res){
             let errors = validationResult(req);
-            //console.log(errors);
             if(errors.isEmpty()){
-                db.Usuarios.create({
+                if(req.body.password === req.body.repassword){
+                    db.Usuarios.create({
                     name: req.body.name,
                     surname: req.body.surname,
                     email: req.body.email,
@@ -73,13 +73,20 @@ module.exports = {
             .catch(function(e){
                 res.send(e);
             })
+            }else{
+                     return res.render('register',
+                   {
+                       old:req.body,
+                       notMatchError:[ {msg:'Las contraseñas deben ser iguales'} ]
+                   })
+           }
             } else {
                 return res.render('register', {
                     errors:errors.mapped(),
                     old:req.body
                     })
-            }
-                
+            
+        }       
                
         },
         perfil: function(req, res){
