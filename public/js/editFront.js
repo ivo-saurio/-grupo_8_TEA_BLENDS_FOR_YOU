@@ -87,17 +87,7 @@ window.addEventListener('load', function(){
         } else {
             errorImage.innerText = ""
         }
-        
-
-        //VALIDACION DESCRIPTION
-
-        if(textareaDescription.value.length == 0){
-            errores.description = 'Este campo es obligatorio'
-            errorDescription.innerText = errores.description
-
-        } else {
-            errorDescription.innerText = ""
-        }
+       
         
         if(Object.keys(errores).length === 0) {
             form.submit()
