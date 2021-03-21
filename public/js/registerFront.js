@@ -90,6 +90,14 @@ const expresiones = {
         errorPassword.innerText = ""
     }
 
+    //VALIDACION CONFIRMACION CONTRASEÑA
+
+    if(!inputRepassword.value.match(expresiones.password)){
+        errores.Repassword = 'Su contraseña debe tener más de 6 caracteres'
+        errorRepassword.innerText = errores.Repassword
+    } else {
+        errorRepassword.innerText = ""
+    }
 
     if(Object.keys(errores).length === 0) {
         register.submit()

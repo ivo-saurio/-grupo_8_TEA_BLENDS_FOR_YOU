@@ -1,4 +1,3 @@
-//var createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -13,13 +12,14 @@ const app = express();
 const mainRouter = require('./routes/main');
 const productosRouter = require('./routes/productos');
 const usersRouter = require('./routes/users');
+const apiRouter = require('./routes/api/api');
 const rememberMiddleware = require('./middlewares/rememberMiddleware');
 const sessionMiddleware = require('./middlewares/sessionMiddleware');
 
 
 //VIEW ENGINE SETUP
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'views'));
 
 
 
@@ -30,16 +30,16 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(methodOverride("_method"));
 app.use(session ({secret: 'sarasa'}));
-app.use(sessionMiddleware)
+app.use(sessionMiddleware);
 app.use(rememberMiddleware);
 
 
 
 //RECURSOS
 app.use('/', mainRouter);
-app.use('/users',usersRouter);
-app.use('/productos', productosRouter)
-
+app.use('/users', usersRouter);
+app.use('/productos', productosRouter);
+app.use('/api', apiRouter);
 
 
 app.listen(process.env.PORT || 3000, function(){
