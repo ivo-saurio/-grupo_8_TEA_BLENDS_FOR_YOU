@@ -10,16 +10,15 @@ module.exports = {
                     usuarios.push({
                         id:generalUsuarios[i].id,
                         name:generalUsuarios[i].name,
-                        surname:generalUsuarios[i].surname,
                         email:generalUsuarios[i].email,
-                        link:'api/users/'+ generalUsuarios[i].id,
+                        link:'http://localhost:3000/api/users/'+ generalUsuarios[i].id,
                     });
                     
                 }
                 return res.status(200).json({
                     count: generalUsuarios.length,
                     usuarios: usuarios,
-                    link:"/api/users"
+                    
                 })
     
             })
@@ -35,12 +34,15 @@ module.exports = {
                 {
                     id: usuario.id,
                     name: usuario.name,
-                    surname: usuario.surname,
                     email:usuario.email,
                     avatar:usuario.avatar
                 }            
             )
         })
+    .catch(function(e){
+        return res.json("User not found")
+    })
+    
     }
     
 }
