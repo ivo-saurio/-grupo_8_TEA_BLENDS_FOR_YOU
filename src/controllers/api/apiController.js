@@ -1,4 +1,4 @@
-const db = require('../database/models')
+const db = require('../../database/models')
 
 
 module.exports = {
@@ -9,10 +9,10 @@ module.exports = {
                 for (let i = 0; i < generalUsuarios.length; i++) {
                     usuarios.push({
                         id:generalUsuarios[i].id,
-                        nombre:generalUsuarios[i].nombre,
-                        apellido:generalUsuarios[i].apellido,
+                        name:generalUsuarios[i].name,
+                        surname:generalUsuarios[i].surname,
                         email:generalUsuarios[i].email,
-                        link:'api/users/'+generalUsuarios[i].id,
+                        link:'api/users/'+ generalUsuarios[i].id,
                     });
                     
                 }
@@ -34,10 +34,10 @@ module.exports = {
             return res.status(200).json(
                 {
                     id: usuario.id,
-                    nombre: usuario.nombre,
-                    apellido: usuario.apellido,
+                    name: usuario.name,
+                    surname: usuario.surname,
                     email:usuario.email,
-                    detail:usuario.imagen
+                    avatar:usuario.avatar
                 }            
             )
         })
