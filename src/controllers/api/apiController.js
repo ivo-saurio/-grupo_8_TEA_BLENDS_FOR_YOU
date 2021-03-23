@@ -78,18 +78,12 @@ module.exports = {
         .then(function(producto){
             return res.status(200).json(
                 {
-                    id: producto.id,
-                    name: producto.name,
-                    surname: producto.surname,
-                    email:producto.email,
-                    avatar:producto.avatar,
-
-                        id: generalProductos.id,
-                        name: generalProductos.name,
-                        description: generalProductos.description,
-                        image: generalProductos.image,
-                        size: generalProductos.size,
-                        price:generalProductos.price,
+                        id: producto.id,
+                        name: producto.name,
+                        description: producto.description,
+                        image: producto.image,
+                        size: producto.size,
+                        price:producto.price,
                 }            
             )
         })
