@@ -1,13 +1,27 @@
 import React from 'react';
-import '../assets/css/app.css';
+import Sidebar from './Sidebar'
+import Header from './Header'
+import Footer from './Footer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <reactFragment>
+      <div id="wrapper">
+      
+        <Sidebar/>
+
+          <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+
+              <Header/>
+
+              <Footer/>
+
+            </div>
+          </div>
+
+      </div>
+    </reactFragment>
   );
 }
 
