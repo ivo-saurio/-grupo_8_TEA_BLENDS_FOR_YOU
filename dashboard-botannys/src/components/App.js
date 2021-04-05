@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './Sidebar'
 import Header from './Header'
 import Footer from './Footer'
+import Main from './Main'
 
 function App() {
   return (
@@ -14,11 +15,14 @@ function App() {
             <div id="content">
 
               <Header/>
-
-              <Footer/>
+              <Main />
+              
 
             </div>
+            <Footer/>
           </div>
+
+        
 
       </div>
     </reactFragment>
