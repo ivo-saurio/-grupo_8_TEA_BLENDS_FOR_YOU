@@ -11,7 +11,7 @@ module.exports = {
                         id:generalUsuarios[i].id,
                         name:generalUsuarios[i].name,
                         email:generalUsuarios[i].email,
-                        link:'http://localhost:3000/api/users/'+ generalUsuarios[i].id,
+                        link:'http://localhost:3001/api/users/'+ generalUsuarios[i].id,
                     });
                     
                 }
@@ -64,7 +64,7 @@ module.exports = {
                 return res.status(200).json({
                     count: generalProductos.length,
                     productos: productos,
-                    link:"/api/products"
+                    link:"'http://localhost:3001/api/products/'"
                 })
     
             })
