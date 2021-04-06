@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require ("method-override");
 const session = require('express-session');
+const cors = require('cors');
 
 
 const app = express();
@@ -32,6 +33,7 @@ app.use(methodOverride("_method"));
 app.use(session ({secret: 'botannys'}));
 app.use(sessionMiddleware);
 app.use(rememberMiddleware);
+app.use(cors());
 
 
 
@@ -42,8 +44,8 @@ app.use('/productos', productosRouter);
 app.use('/api', apiRouter);
 
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log('Servidor corriendo en el puerto 3000');
-    console.log("http://localhost:3000");
+app.listen(process.env.PORT || 3001, function(){
+    console.log('Servidor corriendo en el puerto 3001');
+    console.log("http://localhost:3001");
 })
 

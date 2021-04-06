@@ -16,7 +16,7 @@ module.exports = {
                     
                 }
                 return res.status(200).json({
-                    count: generalUsuarios.length,
+                    total: generalUsuarios.length,
                     usuarios: usuarios,
                     
                 })
@@ -62,7 +62,7 @@ module.exports = {
                     
                 }
                 return res.status(200).json({
-                    count: generalProductos.length,
+                    total: generalProductos.length,
                     productos: productos,
                     link:"/api/products"
                 })
