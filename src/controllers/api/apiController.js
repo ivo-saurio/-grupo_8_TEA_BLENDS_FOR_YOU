@@ -87,6 +87,23 @@ module.exports = {
                 }            
             )
         })
-    }
+    },
+    categorias: function(req,res){
+        db.Categorias.findAll()
+        .then(function(generalCategorias){
+        let categorias = [];
+        for (let i = 0; i < generalCategorias.length; i++) {
+            categorias.push({
+                id: generalCategorias[i].id,
+                name: generalCategorias[i].name
+            });
+            }
+
+        return res.status(200).json({
+            total: generalCategorias.length,
+            categorias: categorias
+        })
+        })
+    },
     
 }
