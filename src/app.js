@@ -33,7 +33,7 @@ app.use(methodOverride("_method"));
 app.use(session ({secret: 'botannys'}));
 app.use(sessionMiddleware);
 app.use(rememberMiddleware);
-app.use(cors());
+app.use(cors())
 
 
 
