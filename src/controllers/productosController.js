@@ -31,8 +31,6 @@ module.exports = {
     create: function (req, res){
       db.Categorias.findAll()
       .then(function(categorias){
-
-      
       res.render('create', {
         categorias: categorias
       })
@@ -47,7 +45,6 @@ module.exports = {
           description: req.body.description,
           size: req.body.size,
           image: req.file.filename,
-          id_categoria: req.body.id_categoria,
           price: req.body.price
   })
   .then(function(){
@@ -98,7 +95,6 @@ module.exports = {
               description: req.body.description,
               size: req.body.size,
               image: req.file.filename,
-              id_categoria: req.body.id_categoria,
               price: req.body.price
           },
           {

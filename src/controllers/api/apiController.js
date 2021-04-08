@@ -75,17 +75,19 @@ module.exports = {
                 id: req.params.id
                 }
         })
-        .then(function(producto){
-            return res.status(200).json(
-                {
-                        id: producto.id,
-                        name: producto.name,
-                        description: producto.description,
-                        image: producto.image,
-                        size: producto.size,
-                        price:producto.price,
-                }            
-            )
+        .then(function(productos){
+      
+                    
+
+
+                   
+            res.status(200).json({
+              
+              url: `http://localhost:3001/images/products/${productos.image}`,
+              productos:productos
+             })
+                          
+            
         })
     },
 

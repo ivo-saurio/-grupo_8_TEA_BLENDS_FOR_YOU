@@ -11,11 +11,11 @@ function LastProduct(props){
 				    <div className="card-body">
 						<div className="text-center">
                             <h2> {props.name} </h2>
-							<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "25rem"}} src="assets/images/product_dummy.svg" alt=""/>
+							<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "300px"}} src={"http://localhost:3001/images/products/" + props.image } alt=""/>
 						</div>
 						    <p> {props.description} </p>
                             <p> {props.price} </p>
-							<a href="http://localhost:3001/productos/{props.id}">Detalle del Producto </a>
+							<a  href={"http://localhost:3001/productos/" + props.id } >Detalle del Producto </a>
 					</div>
 			</div>
 		</div>

@@ -12,7 +12,6 @@ function LastProductCard() {
             .then(data => { 
 				let producto = data[data.length -1]
 				setUltimo(producto)
-				console.log(producto);
 			})
 
     }, [])
@@ -27,6 +26,7 @@ function LastProductCard() {
 			description = {Ultimo.description}
 			price = {Ultimo.price}
 			id = {Ultimo.id}
+			image = {Ultimo.image}
                
             /> 
 			</div>
