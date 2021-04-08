@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react';
 import Resourses from '../../../requests/Resourses';
 
 
-function Card (){
+function Card (titulo, cantidad, colorTexto, icono, color){
     
     const [data, setData] = useState({
         countUsers: 0,
-        countCategoria: 0,
         countProducts: 0
     });
 
     useEffect( () => {
         Resourses.usersAll().then(function(usuarios){
+
             Resourses.productAll().then(function(Productos){
                 
                 setData({countProducts : Productos.data.count, 
-                    countUsers : usuarios.data.count,
+                    countUsers : usuarios.data.count
                    } ) 
                
 
@@ -43,7 +43,7 @@ function Card (){
         color:"card border-left-warning shadow h-100 py-2"
         }
      ]
-
+     
 	 return  ( 
         cardDetail.map((item,n)=>
 		
@@ -62,8 +62,7 @@ function Card (){
 					</div>
 				</div>
 			</div>
-		</div>					    
-		)
+		</div>)
     ) }
 
 export default Card;

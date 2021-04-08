@@ -5,7 +5,7 @@ function Sidebar(){
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" >
 
 			{/* <!-- Sidebar - Brand --> */}
-			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="http://localhost:3001/">
 				<div className="sidebar-brand-icon">
 					<i className="fas fa-chart-line"></i>
 				</div>
@@ -31,9 +31,9 @@ function Sidebar(){
 
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
-				<a className="nav-link collapsed" href="/">
+				<a className="nav-link collapsed" href="http://localhost:3001/users/listadoUsuarios">
 					<i className="fas fa-fw fa-folder"></i>
-					<span>Pages</span>
+					<span>Usuarios</span>
 				</a>
 			</li>
 

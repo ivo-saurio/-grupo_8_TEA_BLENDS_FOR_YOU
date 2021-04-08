@@ -3,6 +3,7 @@ import Card from './Card';
 import LastProduct from './LastProduct';
 import Categories from './Categories';
 
+
 function Main(){
     return(
         
