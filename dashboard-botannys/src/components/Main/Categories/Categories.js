@@ -9,7 +9,7 @@ function Categories (){
     }, [])
 
     const obtenerCategoria = () => {
-        fetch("http://localhost:3001/api/categorias")
+        fetch("http://localhost:3001/api/categories")
         .then(response => response.json())
         .then(json => {
             setCategorias(json.categorias)
@@ -20,7 +20,7 @@ function Categories (){
     }
 
     return(
-        <div className="card-body">
+        
             <div className="row">
                 {
                     categorias.map((categoria) => {
@@ -36,7 +36,7 @@ function Categories (){
                     })
                 }
             </div>
-        </div>
+        
     );
 }
 

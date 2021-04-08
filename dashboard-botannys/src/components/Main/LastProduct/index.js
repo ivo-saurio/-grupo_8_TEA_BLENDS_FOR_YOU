@@ -19,7 +19,7 @@ function LastProductCard() {
 	
 
 		return (
-			<div className="row">
+			
             <LastProduct
                     
 			name = {Ultimo.name}
@@ -29,7 +29,7 @@ function LastProductCard() {
 			image = {Ultimo.image}
                
             /> 
-			</div>
+			
 		)
 
 		
