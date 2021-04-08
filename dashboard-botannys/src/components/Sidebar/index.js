@@ -31,24 +31,24 @@ function Sidebar(){
 
 			{/* <!-- Nav Item - Pages --> */}
 			<li className="nav-item">
-				<a className="nav-link collapsed" href="http://localhost:3001/users/listadoUsuarios">
-					<i className="fas fa-fw fa-folder"></i>
-					<span>Usuarios</span>
+				<a className="nav-link collapsed" href="http://localhost:3001/">
+				<i class="fas fa-arrow-circle-up"></i>
+					<span>Mi sitio web</span>
 				</a>
 			</li>
 
 			{/* <!-- Nav Item - Charts --> */}
 			<li className="nav-item">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-chart-area"></i>
-					<span>Charts</span></a>
+				<a className="nav-link" href="http://localhost:3001/productos/create">
+				<i class="fas fa-plus"></i>
+					<span>Crear nuevo producto</span></a>
 			</li>
 
 			{/* <!-- Nav Item - Tables --> */}
 			<li className="nav-item">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-table"></i>
-					<span>Tables</span></a>
+				<a className="nav-link" href="http://localhost:3001/productos/listado">
+				<i class="fas fa-list-ul"></i>
+					<span>Listado de productos</span></a>
 			</li>
 
 			{/* <!-- Divider --> */}
