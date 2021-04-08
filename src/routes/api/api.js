@@ -9,7 +9,9 @@ router.get('/users/:id',apiController.usersDetail);
 
 router.get('/products',apiController.productAll);
 router.get('/products/:id',apiController.productDetail);
+router.get('/onlyproducts', apiController.onlyProducts);
 
-router.get('/categorias', apiController.categorias);
+router.get('/categories', apiController.categorias);
+router.get('/categories/:id', apiController.idCategorias)
 
 module.exports = router;

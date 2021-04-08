@@ -1,22 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
+import LastProduct from './LastProduct';
 
-function LastProduct(){
-    return(
-        <div className="col-lg-6 mb-4">
-			<div className="card shadow mb-4">
-				<div className="card-header py-3">
-					<h6 className="m-0 font-weight-bold text-primary">Ultimo producto agregado</h6>
-				</div>
-				    <div className="card-body">
-						<div className="text-center">
-							<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "25rem"}} src="assets/images/product_dummy.svg" alt=""/>
-						</div>
-						    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-							<a target="_blank" rel="nofollow" href="/">Detalle del Producto </a>
-					</div>
+
+function LastProductCard() {
+	
+	const [Ultimo, setUltimo] = useState(0);
+
+	useEffect(() => {
+        fetch("http://localhost:3001/api/onlyProducts")
+            .then(res => res.json())
+            .then(data => { 
+				let producto = data[data.length -1]
+				setUltimo(producto)
+				console.log(producto);
+			})
+
+    }, [])
+
+	
+
+		return (
+			<div className="row">
+            <LastProduct
+                    
+			name = {Ultimo.name}
+			description = {Ultimo.description}
+			price = {Ultimo.price}
+			id = {Ultimo.id}
+               
+            /> 
 			</div>
-		</div>
-    )
-}
+		)
 
-export default LastProduct;
+		
+		}
+		
+export default LastProductCard;

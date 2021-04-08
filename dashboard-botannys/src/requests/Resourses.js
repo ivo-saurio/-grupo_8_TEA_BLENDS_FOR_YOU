@@ -17,11 +17,20 @@ module.exports = {
             url: url + 'products'
         })
     },
+
+    onlyProducts: ()=>{
+        return axios({
+            ...defaults,
+            method: 'GET',
+            url: url + 'onlyProducts'
+        })
+    },
+
     categorias: ()=>{
         return axios({
             ...defaults,
             method: 'GET',
-            url: url + 'categorias'
+            url: url + 'categories'
         })
     }
 

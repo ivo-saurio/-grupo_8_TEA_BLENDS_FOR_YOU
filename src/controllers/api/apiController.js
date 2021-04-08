@@ -88,6 +88,14 @@ module.exports = {
             )
         })
     },
+
+    onlyProducts: function(req, res){
+        db.Productos.findAll()
+        .then(function(resultado){
+          return  res.send(JSON.stringify(resultado))
+        })
+},
+
     categorias: function(req,res){
         db.Categorias.findAll()
         .then(function(generalCategorias){
@@ -105,5 +113,21 @@ module.exports = {
         })
         })
     },
+
+    idCategorias: function (req, res){
+        db.Categorias.findOne({
+            where:{
+                id: req.params.id
+                }
+        })
+        .then(function(categorias){
+            return res.status(200).json(
+                {
+                        name: categorias.name,
+                        
+                }            
+            )
+        })
+    }
     
 }
