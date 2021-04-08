@@ -22,7 +22,7 @@ module.exports = {
                 .then(function(usuario){
                         if (bcrypt.compareSync(password, usuario.password)){
                             req.session.usuario = usuario.dataValues;
-                            if (remember != undefined) {
+                            if (req.body.remember) {
                                 res.cookie('remember', usuario.dataValues.email, {maxAge: 2592000000 })
                             } 
                             res.redirect('/');
