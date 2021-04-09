@@ -28,7 +28,7 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'gin'),(2,'tea');
+INSERT INTO `categorias` VALUES (1,'Gin'),(2,'Tea');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `productos` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `id_categorias_idx` (`id_categoria`),
   CONSTRAINT `id_categorias` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (6,'Box Small','box_small.jpeg','Nuestra Box Small contiene Pimienta De Jamaica, Bayas De Enebro, Hibiscus, Anis Estrellado, Flor Lavanda, Cascara De Naranja, y Cuchara Coctelera.\r\nEsta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados\r\n                    ','Small',2300,NULL),(7,'Box Medium','box_medium_abierta.jpeg','Nuestra Box Medium contiene Pimienta Negra, Pimienta Rosa, Bayas De Enebro, Clavo De Olor, Anis Estrellado, Hibiscus, Cardamomo, Lavanda, Canela En Rama, Cuchara Coctelera y jigger.\r\nEsta diseñada para aquellos fanaticos de la cocteleria, quienes entendienden que para ser irremplazables, primero deben buscar ser diferentes\r\n                    ','Medium',4200,NULL),(8,'Box Large ','box_large.jpeg','Nuestra Box Large contiene Pimienta Negra, Pimienta Rosa, Pimienta Verde, Pimienta de Jamaica, Pimienta Blanca, Canela en Rama, Bayas De Enebro, Anis Estrellado, Corteza De Citricos, Rodajas De Citricos, Clavo De Olor, Cardamomo, Hibiscus, Lavanda, Jengibre, Cuchara Coctelera y Jigger.\r\nEntrena los sentidos disfrutando lo exotico, enfrentate a lo desconocido y demuestrale al mundo de que estas hecho.\r\n                    \r\n\r\n                    ','Large ',6000,NULL),(9,'Box Tea','BOX_tea_abierta.jpeg','Nuestra Box Tea contiene Té Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor.\r\nTé Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor.\r\n                    ','Medium',1900,NULL);
+INSERT INTO `productos` VALUES (6,'Box Small ','small.jpeg','Nuestra Box Small contiene Pimienta De Jamaica, Bayas De Enebro, Hibiscus, Anis Estrellado, Flor Lavanda, Cascara De Naranja, y Cuchara Coctelera.\r\nEsta diseñada para aquellos que buscan introducirse en el mundo de la cocteleria, ya que cuenta con un equilibrio perfecto de florales citricos y epeciados\r\n                    \r\n\r\n                    ','Small ',2500,NULL),(7,'Box Medium  ','medium.jpeg','Nuestra Box Medium contiene Pimienta Negra, Pimienta Rosa, Bayas De Enebro, Clavo De Olor, Anis Estrellado, Hibiscus, Cardamomo, Lavanda, Canela En Rama, Cuchara Coctelera y jigger.\r\nEsta diseñada para aquellos fanaticos de la cocteleria, quienes entendienden que para ser irremplazables, primero deben buscar ser diferentes\r\n                    \r\n\r\n                    \r\n\r\n                    ','Medium  ',4200,NULL),(8,'Box Large ','large.jpeg','Nuestra Box Large contiene Pimienta Negra, Pimienta Rosa, Pimienta Verde, Pimienta de Jamaica, Pimienta Blanca, Canela en Rama, Bayas De Enebro, Anis Estrellado, Corteza De Citricos, Rodajas De Citricos, Clavo De Olor, Cardamomo, Hibiscus, Lavanda, Jengibre, Cuchara Coctelera y Jigger.\r\nEntrena los sentidos disfrutando lo exotico, enfrentate a lo desconocido y demuestrale al mundo de que estas hecho.\r\n                    \r\n\r\n                    ','Large ',6000,NULL),(9,'Box Tea','tea.jpeg','Nuestra Box Tea contiene Té Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor.\r\nTé Rooibos, Té Oolong, Té Verde Chino, Té Inglés, Té De Jazmin, Bolsita De Canela Y Manzana, Bolsita De Hibiscus Y Naranja, Bolsita De Ananá y Jengibre, Y Un Infusor.\r\n                    ','Medium',1900,NULL);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,7 +119,7 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `avatar_UNIQUE` (`avatar`),
   KEY `FK_ROLID` (`id_rol`),
   CONSTRAINT `FK_ROLID` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +128,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (9,'Maxi','Rawe','05fbca85-6841-49c1-ae62-7ba3a3394984.png','maxirawe@hotmail.com','$2b$12$yn4K0bOZE9x3.0d6Rae2A.3UJ0g73LDAJ8PGdT',NULL),(25,'Ivo','muñoz',NULL,'ivan@gmail.com','$2b$12$VScUQJhYHT7NV0i2Puy2TuAeVn.IK1jH1Q.3fCM62eq/8R.UVxVte',9),(39,'Maxi','Rawe','undefined-1615516933815.png','maxirawe@gmail.com','$2b$12$rGiFcH5XWwrWg0cpBjaAyumKTGwkEZ8WfhqnEabm/QEjJgRPq5oy6',9);
+INSERT INTO `usuarios` VALUES (25,'Ivo','muñoz',NULL,'ivan@gmail.com','$2b$12$VScUQJhYHT7NV0i2Puy2TuAeVn.IK1jH1Q.3fCM62eq/8R.UVxVte',9),(45,'Maxi','Rawe','undefined-1616460873205.jpg','maxirawe@gmail.com','$2b$12$sYi00zCtueJsgERyyM7Xvuy0sPamcQHWWy76vIk.K8j9Ai.cPzFkK',9),(47,'Urii','Sosa','undefined-1616545791655.jfif','uri@dh.com','$2b$12$Z/z3eiar6oxRA17QfvX3R.ej3BFFslV4YCeC0TgMYMkfFXVxnWKX2',NULL),(48,'Charly','Rawe','undefined-1617922815375.jpg','charly@gmail.com','$2b$12$8yXA/W0kPXYYJiAj9oou8edNVZQk7Bc8LkEV433lmLMshOVvdYz9G',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 18:58:32
+-- Dump completed on 2021-04-08 21:08:18

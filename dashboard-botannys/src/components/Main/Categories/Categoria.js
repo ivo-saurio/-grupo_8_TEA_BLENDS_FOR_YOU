@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-function Categories (){
+function Categoria (){
     
     const [categorias, setCategorias] = useState([]) 
     
@@ -20,24 +20,25 @@ function Categories (){
     }
 
     return(
-        
-            <div className="row">
+        <>
                 {
-                    categorias.map((categoria) => {
+                    categorias.map((categoria, n) => {
                         return (
-                            <div key={categoria.id} className="col-lg-6 mb-4">
-                                <div className="card bg-info text-white shadow">
-                                    <div className="card-body">
-                                        { categoria.name }
+                            <div className="row">  
+                                <div key={n} className="col-lg-6 mb-4" >
+                                    <div className="card bg-info text-white shadow">
+                                        <div className="card-body">
+                                            { categoria.name }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>          
                         )
                     })
                 }
-            </div>
+            </>
         
     );
 }
 
-export default Categories;
+export default Categoria;
